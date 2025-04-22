@@ -173,7 +173,6 @@
           </button>
       </div>
   </section>
-  
     <!-- Hompage -->
 
     <!-- About Us -->
@@ -870,7 +869,7 @@
       const items = document.querySelectorAll('#clientCarousel > div');
       const itemCount = items.length / 2; 
       let currentIndex = 0;
-      const intervalTime = 1000; 
+      const intervalTime = 2000; 
       
       // Set initial position
       carousel.style.transform = 'translateX(0)';
@@ -1006,11 +1005,12 @@
       let currentIndex = 0;
       let nextIndex = 1;
       const slideDuration = 5000; // 5 seconds between slides
-      const transitionDuration = 2000; // 2 second transition
+      const transitionDuration = 2000; // 1 second transition (matches your CSS)
+      let interval;
       
       function slideToNext() {
           // Current slide moves left
-          slides[currentIndex].style.transform = 'translateX(100%)';
+          slides[currentIndex].style.transform = 'translateX(-100%)';
           // Next slide comes in from right
           slides[nextIndex].style.transform = 'translateX(0%)';
           
@@ -1021,7 +1021,7 @@
           // Reset positions after transition
           setTimeout(() => {
               slides.forEach((slide, index) => {
-                  if(index !== currentIndex && index !== nextIndex) {
+                  if(index !== currentIndex) {
                       slide.style.transform = 'translateX(100%)';
                   }
               });
@@ -1036,7 +1036,10 @@
       });
       
       // Start the carousel
-      const interval = setInterval(slideToNext, slideDuration);
+      function startCarousel() {
+          interval = setInterval(slideToNext, slideDuration);
+      }
+      startCarousel();
       
       // Optional: Pause on hover
       const carousel = document.querySelector('.relative.w-full.h-full');
@@ -1045,7 +1048,8 @@
       });
       
       carousel.addEventListener('mouseleave', () => {
-          interval = setInterval(slideToNext, slideDuration);
+          clearInterval(interval);
+          startCarousel();
       });
   });
 </script>
