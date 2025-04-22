@@ -209,9 +209,6 @@
   .-top-0 {
     top: calc(var(--spacing) * -0);
   }
-  .top-0 {
-    top: calc(var(--spacing) * 0);
-  }
   .top-1 {
     top: calc(var(--spacing) * 1);
   }
@@ -516,6 +513,9 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
@@ -716,10 +716,6 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
   .text-\[14px\] {
     font-size: 14px;
   }
@@ -853,6 +849,14 @@
     --tw-duration: 500ms;
     transition-duration: 500ms;
   }
+  .duration-1000 {
+    --tw-duration: 1000ms;
+    transition-duration: 1000ms;
+  }
+  .ease-\[cubic-bezier\(0\.65\,0\,0\.35\,1\)\] {
+    --tw-ease: cubic-bezier(0.65,0,0.35,1);
+    transition-timing-function: cubic-bezier(0.65,0,0.35,1);
+  }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
@@ -901,13 +905,6 @@
       @media (hover: hover) {
         --tw-translate-y: calc(var(--spacing) * -1);
         translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
-    }
-  }
-  .hover\:bg-\[\#28245F\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #28245F;
       }
     }
   }
