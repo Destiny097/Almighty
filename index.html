@@ -66,6 +66,24 @@
             max-width: 100%;
             height: auto;
         }
+
+        @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+    
+    .animate-fadeIn {
+        animation: fadeIn 1.5s ease-in-out forwards;
+    }
+    
+    .animate-fadeOut {
+        animation: fadeOut 1.5s ease-in-out forwards;
+    }
     </style>
 </head>
 
@@ -120,22 +138,42 @@
     <!-- navbar -->
 
     <!-- Hompage -->
-    <section class="relative flex items-center justify-center w-full h-screen text-center text-white bg-center bg-no-repeat bg-cover pt-[80px] md:pt-0" style="background-image: url(assets/landing.png);">
-        <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[60px] lg:text-[180px] font-extrabold uppercase text-transparent z-10 tracking-widest electricity-outline hidden sm:block" data-aos="fade-left" data-aos-duration="3000">
-            ELECTRICITY
-        </h1>
-    
-        <div class="relative  px-4 z-15 w-full max-w-[90%] mx-auto" data-aos="fade-left" data-aos-duration="9000">
-            <p class="uppercase tracking-widest text-[16px] md:text-[25px] mb-4 font-['Enriqueta']">We help you electrical services</p>
-            <h2 class="text-3xl md:text-6xl font-bold leading-tight font-['Figtree']">
-                WE BUILD <span class="font-['Gwendolyn'] text-teal-400 font-bold">Quality</span><br class="hidden md:block" />
-                ELECTRICIAN<span class="text-red-600">.</span>
-            </h2>
-            <button class="mt-8 px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition font-['Figtree'] text-sm md:text-base">
-                DISCOVER MORE
-            </button>
-        </div>
-    </section>
+    <section class="relative flex items-center justify-center w-full h-screen text-center text-white overflow-hidden pt-[80px] md:pt-0">
+      <!-- Carousel container -->
+      <div class="absolute inset-0 z-0 overflow-hidden">
+          <!-- Carousel slides container -->
+          <div class="relative w-full h-full">
+              <!-- Slide 1 -->
+              <div class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" style="background-image: url(assets/landing.png); transform: translateX(0%);"></div>
+              
+              <!-- Slide 2 -->
+              <div class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" style="background-image: url(assets/landing2.jpg); transform: translateX(100%);"></div>
+              
+              <!-- Slide 3 -->
+              <div class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" style="background-image: url(assets/dark-fantasy-scene.jpg); transform: translateX(100%);"></div>
+          </div>
+          
+          <!-- Overlay for better text visibility -->
+          
+      </div>
+  
+      <!-- Your content -->
+      <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[60px] lg:text-[180px] font-extrabold uppercase text-transparent z-10 tracking-widest electricity-outline hidden sm:block" data-aos="fade-left" data-aos-duration="3000">
+          ELECTRICITY
+      </h1>
+  
+      <div class="relative px-4 z-15 w-full max-w-[90%] mx-auto" data-aos="fade-left" data-aos-duration="9000">
+          <p class="uppercase tracking-widest text-[16px] md:text-[25px] mb-4 font-['Enriqueta']">We help you electrical services</p>
+          <h2 class="text-3xl md:text-6xl font-bold leading-tight font-['Figtree']">
+              WE BUILD <span class="font-['Gwendolyn'] text-teal-400 font-bold">Quality</span><br class="hidden md:block" />
+              ELECTRICIAN<span class="text-red-600">.</span>
+          </h2>
+          <button class="mt-8 px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition font-['Figtree'] text-sm md:text-base">
+              DISCOVER MORE
+          </button>
+      </div>
+  </section>
+  
     <!-- Hompage -->
 
     <!-- About Us -->
@@ -961,5 +999,55 @@
         AOS.init({once:true});
     </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.absolute.inset-0.bg-center');
+      const slideCount = slides.length;
+      let currentIndex = 0;
+      let nextIndex = 1;
+      const slideDuration = 5000; // 5 seconds between slides
+      const transitionDuration = 1000; // 1 second transition
+      
+      function slideToNext() {
+          // Current slide moves left
+          slides[currentIndex].style.transform = 'translateX(-100%)';
+          // Next slide comes in from right
+          slides[nextIndex].style.transform = 'translateX(0%)';
+          
+          // Update indexes
+          currentIndex = nextIndex;
+          nextIndex = (nextIndex + 1) % slideCount;
+          
+          // Reset positions after transition
+          setTimeout(() => {
+              slides.forEach((slide, index) => {
+                  if(index !== currentIndex && index !== nextIndex) {
+                      slide.style.transform = 'translateX(100%)';
+                  }
+              });
+          }, transitionDuration);
+      }
+      
+      // Initialize positions
+      slides.forEach((slide, index) => {
+          if(index > 0) {
+              slide.style.transform = 'translateX(100%)';
+          }
+      });
+      
+      // Start the carousel
+      const interval = setInterval(slideToNext, slideDuration);
+      
+      // Optional: Pause on hover
+      const carousel = document.querySelector('.relative.w-full.h-full');
+      carousel.addEventListener('mouseenter', () => {
+          clearInterval(interval);
+      });
+      
+      carousel.addEventListener('mouseleave', () => {
+          interval = setInterval(slideToNext, slideDuration);
+      });
+  });
+</script>
 </body>
 </html>
