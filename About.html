@@ -93,10 +93,10 @@
         <nav class="w-[90%] md:w-[80%] h-fit mx-auto">
             <!-- Contact info - hidden on mobile -->
             <div class="items-start justify-end hidden gap-4 bg-transparent md:flex h-fit">
-                <div class="text-[14px] md:text-[18px] font-['Figtree']">
+                <div class="text-[14px] md:text-[18px] font-['Figtree'] text-white">
                     📞 +91 98765 43210 | +91 98765 43210
                 </div>
-                <div class="text-[14px] md:text-[18px] font-['Figtree']">
+                <div class="text-[14px] md:text-[18px] font-['Figtree'] text-white">
                     📧 info@almightyengineers.in
                 </div>
             </div>
@@ -123,8 +123,8 @@
                         ☰
                     </button>
                     <div id="mobile-nav-items" class="mobile-nav-items">
-                        <a href="#" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer">Home</a>
-                        <a href="#" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer">About Us</a>
+                        <a href="/index.html" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer">Home</a>
+                        <a href="/About.html" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer">About Us</a>
                         <a href="#" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer">Services</a>
                         <a href="#" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer">Clients</a>
                         <a href="#" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer">Testimonials</a>
@@ -144,38 +144,35 @@
           <!-- Carousel slides container -->
           <div class="relative w-full h-full">
               <!-- Slide 1 -->
-              <div class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" style="background-image: url(assets/landing.png); transform: translateX(0%);"></div>
+              <div class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)] z-10" style="background-image: url(assets/landing.png); transform: translateX(0%);"></div>
               
               <!-- Slide 2 -->
-              <div class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" style="background-image: url(assets/landing2.jpg); transform: translateX(100%);"></div>
+              <div class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)] z-10" style="background-image: url(assets/landing.png); transform: translateX(100%);"></div>
               
               <!-- Slide 3 -->
-              <div class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" style="background-image: url(assets/dark-fantasy-scene.jpg); transform: translateX(100%);"></div>
+              <div class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)] z-0" style="background-image: url(assets/landing.png); transform: translateX(100%);"></div>
           </div>
           
           <!-- Overlay for better text visibility -->
           
       </div>
   
-      <!-- Your content -->
-      <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[60px] lg:text-[180px] font-extrabold uppercase text-transparent z-10 tracking-widest electricity-outline hidden sm:block" data-aos="fade-left" data-aos-duration="3000">
-          ELECTRICITY
-      </h1>
   
-      <div class="relative px-4 z-15 w-full max-w-[90%] mx-auto" data-aos="fade-left" data-aos-duration="9000">
-          <p class="uppercase tracking-widest text-[16px] md:text-[25px] mb-4 font-['Enriqueta']">We help you electrical services</p>
-          <h2 class="text-3xl md:text-6xl font-bold leading-tight font-['Figtree']">
-              WE BUILD <span class="font-['Gwendolyn'] text-teal-400 font-bold">Quality</span><br class="hidden md:block" />
-              ELECTRICIAN<span class="text-red-600">.</span>
+      <div class="relative px-4 z-15 w-full max-w-[90%] mx-auto flex items-start " data-aos="fade-left" data-aos-duration="9000">
+          
+          <h2 class="text-3xl md:text-6xl font-bold leading-tight font-['Figtree'] text-left">
+              ABOUT US
           </h2>
-          <button class="mt-8 px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition font-['Figtree'] text-sm md:text-base">
-              DISCOVER MORE
-          </button>
+          
       </div>
   </section>
-    <!-- Hompage -->
-
-    <!-- About Us -->
+<!-- Hompage -->
+<!-- Title -->
+<section class="w-full h-[5vh] flex items-start justify-center">
+  <div class="w-full h-full px-5 py-2 text-[#28245F] font-bold text-[18px] font-['Figtree']"><P>Home > About Us</P></div>
+</section>
+<!-- Title -->
+<!-- About Us -->
      <section class="w-full min-h-screen py-10 rounded-t-2xl md:py-0 flex items-center justify-center rounded-xl bg-[#F9F9F9]">
         <div class="w-[90%] md:w-[80%] h-auto md:h-[80%] flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 mx-auto">
             <div  class="w-full md:w-[60%] h-full" data-aos="fade-right" data-aos-duration="2000">
@@ -198,9 +195,130 @@
             </div>
         </div>
      </section>
-    <!-- About Us -->
+<!-- About Us -->
 
-    <!-- Carousol -->
+<!-- Why US -->
+<section class="relative flex items-center justify-center w-full min-h-screen bg-black bg-center bg-no-repeat bg-cover" style="background-image: url(/assets/electrician_working.png);">
+  <!-- Red background bar -->
+  <div class="hidden lg:block w-[25%] h-screen bg-[#E8272D] absolute top-0 left-0 z-10"></div>
+  
+  <div class="w-full lg:w-[80%] h-full py-20 lg:py-0 lg:h-screen flex items-center justify-center px-4 lg:px-0">
+    <div class="z-20 flex flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
+      <!-- Image on left - becomes top on mobile -->
+      <div class="w-full lg:w-[50%] z-20 flex justify-center">
+        <img src="/assets/workers.png" alt="Electrical workers" class="w-[80%] max-w-[60%]">
+      </div>
+    
+      <!-- Content on right - becomes bottom on mobile -->
+      <div class="w-full lg:w-[50%]">
+        <p class="font-['Enriqueta'] text-[16px] lg:text-[18px] text-white">Why Us</p>
+        <h3 class="font-['Figtree'] text-[36px] lg:text-[55px] font-extrabold text-white">Why Almighty Electricals</h3>
+        <p class="font-['Enriqueta'] text-[16px] lg:text-[18px] text-white mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        
+        <div class="flex flex-col mt-10 lg:mt-20">
+          <!-- First row of icons -->
+          <div class="flex flex-wrap items-center justify-center gap-6 lg:justify-evenly">
+            <div class="flex flex-col items-center justify-center w-[120px] lg:w-auto">
+              <img src="/assets/vec1.png" alt="Experience icon" class="w-12 lg:w-auto">
+              <p class="font-['Figtree'] font-bold text-white text-center text-[14px] lg:text-[18px] p-2">25+ Years of Experience</p>
+            </div>
+    
+            <div class="flex flex-col items-center justify-center w-[120px] lg:w-auto">
+              <img src="/assets/QA.png" alt="Quality icon" class="w-12 lg:w-20">
+              <p class="font-['Figtree'] font-bold text-white text-center text-[14px] lg:text-[18px] p-2">Quality Assured</p>
+            </div>
+    
+            <div class="flex flex-col items-center justify-center w-[120px] lg:w-auto">
+              <img src="/assets/certi.png" alt="Certification icon" class="w-12 lg:w-20">
+              <p class="font-['Figtree'] font-bold text-white text-center text-[14px] lg:text-[18px] p-2">Technically Qualified</p>
+            </div>
+          </div>
+    
+          <!-- Second row of icons -->
+          <div class="flex flex-wrap items-center justify-center gap-6 mt-10 lg:justify-evenly">
+            <div class="flex flex-col items-center justify-center w-[120px] lg:w-auto">
+              <img src="/assets/time.png" alt="TIme icon" class="w-12 lg:w-20">
+              <p class="font-['Figtree'] font-bold text-white text-center text-[14px] lg:text-[18px] p-2">25+ Years of Experience</p>
+            </div>
+    
+            <div class="flex flex-col items-center justify-center w-[120px] lg:w-auto">
+              <img src="/assets/gear.png" alt="Gear icon" class="w-16 lg:w-20">
+              <p class="font-['Figtree'] font-bold text-white text-center text-[14px] lg:text-[18px] p-2">Quality Assured</p>
+            </div>
+    
+            <div class="flex flex-col items-center justify-center w-[120px] lg:w-auto">
+              <img src="/assets/vec1.png" alt="Certification icon" class="w-12 lg:w-auto">
+              <p class="font-['Figtree'] font-bold text-white text-center text-[14px] lg:text-[18px] p-2">Technically Qualified</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Why US -->
+
+<!-- Achievements -->
+<section class="w-full min-h-[40vh] py-10 md:py-0 flex items-center justify-center bg-[#28245F]">
+  <div class="w-[90%] md:w-[70%] h-full flex flex-col items-center justify-center text-center">
+      <div class="mb-6 md:mb-10" data-aos="fade-down" data-aos-duration="2000">
+          <h2 class="font-['Figtree'] font-extrabold text-[32px] md:text-[55px] text-white">Our Achievements</h2>
+      </div>
+      <div class="flex flex-col items-center justify-between w-full gap-8 md:flex-row md:gap-4" data-aos="fade-up" data-aos-duration="2000">
+          <!-- Achievement 1 -->
+          <div class="flex flex-col items-center justify-center w-full md:w-auto">
+              <h2 class="counter font-['Figtree'] font-extrabold text-[48px] md:text-[85px] text-[#30AAE1] m-0 p-0" data-target="20">20</h2>
+              <p class="font-['Figtree'] text-[16px] md:text-[20px] text-white m-0 p-0 mt-2">Years Of Experience</p>
+          </div>
+          
+          <!-- Achievement 2 -->
+          <div class="flex flex-col items-center justify-center w-full md:w-auto">
+              <h2 class="counter font-['Figtree'] font-extrabold text-[48px] md:text-[85px] text-[#30AAE1] m-0 p-0" data-target="1111">1110+</h2>
+              <p class="font-['Figtree'] text-[16px] md:text-[20px] text-white m-0 p-0 mt-2">Installations</p>
+          </div>
+          
+          <!-- Achievement 3 -->
+          <div class="flex flex-col items-center justify-center w-full md:w-auto">
+              <h2 class="counter font-['Figtree'] font-extrabold text-[48px] md:text-[85px] text-[#30AAE1] m-0 p-0" data-target="20">20</h2>
+              <p class="font-['Figtree'] text-[16px] md:text-[20px] text-white m-0 p-0 mt-2">Years Of Experience</p>
+          </div>
+          
+          <!-- Achievement 4 -->
+          <div class="flex flex-col items-center justify-center w-full md:w-auto">
+              <h2 class="counter font-['Figtree'] font-extrabold text-[48px] md:text-[85px] text-[#30AAE1] m-0 p-0" data-target="1111">1110+</h2>
+              <p class="font-['Figtree'] text-[16px] md:text-[20px] text-white m-0 p-0 mt-2">Installations</p>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Achievements -->
+<!-- SreeNivasan -->
+<section class="flex items-center justify-center w-full min-h-screen lg:h-screen rounded-t-2xl bg-[#F9F9F9] py-10 lg:py-0">
+  <div class="w-full lg:w-[70%] h-full lg:h-[80%] flex flex-col lg:flex-row items-center justify-center lg:justify-evenly gap-8 lg:gap-0 px-4 lg:px-0">
+    
+    <div class="w-full lg:w-[50%] flex justify-center">
+      <img src="/assets/Sreenivasan.png" alt="Admin" class="w-full max-w-[60%] lg:w-[60%]">
+    </div>
+
+    
+    <div class="w-full lg:w-[50%] lg:h-[80%] flex flex-col items-center lg:items-start justify-center lg:justify-evenly gap-6 lg:gap-0">
+      <h3 class="text-[#E8272D] font-['Figtree'] font-extrabold text-[32px] lg:text-[55px] text-center lg:text-left">Sreenivasan</h3>
+      <p class="text-[#646464] font-['Figtree'] text-[14px] lg:text-[18px] text-center lg:text-left">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
+      </p>
+      <img src="/assets/sign.png" alt="Sreenivasan's Signature" class="w-[60%] lg:w-[35%]">
+    </div>
+  </div>
+</section>
+<!-- SreeNivasan -->
+
+<!-- Strengths -->
+<section>
+  
+</section>
+<!-- Strengths -->
+<!-- Carousol -->
     <section class="w-full py-8 bg-white md:py-16">
         <div class="w-[90%] md:w-[80%] mx-auto flex flex-col md:flex-row gap-8">
           <!-- Header Section -->
