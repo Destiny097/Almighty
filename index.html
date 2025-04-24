@@ -292,10 +292,10 @@
 <!-- Achievements -->
 <section class="w-full min-h-[40vh] py-10 md:py-0 flex items-center justify-center bg-[#28245F]">
     <div class="w-full h-auto md:h-[30vh] flex flex-col items-center bg-[#28245F] counter_wrapper justify-evenly py-10 md:py-0">
-        <div>
+        <div class="flex items-center justify-center" data-aos="fade-down" data-aos-duration="2000">
             <h2 class="font-['Figtree'] font-extrabold text-[32px] md:text-[55px] text-white text-center">Our Achievement</h2>
         </div>
-        <div class="flex flex-col items-center w-full gap-10 mt-6 md:flex-row justify-evenly md:gap-0">
+        <div class="flex flex-col items-center w-full gap-10 mt-6 md:flex-row justify-evenly md:gap-0" data-aos="fade-up" data-aos-duration="3000">
             <!-- Counter Item -->
             <div class="text-center counter">
                 <h1 class="count font-['Figtree'] font-extrabold text-[50px] md:text-[85px] text-[#30AAE1]" data-target="20">0</h1>
@@ -1082,7 +1082,7 @@ const observer = new IntersectionObserver((entries, observer) => {
         }
     });
 }, {
-    threshold: 0.5 // Trigger when 50% of the element is visible
+    threshold: 0.7 
 });
 
 // Observe each counter
