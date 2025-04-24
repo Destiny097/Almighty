@@ -261,36 +261,34 @@
 
 <!-- Achievements -->
 <section class="w-full min-h-[40vh] py-10 md:py-0 flex items-center justify-center bg-[#28245F]">
-  <div class="w-[90%] md:w-[70%] h-full flex flex-col items-center justify-center text-center">
-      <div class="mb-6 md:mb-10" data-aos="fade-down" data-aos-duration="2000">
-          <h2 class="font-['Figtree'] font-extrabold text-[32px] md:text-[55px] text-white">Our Achievements</h2>
+  <div class="w-full h-auto md:h-[30vh] flex flex-col items-center bg-[#28245F] counter_wrapper justify-evenly py-10 md:py-0">
+      <div>
+          <h2 class="font-['Figtree'] font-extrabold text-[32px] md:text-[55px] text-white text-center">Our Achievement</h2>
       </div>
-      <div class="flex flex-col items-center justify-between w-full gap-8 md:flex-row md:gap-4" data-aos="fade-up" data-aos-duration="2000">
-          <!-- Achievement 1 -->
-          <div class="flex flex-col items-center justify-center w-full md:w-auto">
-              <h2 class="counter font-['Figtree'] font-extrabold text-[48px] md:text-[85px] text-[#30AAE1] m-0 p-0" data-target="20">20</h2>
-              <p class="font-['Figtree'] text-[16px] md:text-[20px] text-white m-0 p-0 mt-2">Years Of Experience</p>
+      <div class="flex flex-col items-center w-full gap-10 mt-6 md:flex-row justify-evenly md:gap-0">
+          <!-- Counter Item -->
+          <div class="text-center counter">
+              <h1 class="count font-['Figtree'] font-extrabold text-[50px] md:text-[85px] text-[#30AAE1]" data-target="20">0</h1>
+              <p class="text-white text-[16px] md:text-[20px] font-['Figtree']">Years of Experience</p>
           </div>
-          
-          <!-- Achievement 2 -->
-          <div class="flex flex-col items-center justify-center w-full md:w-auto">
-              <h2 class="counter font-['Figtree'] font-extrabold text-[48px] md:text-[85px] text-[#30AAE1] m-0 p-0" data-target="1111">1110+</h2>
-              <p class="font-['Figtree'] text-[16px] md:text-[20px] text-white m-0 p-0 mt-2">Installations</p>
+  
+          <div class="text-center counter">
+              <h1 class="count font-['Figtree'] font-extrabold text-[50px] md:text-[85px] text-[#30AAE1]" data-target="1110">0</h1>
+              <p class="text-white text-[16px] md:text-[20px] font-['Figtree']">Installations</p>
           </div>
-          
-          <!-- Achievement 3 -->
-          <div class="flex flex-col items-center justify-center w-full md:w-auto">
-              <h2 class="counter font-['Figtree'] font-extrabold text-[48px] md:text-[85px] text-[#30AAE1] m-0 p-0" data-target="20">20</h2>
-              <p class="font-['Figtree'] text-[16px] md:text-[20px] text-white m-0 p-0 mt-2">Years Of Experience</p>
+  
+          <div class="text-center counter">
+              <h1 class="count font-['Figtree'] font-extrabold text-[50px] md:text-[85px] text-[#30AAE1]" data-target="20">0</h1>
+              <p class="text-white text-[16px] md:text-[20px] font-['Figtree']">Years of Experience</p>
           </div>
-          
-          <!-- Achievement 4 -->
-          <div class="flex flex-col items-center justify-center w-full md:w-auto">
-              <h2 class="counter font-['Figtree'] font-extrabold text-[48px] md:text-[85px] text-[#30AAE1] m-0 p-0" data-target="1111">1110+</h2>
-              <p class="font-['Figtree'] text-[16px] md:text-[20px] text-white m-0 p-0 mt-2">Installations</p>
+  
+          <div class="text-center counter">
+              <h1 class="count font-['Figtree'] font-extrabold text-[50px] md:text-[85px] text-[#30AAE1]" data-target="1110">0</h1>
+              <p class="text-white text-[16px] md:text-[20px] font-['Figtree']">Years of Experience</p>
           </div>
       </div>
   </div>
+  
 </section>
 <!-- Achievements -->
 <!-- SreeNivasan -->
@@ -1006,5 +1004,46 @@
       });
   });
 </script>
+<script>
+  const counts = document.querySelectorAll('.count');
+  const speed = 97;
+  
+  const startCounter = (counter) => {
+      const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const inc = target / speed;
+  
+          if (count < target) {
+              counter.innerText = Math.ceil(count + inc);
+              setTimeout(updateCount, 10);
+          } else {
+              counter.innerText = target;
+          }
+      };
+  
+      updateCount();
+  };
+  
+  // Intersection Observer
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              const counter = entry.target;
+              startCounter(counter);
+              observer.unobserve(counter); // Optional: Stop observing after trigger
+          }
+      });
+  }, {
+      threshold: 0.5 // Trigger when 50% of the element is visible
+  });
+  
+  // Observe each counter
+  counts.forEach(counter => {
+      observer.observe(counter);
+  });
+  
+  
+  </script>
 </body>
 </html>
