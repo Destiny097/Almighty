@@ -25,7 +25,7 @@
         }
         
         .electricity-outline {
-            -webkit-text-stroke: 1px #00b84b;
+            -webkit-text-stroke: 1px #08b15733;
             color: transparent;
         }
         
@@ -137,36 +137,47 @@
     </div>
     <!-- navbar -->
 
-    <!-- Hompage -->
-    <section class="relative flex items-center justify-center w-full h-[50vh] text-center text-white overflow-hidden pt-[80px] md:pt-0">
-      <!-- Carousel container -->
-      <div class="absolute inset-0 z-0 overflow-hidden">
-          <!-- Carousel slides container -->
-          <div class="relative w-full h-full">
-              <!-- Slide 1 -->
-              <div class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)] z-10" style="background-image: url(assets/landing.png); transform: translateX(0%);"></div>
-              
-              <!-- Slide 2 -->
-              <div class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)] z-10" style="background-image: url(assets/landing.png); transform: translateX(100%);"></div>
-              
-              <!-- Slide 3 -->
-              <div class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)] z-0" style="background-image: url(assets/landing.png); transform: translateX(100%);"></div>
-          </div>
-          
-          <!-- Overlay for better text visibility -->
-          
-      </div>
+<!-- Homepage -->
+<section class="relative flex items-center justify-center w-full h-[50vh] text-center text-white overflow-hidden pt-[80px] md:pt-0">
+    <!-- Carousel -->
+    <div class="absolute inset-0 z-0 overflow-hidden carousel-container">
+        <div class="relative w-full h-full">
+            <!-- Slides -->
+            <div class="carousel-slide absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" 
+                 style="background-image: url(assets/landing.png); transform: translateX(0);"></div>
+            <div class="carousel-slide absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" 
+                 style="background-image: url(assets/landing.png); transform: translateX(100%);"></div>
+            <div class="carousel-slide absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" 
+                 style="background-image: url(assets/landing.png); transform: translateX(100%);"></div>
+        
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/30 z-5"></div>
+            
+            <!-- Navigation Arrows -->
+            
+        </div>
+    </div>
   
+    <!-- Content -->
   
-      <div class="relative px-4 z-15 w-full max-w-[90%] mx-auto flex items-start " data-aos="fade-left" data-aos-duration="9000">
-          
-          <h2 class="text-3xl md:text-6xl font-bold leading-tight font-['Figtree'] text-left">
-              CONTACT
-          </h2>
-          
-      </div>
+    <div class="relative px-4 z-15 w-full max-w-[90%] mx-auto flex items-start" data-aos="fade-left" data-aos-duration="9000">
+        <h2 class="text-3xl md:text-6xl font-bold leading-tight font-['Figtree']">
+            CONTACT
+        </h2>
+      
+    </div>
+    <button class="absolute z-10 p-2 transition-all duration-300 -translate-y-1/2 bg-[#E8272D] -bottom-7 carousel-prev right-90 hover:bg-white/50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+    </button>
+    <button class="absolute z-10 p-2 transition-all duration-300 -translate-y-1/2 -bottom-7 carousel-next right-75 bg-[#E8272D] hover:bg-white/50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+    </button>
   </section>
-<!-- Hompage -->
+  <!-- Homepage -->
 <!-- Title -->
 <section class="w-full h-[7vh] flex items-start justify-center">
   <div class="w-full h-full px-5 py-2 text-[#28245F] font-bold text-[18px] font-['Figtree']"><P>Home > Contact Us</P></div>
@@ -174,7 +185,11 @@
 <!-- Title -->
  
 <!-- Contact Us -->
-<section class="w-full min-h-screen lg:h-[130vh] rounded-xl flex items-center justify-center py-10 lg:py-0">
+<section class="w-full min-h-screen lg:h-[130vh] rounded-xl flex items-center justify-center py-10 lg:py-0 relative">
+    <h1 class="absolute top-10 left-[50%] -translate-x-1/2 -translate-y-1/2 text-[60px] lg:text-[130px] font-extrabold tracking-wide uppercase text-transparent z-1S  electricity-outline hidden sm:block text-center" 
+      data-aos="fade-left" data-aos-duration="3000">
+      CONTACT
+  </h1>
     <div class="flex items-center justify-center w-full h-full px-4 lg:px-0">
         <div class="w-full lg:w-[80%] h-full flex flex-col items-center justify-center">
             <!-- Header Section -->
@@ -318,8 +333,8 @@
 <!-- Details -->
 
 <!-- Footer -->
-<section class="w-full min-h-[90vh] md:h-[90vh]">
-    <footer class="w-full h-full bg-[#28245F] rounded-t-2xl flex flex-col items-center py-8 md:py-0">
+<section class="w-full min-h-[90vh] md:h-[90vh] relative">
+    <footer class="w-full h-full bg-[#28245F] rounded-t-4xl flex flex-col items-center py-8 md:py-0">
         <!-- Logo -->
         <div class="flex items-center justify-center w-full mt-4 h-fit md:mt-0">
             <img src="assets/Almighty_logo_alt.png" alt="Logo" class="h-16 md:h-24">
@@ -368,7 +383,7 @@
             </div>
 
             <!-- Address -->
-            <div class="w-full md:w-[25%] h-full flex flex-col items-center md:items-start gap-6 mt-5">
+            <div class="w-full md:w-[35%] h-full flex flex-col items-center md:items-start gap-6 mt-5">
                 <h3 class="text-lg font-bold text-white">Address</h3>
                 <div class="flex flex-col w-full gap-4 text-white text-[14px] md:text-[16px]">
                     <div>
@@ -387,7 +402,7 @@
 
             <!-- Wires Image (Hidden on mobile) -->
             <div class="hidden md:flex w-[30%] h-full items-center justify-center">
-                <img src="assets/wires.png" alt="Electrical wires" class="object-contain w-full h-auto">
+                <img src="assets/wires.png" alt="Electrical wires" class="absolute w-[350px] right-0 bottom-25 ">
             </div>
         </div>
 
@@ -630,59 +645,84 @@
     </script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-      const slides = document.querySelectorAll('.absolute.inset-0.bg-center');
-      const slideCount = slides.length;
-      let currentIndex = 0;
-      let nextIndex = 1;
-      const slideDuration = 5000; // 5 seconds between slides
-      const transitionDuration = 1000; // 1 second transition (matches your CSS)
-      let interval;
-      
-      function slideToNext() {
-          // Current slide moves left
-          slides[currentIndex].style.transform = 'translateX(-100%)';
-          // Next slide comes in from right
-          slides[nextIndex].style.transform = 'translateX(0%)';
-          
-          // Update indexes
-          currentIndex = nextIndex;
-          nextIndex = (nextIndex + 1) % slideCount;
-          
-          // Reset positions after transition
-          setTimeout(() => {
-              slides.forEach((slide, index) => {
-                  if(index !== currentIndex) {
-                      slide.style.transform = 'translateX(100%)';
-                  }
-              });
-          }, transitionDuration);
-      }
-      
-      // Initialize positions
-      slides.forEach((slide, index) => {
-          if(index > 0) {
-              slide.style.transform = 'translateX(100%)';
-          }
-      });
-      
-      // Start the carousel
-      function startCarousel() {
-          interval = setInterval(slideToNext, slideDuration);
-      }
-      startCarousel();
-      
-      // Optional: Pause on hover
-      const carousel = document.querySelector('.relative.w-full.h-full');
-      carousel.addEventListener('mouseenter', () => {
-          clearInterval(interval);
-      });
-      
-      carousel.addEventListener('mouseleave', () => {
-          clearInterval(interval);
-          startCarousel();
-      });
-  });
-</script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const slideCount = slides.length;
+        let currentIndex = 0;
+        let nextIndex = 1;
+        const slideDuration = 5000;
+        const transitionDuration = 1000;
+        let interval;
+        
+        function slideToNext() {
+            slides[currentIndex].style.transform = 'translateX(-100%)';
+            slides[nextIndex].style.transform = 'translateX(0)';
+            
+            currentIndex = nextIndex;
+            nextIndex = (nextIndex + 1) % slideCount;
+            
+            setTimeout(() => {
+                slides.forEach((slide, index) => {
+                    if(index !== currentIndex) {
+                        slide.style.transform = 'translateX(100%)';
+                    }
+                });
+            }, transitionDuration);
+        }
+        
+        function goToSlide(index) {
+            if (index === currentIndex) return;
+            
+            clearInterval(interval);
+            
+            if (index > currentIndex) {
+                slides[currentIndex].style.transform = 'translateX(-100%)';
+                slides[index].style.transform = 'translateX(0)';
+            } else {
+                slides[currentIndex].style.transform = 'translateX(100%)';
+                slides[index].style.transform = 'translateX(0)';
+            }
+            
+            nextIndex = (index + 1) % slideCount;
+            currentIndex = index;
+            
+            setTimeout(() => {
+                slides.forEach((slide, i) => {
+                    if(i !== currentIndex) {
+                        slide.style.transform = 'translateX(100%)';
+                    }
+                });
+            }, transitionDuration);
+            
+            startCarousel();
+        }
+        
+        // Initialize
+        slides.forEach((slide, index) => {
+            if(index > 0) {
+                slide.style.transform = 'translateX(100%)';
+            }
+        });
+        
+        function startCarousel() {
+            interval = setInterval(slideToNext, slideDuration);
+        }
+        startCarousel();
+        
+        // Pause on hover
+        const carousel = document.querySelector('.carousel-container');
+        carousel.addEventListener('mouseenter', () => clearInterval(interval));
+        carousel.addEventListener('mouseleave', startCarousel);
+        
+        // Button controls
+        document.querySelector('.carousel-prev').addEventListener('click', () => {
+            goToSlide((currentIndex - 1 + slideCount) % slideCount);
+        });
+        
+        document.querySelector('.carousel-next').addEventListener('click', () => {
+            goToSlide((currentIndex + 1) % slideCount);
+        });
+    });
+  </script>
 </body>
 </html>
