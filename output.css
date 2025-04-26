@@ -343,6 +343,12 @@
   .bottom-\[100px\] {
     bottom: 100px;
   }
+  .bottom-\[120px\] {
+    bottom: 120px;
+  }
+  .bottom-\[150px\] {
+    bottom: 150px;
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
