@@ -285,69 +285,82 @@
       </div>
     </div>
   </section>
-<!-- Carousol -->
+<!-- Carousel -->
 <section class="w-full py-8 bg-white md:py-16">
-    <div class="w-[90%] md:w-[80%] mx-auto flex flex-col md:flex-row gap-8">
+  <div class="w-[90%] md:w-[80%] mx-auto flex flex-col md:flex-row gap-8">
       <!-- Header Section -->
       <div class="flex flex-col items-start md:items-center md:w-[20%]">
-        <h2 class="text-[28px] md:text-[48px] font-bold font-['Figtree'] text-[#28245F] mb-4">Our Clients.</h2>
-        <button class="px-4 py-2 md:px-6 md:py-3 border-2 border-[#E8272D] text-[#E8272D] hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base">
-          VIEW ALL CLIENTS
-        </button>
+          <h2 class="text-[28px] md:text-[48px] font-bold font-['Figtree'] text-[#28245F] mb-4">Our Clients.</h2>
+          <button class="px-4 py-2 md:px-6 md:py-3 border-2 border-[#E8272D] text-[#E8272D] hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base">
+              VIEW ALL CLIENTS
+          </button>
       </div>
       
       <!-- Carousel Container -->
-      <div class="relative overflow-hidden w-full md:w-[80%]">
-        <!-- Carousel Track -->
-        <div id="clientCarousel" class="flex transition-transform duration-300 ease-in-out">
-          <!-- Client Items - Duplicated for seamless looping -->
-          <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-            <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-              <img src="assets/assist.png" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
-            </div>
-          </div>
+      <div class="relative w-full md:w-[80%]">
+          <!-- Navigation Buttons -->
+          <button id="carousel-prev" class="absolute left-0 z-10 p-2 -ml-4 transition-all duration-300 -translate-y-1/2 shadow-md  top-1/2 bg-[#E8272D] hover:bg-white ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#28245F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+          </button>
+          
+          <div class="relative w-full overflow-hidden">
+              <!-- Carousel Track -->
+              <div id="clientCarousel" class="flex transition-transform duration-300 ease-in-out">
+                  <!-- Client Items -->
+                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
+                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                          <img src="assets/assist.png" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
+                      </div>
+                  </div>
 
-          <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-            <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-              <img src="assets/assist.png" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
-            </div>
+                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
+                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                          <img src="assets/assist.png" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
+                      </div>
+                  </div>
+                  
+                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
+                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                          <img src="assets/furniture.png" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                      </div>
+                  </div>
+                  
+                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
+                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                          <img src="assets/uni_furniture.png" alt="Unique Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                      </div>
+                  </div>
+                  
+                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
+                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                          <img src="assets/home.png" alt="Home" class="max-h-[80px] md:max-h-[120px] w-auto">
+                      </div>
+                  </div>
+                  
+                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
+                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                          <img src="assets/assist.png" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
+                      </div>
+                  </div>
+                  
+                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
+                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                          <img src="assets/furniture.png" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                      </div>
+                  </div>
+              </div>
           </div>
           
-          <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-            <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-              <img src="assets/furniture.png" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
-            </div>
-          </div>
-          
-          <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-            <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-              <img src="assets/uni_furniture.png" alt="Unique Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
-            </div>
-          </div>
-          
-          <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-            <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-              <img src="assets/home.png" alt="Home" class="max-h-[80px] md:max-h-[120px] w-auto">
-            </div>
-          </div>
-          
-          <!-- Duplicate items for seamless looping -->
-          <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-            <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-              <img src="assets/assist.png" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
-            </div>
-          </div>
-          
-          <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-            <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-              <img src="assets/furniture.png" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
-            </div>
-          </div>
-        </div>
+          <button id="carousel-next" class="absolute right-0 z-10 p-2 -mr-4 transition-all duration-300 -translate-y-1/2 shadow-md  top-1/2 bg-[#E8272D] hover:bg-white">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#28245F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+          </button>
       </div>
-    </div>
-  </section>
-<!-- Carousol -->
+  </div>
+</section>
      
 <!-- Testimonials -->
     <section class="w-full h-[90vh] md:h-[80vh] rounded-t-2xl bg-cover bg-center bg-no-repeat flex items-center justify-center py-12 md:py-0 relative overflow-hidden" style="background-image: url(assets/testbg.png);" data-aos="fade-up" data-aos-duration="1000">
@@ -727,72 +740,114 @@
     });
     </script>
     
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const carousel = document.getElementById('clientCarousel');
-      const items = document.querySelectorAll('#clientCarousel > div');
-      const itemCount = items.length / 2; 
-      let currentIndex = 0;
-      const intervalTime = 2000; 
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const carousel = document.getElementById('clientCarousel');
+          const prevBtn = document.querySelector('#carousel-prev');
+          const nextBtn = document.querySelector('#carousel-next');
+          const items = document.querySelectorAll('#clientCarousel > div');
+          const originalItemCount = items.length / 2; // Since we duplicated items
+          let currentIndex = 0;
+          let autoSlideInterval;
+          const intervalTime = 1000;
+          let isTransitioning = false;
       
-      // Set initial position
-      carousel.style.transform = 'translateX(0)';
+          // Get item width based on screen size
+          function getItemWidth() {
+              if (window.innerWidth >= 1024) {
+                  return 25; // 4 items visible (25% each)
+              } else if (window.innerWidth >= 640) {
+                  return 50; // 2 items visible (50% each)
+              } else {
+                  return 100; // 1 item visible (100%)
+              }
+          }
       
-      // Auto-rotate function
-      function autoRotate() {
-        currentIndex = (currentIndex + 1) % itemCount;
-        
-        // Calculate the translateX value based on screen size
-        let translateX;
-        if (window.innerWidth >= 1024) {
-          translateX = -currentIndex * 25; // 4 items visible (25% each)
-        } else if (window.innerWidth >= 640) {
-          translateX = -currentIndex * 50; // 2 items visible (50% each)
-        } else {
-          translateX = -currentIndex * 100; // 1 item visible (100%)
-        }
-        
-        carousel.style.transform = `translateX(${translateX}%)`;
-        
-        // Reset position when reaching the duplicated items for seamless looping
-        if (currentIndex === itemCount - 1) {
-          setTimeout(() => {
-            carousel.style.transition = 'none';
-            carousel.style.transform = 'translateX(0)';
-            setTimeout(() => {
-              carousel.style.transition = 'transform 0.3s ease-in-out';
-            }, 20);
-          }, 300);
-        }
-      }
+          // Update carousel position
+          function updateCarousel() {
+              if (isTransitioning) return;
+              isTransitioning = true;
+              
+              const itemWidth = getItemWidth();
+              carousel.style.transition = 'transform 0.5s ease-in-out';
+              carousel.style.transform = `translateX(${-currentIndex * itemWidth}%)`;
+          }
       
-      // Start auto-rotation
-      let interval = setInterval(autoRotate, intervalTime);
+          // Handle transition end for seamless looping
+          function handleTransitionEnd() {
+              isTransitioning = false;
+              const itemWidth = getItemWidth();
+              
+              // If we're at the cloned items, instantly jump to original items
+              if (currentIndex >= originalItemCount) {
+                  carousel.style.transition = 'none';
+                  currentIndex = currentIndex - originalItemCount;
+                  carousel.style.transform = `translateX(${-currentIndex * itemWidth}%)`;
+                  
+                  // Force reflow
+                  void carousel.offsetWidth;
+              }
+              // If we're before first item, jump to end
+              else if (currentIndex < 0) {
+                  carousel.style.transition = 'none';
+                  currentIndex = originalItemCount - 1;
+                  carousel.style.transform = `translateX(${-currentIndex * itemWidth}%)`;
+                  
+                  // Force reflow
+                  void carousel.offsetWidth;
+              }
+          }
       
-      // Pause on hover
-      carousel.addEventListener('mouseenter', () => {
-        clearInterval(interval);
+          // Navigation functions
+          function goToPrev() {
+              if (isTransitioning) return;
+              currentIndex--;
+              updateCarousel();
+              resetAutoSlide();
+          }
+      
+          function goToNext() {
+              if (isTransitioning) return;
+              currentIndex++;
+              updateCarousel();
+              resetAutoSlide();
+          }
+      
+          // Auto-slide functionality
+          function startAutoSlide() {
+              autoSlideInterval = setInterval(goToNext, intervalTime);
+          }
+      
+          function resetAutoSlide() {
+              clearInterval(autoSlideInterval);
+              startAutoSlide();
+          }
+      
+          // Event listeners
+          prevBtn.addEventListener('click', goToPrev);
+          nextBtn.addEventListener('click', goToNext);
+          carousel.addEventListener('transitionend', handleTransitionEnd);
+      
+          // Pause on hover
+          carousel.addEventListener('mouseenter', () => {
+              clearInterval(autoSlideInterval);
+          });
+      
+          carousel.addEventListener('mouseleave', () => {
+              startAutoSlide();
+          });
+      
+          // Handle window resize
+          window.addEventListener('resize', function() {
+              carousel.style.transition = 'none';
+              updateCarousel();
+          });
+      
+          // Initialize
+          updateCarousel();
+          startAutoSlide();
       });
-      
-      carousel.addEventListener('mouseleave', () => {
-        interval = setInterval(autoRotate, intervalTime);
-      });
-      
-      // Handle window resize
-      window.addEventListener('resize', () => {
-        // Recalculate position on resize
-        let translateX;
-        if (window.innerWidth >= 1024) {
-          translateX = -currentIndex * 25;
-        } else if (window.innerWidth >= 640) {
-          translateX = -currentIndex * 50;
-        } else {
-          translateX = -currentIndex * 100;
-        }
-        carousel.style.transform = `translateX(${translateX}%)`;
-      });
-    });
-    </script>
+      </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const track = document.getElementById('testimonialTrack');
