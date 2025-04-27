@@ -483,9 +483,72 @@
       </div>
   </div>
 </section>
-     
-    <!-- Testimonials -->
-    <section class="w-full h-[90vh] md:h-[80vh] rounded-t-2xl bg-cover bg-center bg-no-repeat flex items-center justify-center py-12 md:py-0 relative overflow-hidden" style="background-image: url(assets/testbg.png);" data-aos="fade-up" data-aos-duration="1000">
+    <!-- Testimonial Section - Hidden on Small Screens -->
+    <section class="relative flex-col hidden w-full h-auto md:flex md:h-screen">
+        <!-- Background Image -->
+        <div class="w-full h-[50vh] md:h-[70%] relative">
+            <img src="assets/testbg.png" alt="Tools" class="object-cover w-full h-full">
+        </div>
+    
+        <!-- Electrician Image (hidden on small screens) -->
+        <div class="hidden md:block w-[30%] absolute top-[50%] md:top-[20%] left-[10%]">
+            <img src="assets/electrician.png" alt="Electrician" class="w-full">
+        </div>
+    
+        <!-- Testimonial Carousel -->
+        <div class="w-[90%] md:w-[40%] absolute top-[50vh] md:top-[40%] right-[10%] p-6 md:p-8 rounded-lg -translate-y-1/2">
+            <h1 class="font-['Figtree'] font-bold text-[28px] md:text-[55px] text-white text-center mb-4">Testimonials</h1>
+            
+            <div class="relative flex flex-col h-full">
+                <!-- Slides container -->
+                <div class="flex items-center justify-between">
+                    <!-- Prev button -->
+                    <button class="py-2 px-2 bg-[#E8272D]  hover:bg-gray-300" data-carousel-prev>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+    
+                    <div class="flex-1 mx-2 md:mx-4 relative h-[180px] md:h-[200px] overflow-hidden">
+                        <!-- Slides -->
+                        <div class="absolute inset-0 flex flex-col items-center text-center transition-opacity duration-700 opacity-100 justify-evenly" data-carousel-slide>
+                            <p class="font-['Figtree'] text-[14px] md:text-[18px] text-white">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                            </p>
+                            <h3 class="font-['Figtree'] text-[16px] md:text-[18px] font-bold text-white mt-2">Liam James</h3>
+                            <p class="font-['Figtree'] text-[#00FFC3] text-[14px] md:text-[16px]">Cherris</p>
+                        </div>
+    
+                        <div class="absolute inset-0 flex flex-col items-center text-center transition-opacity duration-700 opacity-0 justify-evenly" data-carousel-slide>
+                            <p class="font-['Figtree'] text-[14px] md:text-[18px] text-white">
+                                The service was exceptional from start to finish. The team went above and beyond to deliver results that exceeded our expectations.
+                            </p>
+                            <h3 class="font-['Figtree'] text-[16px] md:text-[18px] font-bold text-white mt-2">Sarah Johnson</h3>
+                            <p class="font-['Figtree'] text-[#00FFC3] text-[14px] md:text-[16px]">TechCorp</p>
+                        </div>
+    
+                        <div class="absolute inset-0 flex flex-col items-center text-center transition-opacity duration-700 opacity-0 justify-evenly" data-carousel-slide>
+                            <p class="font-['Figtree'] text-[14px] md:text-[18px] text-white">
+                                Working with this company transformed our digital presence. Their innovative approach made all the difference in our product launch.
+                            </p>
+                            <h3 class="font-['Figtree'] text-[16px] md:text-[18px] font-bold text-white mt-2">Michael Chen</h3>
+                            <p class="font-['Figtree'] text-[#00FFC3] text-[14px] md:text-[16px]">DesignCo</p>
+                        </div>
+                    </div>
+    
+                    <!-- Next button -->
+                    <button class="py-2 px-2 bg-[#E8272D]  hover:bg-gray-300" data-carousel-next>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials on mobile-->
+    <section class="w-full h-[90vh] md:h-[80vh] rounded-t-2xl bg-cover bg-center bg-no-repeat flex items-center justify-center py-12 md:py-0 relative overflow-hidden lg:hidden" style="background-image: url(assets/testbg.png);" data-aos="fade-up" data-aos-duration="1000">
         <!-- Carousel Container -->
         <div class="w-[90%] md:w-[80%] h-full mx-auto overflow-hidden relative">
             <!-- Carousel Track -->
@@ -547,28 +610,20 @@
                     </div>
                 </div>
             </div>
-    
-            <!-- Navigation Dots -->
-            <div class="absolute z-10 flex space-x-2 transform -translate-x-1/2 bottom-8 left-1/2">
-                <button class="w-3 h-3 bg-white rounded-full testimonial-dot" data-index="0"></button>
-                <button class="w-3 h-3 bg-gray-400 rounded-full testimonial-dot" data-index="1"></button>
-                <button class="w-3 h-3 bg-gray-400 rounded-full testimonial-dot" data-index="2"></button>
-            </div>
         </div>
     
         <!-- Navigation Arrows -->
-        <button id="testimonialPrev" class="absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 p-3 bg-[#E8272D] rounded-full text-white hover:bg-[#c51f24] transition z-10">
+        <button id="testimonialPrev" class="absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 p-3 bg-[#E8272D]  text-white hover:bg-[#c51f24] transition z-10">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
         </button>
-        <button id="testimonialNext" class="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 p-3 bg-[#E8272D] rounded-full text-white hover:bg-[#c51f24] transition z-10">
+        <button id="testimonialNext" class="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 p-3 bg-[#E8272D]  text-white hover:bg-[#c51f24] transition z-10">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
         </button>
     </section>
-    <!-- Testimonials -->
 
     <section class="w-full h-[20vh] hidden md:block mb-5">
         <div class="flex justify-end w-full h-full">
@@ -840,6 +895,44 @@
         </div>
     </div>
 </section>
+
+<!-- Testimonial Carousel Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('[data-carousel-slide]');
+        const prevButton = document.querySelector('[data-carousel-prev]');
+        const nextButton = document.querySelector('[data-carousel-next]');
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        function showSlide(index) {
+            if (index >= slides.length) index = 0;
+            if (index < 0) index = slides.length - 1;
+
+            slides.forEach(slide => {
+                slide.classList.remove('opacity-100');
+                slide.classList.add('opacity-0');
+            });
+
+            slides[index].classList.remove('opacity-0');
+            slides[index].classList.add('opacity-100');
+            currentIndex = index;
+            resetAutoSlide();
+        }
+
+        function nextSlide() { showSlide(currentIndex + 1); }
+        function prevSlide() { showSlide(currentIndex - 1); }
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+
+        showSlide(0);
+    });
+</script>
 <script>
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
