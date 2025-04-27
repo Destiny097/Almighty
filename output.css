@@ -235,6 +235,12 @@
   .-top-\[100px\] {
     top: calc(100px * -1);
   }
+  .-top-\[200px\] {
+    top: calc(200px * -1);
+  }
+  .-top-\[300px\] {
+    top: calc(300px * -1);
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -288,6 +294,12 @@
   }
   .top-\[100\%\] {
     top: 100%;
+  }
+  .top-\[100px\] {
+    top: 100px;
+  }
+  .top-\[300px\] {
+    top: 300px;
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
