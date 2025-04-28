@@ -166,11 +166,7 @@
       </h2>
     
   </div>
-  <button class="absolute z-10 py-2 px-4 transition-all duration-300 -translate-y-1/2 bg-[#E8272D] -bottom-7 carousel-prev right-90 hover:bg-white/50">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-      </svg>
-  </button>
+
   
 </section>
 <!-- Homepage -->
@@ -257,80 +253,81 @@
 <!-- Services -->
 
 <!-- Carousel -->
+<!-- Carousel -->
 <section class="w-full py-8 bg-white md:py-16">
-  <div class="w-[90%] md:w-[80%] mx-auto flex flex-col md:flex-row gap-8">
-      <!-- Header Section -->
-      <div class="flex flex-col items-start md:items-center md:w-[20%]">
-          <h2 class="text-[28px] md:text-[48px] font-bold font-['Figtree'] text-[#28245F] mb-4">Our Clients.</h2>
-          <button class="px-4 py-2 md:px-6 md:py-3 border-2 border-[#E8272D] text-[#E8272D] hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base">
-              VIEW ALL CLIENTS
-          </button>
-      </div>
-      
-      <!-- Carousel Container -->
-      <div class="relative w-full md:w-[80%]">
-          <!-- Navigation Buttons -->
-          <button id="carousel-prev" class="absolute left-0 z-10 p-2 -ml-4 transition-all duration-300 -translate-y-1/2 shadow-md  top-1/2 bg-[#E8272D] hover:bg-white ">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#28245F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-              </svg>
-          </button>
-          
-          <div class="relative w-full overflow-hidden">
-              <!-- Carousel Track -->
-              <div id="clientCarousel" class="flex transition-transform duration-300 ease-in-out">
-                  <!-- Client Items -->
-                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-                          <img src="assets/assist.png" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
-                      </div>
-                  </div>
+    <div class="w-[90%] md:w-[80%] mx-auto flex flex-col md:flex-row gap-8">
+        <!-- Header Section -->
+        <div class="flex flex-col items-center justify-start md:justify-start md:items-start md:w-[20%] ">
+            <h2 class="text-[28px] md:text-[55px] font-bold font-['Figtree'] text-[#28245F] mb-4">Our Clients<span class="text-[#E8272D]">.</span></h2>
+            <button class="px-4 py-2 md:px-6 md:py-3 border-2 border-[#E8272D] text-[#E8272D] hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base">
+                VIEW ALL CLIENTS 
+            </button>
+        </div>
+        
+        <!-- Carousel Container -->
+        <div class="relative w-full md:w-[80%]">
+            <!-- Navigation Buttons -->
+            <button id="carousel-prev" class="absolute left-0 z-10 p-2 -ml-4 transition-all duration-300 -translate-y-1/2 shadow-md  top-1/2 bg-[#E8272D] hover:bg-white ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#28245F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            
+            <div class="relative w-full overflow-hidden">
+                <!-- Carousel Track -->
+                <div id="clientCarousel" class="flex transition-transform duration-300 ease-in-out">
+                    <!-- Client Items -->
+                    <div class="min-w-full sm:min-w-[50%] lg:min-w-[30%] p-2 md:p-4">
+                        <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                            <img src="assets/assist.png" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
+                        </div>
+                    </div>
 
-                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-                          <img src="assets/assist.png" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
-                      </div>
-                  </div>
-                  
-                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-                          <img src="assets/furniture.png" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
-                      </div>
-                  </div>
-                  
-                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-                          <img src="assets/uni_furniture.png" alt="Unique Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
-                      </div>
-                  </div>
-                  
-                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-                          <img src="assets/home.png" alt="Home" class="max-h-[80px] md:max-h-[120px] w-auto">
-                      </div>
-                  </div>
-                  
-                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-                          <img src="assets/assist.png" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
-                      </div>
-                  </div>
-                  
-                  <div class="min-w-full sm:min-w-[50%] lg:min-w-[25%] p-2 md:p-4">
-                      <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
-                          <img src="assets/furniture.png" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
-                      </div>
-                  </div>
-              </div>
-          </div>
-          
-          <button id="carousel-next" class="absolute right-0 z-10 p-2 -mr-4 transition-all duration-300 -translate-y-1/2 shadow-md  top-1/2 bg-[#E8272D] hover:bg-white">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#28245F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-          </button>
-      </div>
-  </div>
+                    <div class="min-w-full sm:min-w-[50%] lg:min-w-[30%] p-2 md:p-4">
+                        <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                            <img src="assets/assist.png" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
+                        </div>
+                    </div>
+                    
+                    <div class="min-w-full sm:min-w-[50%] lg:min-w-[30%] p-2 md:p-4">
+                        <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                            <img src="assets/furniture.png" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                        </div>
+                    </div>
+                    
+                    <div class="min-w-full sm:min-w-[50%] lg:min-w-[30%] p-2 md:p-4">
+                        <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                            <img src="assets/uni_furniture.png" alt="Unique Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                        </div>
+                    </div>
+                    
+                    <div class="min-w-full sm:min-w-[50%] lg:min-w-[30%] p-2 md:p-4">
+                        <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                            <img src="assets/home.png" alt="Home" class="max-h-[80px] md:max-h-[120px] w-auto">
+                        </div>
+                    </div>
+                    
+                    <div class="min-w-full sm:min-w-[50%] lg:min-w-[30%] p-2 md:p-4">
+                        <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                            <img src="assets/assist.png" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
+                        </div>
+                    </div>
+                    
+                    <div class="min-w-full sm:min-w-[50%] lg:min-w-[30%] p-2 md:p-4">
+                        <div class="flex items-center justify-center h-full p-4 transition bg-white border border-gray-200 rounded-lg md:p-8 hover:shadow-lg">
+                            <img src="assets/furniture.png" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="carousel-next" class="absolute right-0 z-10 p-2 -mr-4 transition-all duration-300 -translate-y-1/2 shadow-md  top-1/2 bg-[#E8272D] hover:bg-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#28245F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </div>
 </section>
      
         <!-- Testimonial Section - Hidden on Small Screens -->
@@ -482,124 +479,124 @@
         </div>
     </div>
 </section>
-<!-- Blogs -->
-<section class="relative z-50 w-full py-5 bg-transparent " data-aos="fade-down" data-aos-duration="1000" >
-  <h1 class="absolute top-10 left-[25%] -translate-x-1/2 -translate-y-1/2 text-[60px] lg:text-[130px] font-extrabold tracking-wide uppercase text-transparent z-1S  electricity-outline hidden sm:block text-center" 
-      data-aos="fade-left" data-aos-duration="3000">
-      BLOGS
-  </h1>
-  <div class="w-[90%] md:w-[80%] mx-auto z-50">
-    <!-- Header Section -->
-    <div class="z-50 flex flex-col items-start justify-between gap-6 mb-12 md:flex-row">
-      <div>
-        <p class="text-[#0B7C40] font-['Enriqueta'] text-[18px] mb-1">OUR BLOGS</p>
-        <h2 class="text-[32px] md:text-[48px] font-bold font-['Figtree'] text-[#28245F] mb-6">
-          Our Latest Blog Posts.
-        </h2>
+<!-- BLOGS -->
+<section class="relative md:-top-[50px] z-50 w-full py-5 bg-transparent " data-aos="fade-down" data-aos-duration="1000" >
+    <h1 class="absolute top-10 left-[25%] -translate-x-1/2 -translate-y-1/2 text-[60px] lg:text-[130px] font-extrabold tracking-wide uppercase text-transparent z-1S  electricity-outline hidden sm:block text-center" 
+        data-aos="fade-left" data-aos-duration="3000">
+        BLOGS
+    </h1>
+    <div class="w-[90%] md:w-[80%] mx-auto z-50">
+      <!-- Header Section -->
+      <div class="z-50 flex flex-col items-start justify-between gap-6 mb-12 md:flex-row">
+        <div>
+          <p class="text-[#0B7C40] font-['Enriqueta'] text-[18px] mb-1">OUR BLOGS</p>
+          <h2 class="text-[32px] md:text-[48px] font-bold font-['Figtree'] text-[#28245F] mb-6">
+            Our Latest Blog Posts.
+          </h2>
+        </div>
+        <div class="flex items-center justify-center">
+          <p class="font-['Figtree'] text-[16px] md:text-[18px] text-[#646464] max-w-2xl md:mx-0 mx-auto">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
+          </p>
+        </div>
       </div>
-      <div class="flex items-center justify-center">
-        <p class="font-['Figtree'] text-[16px] md:text-[18px] text-[#646464] max-w-2xl md:mx-0 mx-auto">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
-        </p>
+  
+      <!-- Blog Posts Grid -->
+    <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Blog Post 1 -->
+        <div class="flex flex-col items-center overflow-hidden transition bg-white border border-gray-200 rounded-lg hover:shadow-lg group">
+            <div class="relative w-full overflow-hidden">
+              <img
+                src="assets/maintenance2.png"
+                alt="Blog post image"
+                class="object-cover w-full h-48 transition duration-300 ease-in-out group-hover:brightness-50"
+              />
+              <div class="absolute inset-0 bg-[#28245F] opacity-0 group-hover:opacity-60 transition duration-300 ease-in-out"></div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-[#646464] text-sm mb-4">
+                <span class="font-bold">ADMIN</span>
+                <span class="mx-2">—</span>
+                <span>17 MARCH 2022</span>
+              </div>
+              <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
+                How we can fix any problem in household things.
+              </h3>
+              <a href="Blog_details.html">
+                <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
+                  READ MORE
+                </button>
+              </a>
+            </div>
+          </div>
+  
+        <!-- Blog Post 2 -->
+        <div class="flex flex-col items-center overflow-hidden transition bg-white border border-gray-200 rounded-lg hover:shadow-lg group">
+            <div class="relative w-full overflow-hidden">
+              <img
+                src="assets/maintenance2.png"
+                alt="Blog post image"
+                class="object-cover w-full h-48 transition duration-300 ease-in-out group-hover:brightness-50"
+              />
+              <div class="absolute inset-0 bg-[#28245F] opacity-0 group-hover:opacity-60 transition duration-300 ease-in-out"></div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-[#646464] text-sm mb-4">
+                <span class="font-bold">ADMIN</span>
+                <span class="mx-2">—</span>
+                <span>17 MARCH 2022</span>
+              </div>
+              <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
+                How we can fix any problem in household things.
+              </h3>
+              <a href="Blog_details.html">
+                <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
+                  READ MORE
+                </button>
+              </a>
+            </div>
+          </div>
+  
+        <!-- Blog Post 3 -->
+        <div class="flex flex-col items-center overflow-hidden transition bg-white border border-gray-200 rounded-lg hover:shadow-lg group">
+            <div class="relative w-full overflow-hidden">
+              <img
+                src="assets/maintenance2.png"
+                alt="Blog post image"
+                class="object-cover w-full h-48 transition duration-300 ease-in-out group-hover:brightness-50"
+              />
+              <div class="absolute inset-0 bg-[#28245F] opacity-0 group-hover:opacity-60 transition duration-300 ease-in-out">
+               
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-[#646464] text-sm mb-4">
+                <span class="font-bold">ADMIN</span>
+                <span class="mx-2">—</span>
+                <span>17 MARCH 2022</span>
+              </div>
+              <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
+                How we can fix any problem in household things.
+              </h3>
+              <a href="Blog_details.html">
+                <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
+                  READ MORE
+                </button>
+              </a>
+            </div>
+          </div>
+    </div>
+  
+      <!-- View All Button -->
+      <div class="text-center">
+        
+        <button class="px-4 py-2 md:px-6 md:py-3 border-2 border-[#E8272D] text-[#28245F] hover:bg-[#E8272D] hover:text-white transition-all font-['Figtree'] text-sm md:text-base">
+            <a href="Blogs.html" >VIEW ALL BLOGS</a>
+        </button>
+          
       </div>
     </div>
-
-    <!-- Blog Posts Grid -->
-  <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Blog Post 1 -->
-      <div class="flex flex-col items-center overflow-hidden transition bg-white border border-gray-200 rounded-lg hover:shadow-lg group">
-          <div class="relative w-full overflow-hidden">
-            <img
-              src="assets/maintenance2.png"
-              alt="Blog post image"
-              class="object-cover w-full h-48 transition duration-300 ease-in-out group-hover:brightness-50"
-            />
-            <div class="absolute inset-0 bg-[#28245F] opacity-0 group-hover:opacity-60 transition duration-300 ease-in-out"></div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center text-[#646464] text-sm mb-4">
-              <span class="font-bold">ADMIN</span>
-              <span class="mx-2">—</span>
-              <span>17 MARCH 2022</span>
-            </div>
-            <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
-              How we can fix any problem in household things.
-            </h3>
-            <a href="Blog_details.html">
-                <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
-                  READ MORE
-                </button>
-              </a>
-          </div>
-        </div>
-
-      <!-- Blog Post 2 -->
-      <div class="flex flex-col items-center overflow-hidden transition bg-white border border-gray-200 rounded-lg hover:shadow-lg group">
-          <div class="relative w-full overflow-hidden">
-            <img
-              src="assets/maintenance2.png"
-              alt="Blog post image"
-              class="object-cover w-full h-48 transition duration-300 ease-in-out group-hover:brightness-50"
-            />
-            <div class="absolute inset-0 bg-[#28245F] opacity-0 group-hover:opacity-60 transition duration-300 ease-in-out"></div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center text-[#646464] text-sm mb-4">
-              <span class="font-bold">ADMIN</span>
-              <span class="mx-2">—</span>
-              <span>17 MARCH 2022</span>
-            </div>
-            <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
-              How we can fix any problem in household things.
-            </h3>
-            <a href="Blog_details.html">
-                <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
-                  READ MORE
-                </button>
-              </a>
-          </div>
-        </div>
-
-      <!-- Blog Post 3 -->
-      <div class="flex flex-col items-center overflow-hidden transition bg-white border border-gray-200 rounded-lg hover:shadow-lg group">
-          <div class="relative w-full overflow-hidden">
-            <img
-              src="assets/maintenance2.png"
-              alt="Blog post image"
-              class="object-cover w-full h-48 transition duration-300 ease-in-out group-hover:brightness-50"
-            />
-            <div class="absolute inset-0 bg-[#28245F] opacity-0 group-hover:opacity-60 transition duration-300 ease-in-out">
-             
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center text-[#646464] text-sm mb-4">
-              <span class="font-bold">ADMIN</span>
-              <span class="mx-2">—</span>
-              <span>17 MARCH 2022</span>
-            </div>
-            <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
-              How we can fix any problem in household things.
-            </h3>
-            <a href="Blog_details.html">
-                <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
-                  READ MORE
-                </button>
-              </a>
-          </div>
-        </div>
-  </div>
-
-    <!-- View All Button -->
-    <div class="text-center">
-        <a href="Blogs.html">
-            <button class="px-4 py-2 md:px-6 md:py-3 border-2 border-[#E8272D] text-[#E8272D] hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base">
-                <a href="Blogs.html">VIEW ALL BLOGS</a>
-            </button>
-          </a>
-    </div>
-  </div>
-</section>
+  </section>
 <!-- BLOGS -->
 <!-- Footer -->
 <!-- Footer -->
