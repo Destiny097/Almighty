@@ -237,6 +237,12 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
+  .-top-\[10px\] {
+    top: calc(10px * -1);
+  }
+  .-top-\[25px\] {
+    top: calc(25px * -1);
+  }
   .-top-\[100px\] {
     top: calc(100px * -1);
   }
@@ -510,8 +516,14 @@
   .h-\[7vh\] {
     height: 7vh;
   }
+  .h-\[10\%\] {
+    height: 10%;
+  }
   .h-\[10vh\] {
     height: 10vh;
+  }
+  .h-\[20\%\] {
+    height: 20%;
   }
   .h-\[20vh\] {
     height: 20vh;
@@ -525,6 +537,9 @@
   .h-\[50vh\] {
     height: 50vh;
   }
+  .h-\[70px\] {
+    height: 70px;
+  }
   .h-\[70vh\] {
     height: 70vh;
   }
@@ -533,6 +548,12 @@
   }
   .h-\[80px\] {
     height: 80px;
+  }
+  .h-\[83\] {
+    height: 83;
+  }
+  .h-\[83px\] {
+    height: 83px;
   }
   .h-\[90vh\] {
     height: 90vh;
@@ -1257,6 +1278,27 @@
         --tw-scale-y: 105%;
         --tw-scale-z: 105%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .group-hover\:bg-white {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-white);
+      }
+    }
+  }
+  .group-hover\:text-\[\#28245F\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: #28245F;
+      }
+    }
+  }
+  .group-hover\:text-white {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-white);
       }
     }
   }
