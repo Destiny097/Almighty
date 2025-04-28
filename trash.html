@@ -181,106 +181,82 @@
       data-aos="fade-left" data-aos-duration="3000">
       CONTACT
   </h1>
-    <div class="flex items-center justify-center w-full h-full px-4 lg:px-0">
-        <div class="w-full lg:w-[80%] h-full flex flex-col items-center justify-center">
-            <!-- Header Section -->
-            <div class="w-full lg:w-[80%] h-fit lg:h-[30%] flex flex-col items-center justify-evenly mb-8 lg:mb-0">
-                <p class="font-['Enriqueta'] text-[16px] lg:text-[18px] text-[#0B7C40] text-center">Contact Us</p>
-                <h2 class="font-['Figtree'] text-[32px] lg:text-[55px] text-[#28245F] font-extrabold text-center">Get in Touch with Us</h2>
-                <p class="font-['Figtree'] text-[14px] lg:text-[18px] text-[#646464] font-normal text-center px-4 lg:px-0">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                </p>
-            </div>
-
-            <!-- Contact-form Section -->
-            <div class="w-full lg:w-[90%] h-full lg:h-[70%] flex flex-col lg:flex-row items-center justify-center lg:justify-evenly gap-8 lg:gap-0">
-                <!-- Map Section -->
-                <div class="w-full lg:w-[50%] h-[80%] flex justify-center order-2 lg:order-1 mt-8 lg:mt-0">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7774.032772477154!2d77.64299366262307!3d13.034628400347215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17afb2cfc539%3A0x22393ad17d784b40!2sSpydernet%20Technologies!5e0!3m2!1sen!2sin!4v1745859977426!5m2!1sen!2sin" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="min-h-[400px]"
-                        ></iframe>
-                </div>
-                
-                <!-- Form Section -->
-                <div class="w-full lg:w-[50%] h-fit lg:h-[60%] bg-white rounded-lg flex flex-col justify-center order-1 lg:order-2 p-6 lg:p-8 ">
-                    <h2 class="font-['Figtree'] text-[28px] lg:text-[40px] xl:text-[55px] text-[#28245F] font-extrabold text-left mb-4 lg:mb-6">Feel free to write</h2>
-                    
-                    <form class="space-y-4">
-                        <!-- Name Field -->
-                        <div class="w-full border-1 border-[#E8272D] rounded-md">
-                            <input 
-                                type="text" 
-                                id="name" 
-                                required
-                                placeholder="Name*"
-                                class="w-full px-4 py-3 lg:py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E8272D] placeholder:font-['Figtree'] placeholder:text-[18px] placeholder:text-[#28245F] "
-                            >
-                        </div>
-                        
-                        <!-- Email Field -->
-                        <div class="w-full border-1 border-[#E8272D] rounded-md">
-                            <input 
-                                type="email" 
-                                id="email" 
-                                required
-                                placeholder="Email*"
-                                class="w-full px-4 py-3 lg:py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E8272D] placeholder:font-['Figtree'] placeholder:text-[18px] placeholder:text-[#28245F] "
-                            >
-                        </div>
-                        
-                        <!-- Phone Field -->
-                        <div class="w-full border-1 border-[#E8272D] rounded-md">
-                            <input 
-                                type="tel" 
-                                id="phone" 
-                                required
-                                placeholder="Phone*"
-                                class="w-full px-4 py-3 lg:py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E8272D] placeholder:font-['Figtree'] placeholder:text-[18px] placeholder:text-[#28245F] "
-                            >
-                        </div>
-                        
-                        <!-- Subject Field -->
-                        <div class="w-full border-1 border-[#E8272D] rounded-md">
-                            <input 
-                                type="text" 
-                                id="subject" 
-                                required
-                                placeholder="Subject*"
-                                class="w-full px-4 py-3 lg:py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E8272D] placeholder:font-['Figtree'] placeholder:text-[18px] placeholder:text-[#28245F] "
-                            >
-                        </div>
-                        
-                        <!-- Message Field -->
-                        <div class="w-full border-1 border-[#E8272D] rounded-md">
-                            <textarea 
-                                id="message" 
-                                rows="4"
-                                required
-                                placeholder="Message*"
-                               
-                                class="w-full h-[120px] lg:h-[150px] xl:h-[200px] px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E8272D] placeholder:font-['Figtree'] placeholder:text-[18px] placeholder:text-[#28245F] "
-                            ></textarea>
-                        </div>
-                        
-                        <!-- Submit Button -->
-                        <button 
-                            type="submit"
-                            class="w-full px-4 py-3 lg:py-3 text-white bg-[#E8272D] rounded-md font-['Figtree'] text-[14px] lg:text-[14px] hover:bg-[#C51F25] transition-colors duration-200"
-                        >
-                            SEND
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
+  <div class="container px-4 py-12 mx-auto">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <!-- Contact Form -->
+      <div class="p-6 bg-white rounded-lg shadow-md">
+        <h2 class="mb-6 text-2xl font-bold text-gray-800">Contact Us</h2>
+        <form>
+          <!-- Form Field Component (Reusable) -->
+          <div class="relative mb-4">
+            <input 
+              type="text" 
+              id="name" 
+              placeholder=" "
+              class="w-full p-3 border border-gray-300 rounded-lg peer focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+            <label 
+              for="name" 
+              class="absolute transition-all duration-200 -translate-y-1/2 pointer-events-none left-3 top-1/2 peer-focus:text-xs peer-focus:-top-2 peer-focus:bg-white peer-focus:px-1 peer-focus:text-blue-500 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base"
+            >
+              Name<span class="text-red-500">*</span>
+            </label>
+          </div>
+  
+          <!-- Repeat for other fields -->
+          <div class="relative mb-4">
+            <input 
+              type="email" 
+              id="email" 
+              placeholder=" "
+              class="w-full p-3 border border-gray-300 rounded-lg peer"
+            >
+            <label 
+              for="email" 
+              class="absolute transition-all duration-200 -translate-y-1/2 pointer-events-none left-3 top-1/2 peer-focus:text-xs peer-focus:-top-2 peer-focus:bg-white peer-focus:px-1 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base"
+            >
+              Email<span class="text-red-500">*</span>
+            </label>
+          </div>
+  
+          <!-- Phone (optional) -->
+          <div class="relative mb-4">
+            <input 
+              type="tel" 
+              id="phone" 
+              placeholder=" "
+              class="w-full p-3 border border-gray-300 rounded-lg peer"
+            >
+            <label 
+              for="phone" 
+              class="absolute transition-all duration-200 -translate-y-1/2 pointer-events-none left-3 top-1/2 peer-focus:text-xs peer-focus:-top-2 peer-focus:bg-white peer-focus:px-1 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base"
+            >
+              Phone
+            </label>
+          </div>
+  
+          <!-- Submit Button -->
+          <button type="submit" class="w-full px-4 py-3 text-white transition bg-blue-600 rounded-lg hover:bg-blue-700">
+            Send Message
+          </button>
+        </form>
+      </div>
+  
+      <!-- Google Maps -->
+      <div class="h-full min-h-[400px] rounded-lg overflow-hidden shadow-md">
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7774.032772477154!2d77.64299366262307!3d13.034628400347215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17afb2cfc539%3A0x22393ad17d784b40!2sSpydernet%20Technologies!5e0!3m2!1sen!2sin!4v1745859977426!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="min-h-[400px]"
+        ></iframe>
+      </div>
     </div>
+  </div>
 </section>
 <!-- Contact Us -->
 
