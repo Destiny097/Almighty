@@ -48,6 +48,8 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -589,6 +591,12 @@
   }
   .h-\[30vh\] {
     height: 30vh;
+  }
+  .h-\[35\%\] {
+    height: 35%;
+  }
+  .h-\[40\%\] {
+    height: 40%;
   }
   .h-\[40vh\] {
     height: 40vh;
@@ -1225,6 +1233,14 @@
   .font-extrabold {
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
+  }
+  .font-extralight {
+    --tw-font-weight: var(--font-weight-extralight);
+    font-weight: var(--font-weight-extralight);
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -2452,6 +2468,11 @@
       height: calc(var(--spacing) * 14);
     }
   }
+  .lg\:h-\[\#5\%\] {
+    @media (width >= 64rem) {
+      height: #5%;
+    }
+  }
   .lg\:h-\[10vh\] {
     @media (width >= 64rem) {
       height: 10vh;
@@ -2460,6 +2481,11 @@
   .lg\:h-\[30\%\] {
     @media (width >= 64rem) {
       height: 30%;
+    }
+  }
+  .lg\:h-\[35\%\] {
+    @media (width >= 64rem) {
+      height: 35%;
     }
   }
   .lg\:h-\[35vh\] {
