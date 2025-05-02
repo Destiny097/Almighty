@@ -619,6 +619,9 @@
   .h-\[55vh\] {
     height: 55vh;
   }
+  .h-\[70\%\] {
+    height: 70%;
+  }
   .h-\[70px\] {
     height: 70px;
   }
@@ -2553,6 +2556,11 @@
       height: 150px;
     }
   }
+  .lg\:h-\[150vh\] {
+    @media (width >= 64rem) {
+      height: 150vh;
+    }
+  }
   .lg\:h-\[220px\] {
     @media (width >= 64rem) {
       height: 220px;
@@ -2593,6 +2601,11 @@
       width: 30%;
     }
   }
+  .lg\:w-\[35\%\] {
+    @media (width >= 64rem) {
+      width: 35%;
+    }
+  }
   .lg\:w-\[40\%\] {
     @media (width >= 64rem) {
       width: 40%;
@@ -2606,6 +2619,11 @@
   .lg\:w-\[50\%\] {
     @media (width >= 64rem) {
       width: 50%;
+    }
+  }
+  .lg\:w-\[70\%\] {
+    @media (width >= 64rem) {
+      width: 70%;
     }
   }
   .lg\:w-\[75\%\] {
