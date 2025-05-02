@@ -299,11 +299,29 @@
   .-bottom-0 {
     bottom: calc(var(--spacing) * -0);
   }
+  .-bottom-2 {
+    bottom: calc(var(--spacing) * -2);
+  }
+  .-bottom-2\/10 {
+    bottom: calc(calc(2/10 * 100%) * -1);
+  }
+  .-bottom-2\/12 {
+    bottom: calc(calc(2/12 * 100%) * -1);
+  }
+  .-bottom-2\/14 {
+    bottom: calc(calc(2/14 * 100%) * -1);
+  }
   .-bottom-\[20px\] {
     bottom: calc(20px * -1);
   }
   .-bottom-\[100px\] {
     bottom: calc(100px * -1);
+  }
+  .-bottom-\[120px\] {
+    bottom: calc(120px * -1);
+  }
+  .-bottom-\[125px\] {
+    bottom: calc(125px * -1);
   }
   .-bottom-\[150px\] {
     bottom: calc(150px * -1);
