@@ -88,17 +88,20 @@
 
 <body class="w-full bg-white">
     <!-- navbar -->
-    <div class="w-full h-[80px] md:h-[150px] flex items-center justify-center fixed z-60 bg-white md:bg-transparent">
-        <nav class="w-[90%] md:w-[80%] h-fit mx-auto">
+    <div class="w-full h-[80px] md:h-[125px] flex items-center justify-center fixed  z-60 bg-white md:bg-transparent">
+        <nav class="w-[90%] md:w-[80%] flex flex-col items-end justify-end">
             <!-- Contact info - hidden on mobile -->
-            <div class="items-start justify-end hidden gap-4 bg-transparent md:flex h-fit">
-                <div class="text-[14px] md:text-[18px] font-['Figtree'] text-white">
-                    📞 +91 98765 43210 | +91 98765 43210
+            <div class="items-center justify-end hidden gap-8 py-2 bg-transparent md:flex">
+                <div class="flex items-center  text-[14px] md:text-[18px] font-['Figtree'] text-white gap-2">
+                    <img src="assets/ph_nav.svg" alt="">
+                    +91 98765 43210 | +91 98765 43210
                 </div>
-                <div class="text-[14px] md:text-[18px] font-['Figtree'] text-white">
-                    📧 info@almightyengineers.in
+                <div class="flex items-center  text-[14px] md:text-[18px] font-['Figtree'] text-white gap-2">
+                    <img src="assets/msg.svg" alt="">
+                    info@almightyengineers.in
                 </div>
             </div>
+            
     
             <div class="flex items-center justify-between w-full bg-white">
                 <div>
@@ -159,34 +162,27 @@
         </div>
     
         <!-- Content -->
-        <h1 class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[60px] lg:text-[180px] font-extrabold uppercase text-transparent z-10 tracking-widest electricity-outline hidden sm:block" 
-            data-aos="fade-left" data-aos-duration="3000">
-            ELECTRICITY
-        </h1>
+        
     
         <div class="relative px-4 z-15 w-full max-w-[90%] mx-auto" data-aos="fade-left" data-aos-duration="9000">
-            <p class="uppercase tracking-widest text-[16px] md:text-[25px] mb-4 font-['Enriqueta']">We help you electrical services</p>
-            <h2 class="text-3xl md:text-6xl font-bold leading-tight font-['Figtree']">
+            <h1 class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[60px] lg:text-[180px] font-extrabold uppercase text-transparent z-10 tracking-widest electricity-outline hidden sm:block" 
+            data-aos="fade-left" data-aos-duration="3000">
+            ELECTRICITY
+            </h1>
+            <p class="uppercase tracking-widest text-[16px] md:text-[25px]  font-['Enriqueta'] font-normal">We help you electrical services</p>
+            <h2 class="text-3xl md:text-6xl lg:text-[100px] font-extrabold leading-tight font-['Figtree']">
                 WE BUILD <span class="font-['Gwendolyn'] text-teal-400 font-bold">Quality</span><br class="hidden md:block" />
                 ELECTRICIAN<span class="text-red-600">.</span>
             </h2>
-            <button class="mt-8 px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition font-['Figtree'] text-[16px] md:text-base rounded">
+            <button class="mt-4 px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition font-['Figtree'] text-[16px] md:text-base rounded">
                 DISCOVER MORE
             </button>
         </div>
-        <button class="group absolute z-10 py-2 px-6 transition-all duration-300 -translate-y-1/2 bg-[#E8272D] bottom-20 carousel-prev lg:right-95 hover:bg-white hover:text-[#E8272D] right-30">
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                 class="w-6 h-6 md:h-8 md:w-8 text-white group-hover:text-[#E8272D] transition-all duration-300" 
-                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
+        <button class="group absolute z-10 py-3 px-7 transition-all duration-300 -translate-y-1/2 bg-[#E8272D] bottom-20 carousel-prev lg:right-94 right-35 cursor-pointer">
+            <img src="assets/arrowL.svg" alt="">
           </button>
-          <button class="group absolute z-10 py-2 px-6 transition-all duration-300 -translate-y-1/2 bottom-20 carousel-next lg:right-70 bg-[#E8272D] hover:bg-white hover:text-[#E8272D] right-5">
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                 class="w-6 h-6 md:h-8 md:w-8 text-white group-hover:text-[#E8272D] transition-all duration-300" 
-                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
+          <button class="absolute z-10 py-3 transition-all duration-300 -translate-y-1/2 bg-white cursor-pointer group px-7 bottom-20 carousel-next lg:right-70 right-10">
+            <img src="assets/arrowR.svg" alt="">
           </button>
     </section>
 
