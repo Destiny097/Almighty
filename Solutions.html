@@ -359,8 +359,8 @@
     
 </section>
      
-    <!-- Testimonial Section - Hidden on Small Screens -->
-<section class="relative flex-col hidden w-full h-screen lg:flex md:h-screen md:hidden ">
+   <!-- Testimonial Section - Hidden on Small Screens -->
+   <section class="relative flex-col hidden w-full h-screen lg:flex md:h-screen md:hidden ">
     <!-- Background Image -->
     <div class="w-full h-[50vh] md:h-[70%] relative">
         <img src="assets/testbg.png" alt="Tools" class="object-cover w-full h-full">
@@ -373,14 +373,14 @@
 
     <!-- Testimonial Carousel -->
     <div class="w-[90%] md:w-[40%] absolute top-[50vh] md:top-[40%] right-[10%] p-6 md:p-8 rounded-lg -translate-y-1/2">
-        <div class="relative">
+        <div class="relative md:mb-10">
             <h1 class="font-['Figtree'] font-bold text-[28px] md:text-[55px] text-white text-center mb-4">Testimonials</h1>
             <div class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                 <img src="assets/tes.png" alt="">
             </div>
         </div>
         
-        <div class="relative flex flex-col h-full">
+        <div class="relative flex flex-col h-full md:mt-20">
             <!-- Slides container -->
             <div class="flex items-center justify-between">
                 <!-- Prev button -->
@@ -431,7 +431,6 @@
         <img src="assets/wired.png" alt="Live wires" class="w-full">
     </div>
 </section>
-
 <!-- Testimonials on mobile-->
 <section class="w-full h-[90vh] md:h-[80vh] rounded-t-2xl bg-cover bg-center bg-no-repeat flex items-center justify-center py-12 md:py-0 relative overflow-hidden lg:hidden" style="background-image: url(assets/testbg.png);" data-aos="fade-up" data-aos-duration="1000">
     <!-- Carousel Container -->
@@ -510,134 +509,133 @@
     </button>
 </section>
 
-<!-- BLOGS -->
 <section class="z-50 flex items-center justify-center w-full py-20 bg-transparent" data-aos="fade-down" data-aos-duration="1000">
         
-        <div class="w-[90%] md:w-[80%] mx-auto z-50 relative flex flex-col items-center">
-            <h1 class="absolute top-0 left-0  -translate-y-1/2 text-[60px] lg:text-[130px] font-extrabold uppercase text-transparent z-10  electricity-outline hidden sm:block text-center" 
-            data-aos="fade-left" data-aos-duration="3000">
-            BLOGS
-            </h1>
-          <!-- Header Section -->
-          <div class="z-50 flex flex-col items-start justify-between gap-6 mb-12 md:flex-row">
-            <div>
-              <p class="text-[#0B7C40] font-['Enriqueta'] text-[18px] mb-1">OUR BLOGS</p>
-              <h2 class="text-[32px] md:text-[48px] font-bold font-['Figtree'] text-[#28245F] mb-6">
-                Our Latest Blog Posts.
-              </h2>
+    <div class="w-[90%] md:w-[80%] mx-auto z-50 relative flex flex-col items-center">
+        <h1 class="absolute top-0 left-0  -translate-y-1/2 text-[60px] lg:text-[130px] font-extrabold uppercase text-transparent z-10  electricity-outline hidden sm:block text-center" 
+        data-aos="fade-left" data-aos-duration="3000">
+        BLOGS
+        </h1>
+      <!-- Header Section -->
+      <div class="z-50 flex flex-col items-start justify-between w-full gap-6 mb-12 md:flex-row">
+        <div class="md:w-[50%]">
+          <p class="text-[#0B7C40] font-['Enriqueta'] text-[18px] mb-1">OUR BLOGS</p>
+          <h2 class="text-[32px] md:text-[48px] font-bold font-['Figtree'] text-[#28245F] mb-6">
+            Our Latest Blog Posts<span class="text-red-600">.</span>
+          </h2>
+        </div> 
+        <div class="flex items-center justify-center md:w-[45%]">
+          <p class="font-['Figtree'] text-[16px] md:text-[18px] text-[#646464] max-w-2xl md:mx-0 mx-auto">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Blog Posts Grid -->
+    <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Blog Post 1 -->
+        <div class="flex flex-col items-center overflow-hidden transition group">
+            <!-- Image Section -->
+            <div class="relative w-full overflow-hidden">
+              <img
+                src="assets/maintenance2.png"
+                alt="Blog post image"
+                class="object-cover w-full h-48 transition ease-in-out group-hover:brightness-75 group-hover:bg-[#28245F99]"
+              />
+              <div class="absolute inset-0 bg-[#28245F99] opacity-0 group-hover:opacity-40 transition duration-300 ease-in-out"></div>
             </div>
-            <div class="flex items-center justify-center">
-              <p class="font-['Figtree'] text-[16px] md:text-[18px] text-[#646464] max-w-2xl md:mx-0 mx-auto">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
-              </p>
+          
+            <!-- Text Section -->
+            <div class="p-6 transition-colors duration-300 ease-in-out w-full group-hover:bg-[#F4F4F4]">
+              <div class="flex items-start justify-start text-[#646464] text-sm mb-4">
+                <span class="mx-2 text-[#E8272D]">|</span>
+                <span class="font-['Figtree'] text-[16px] text-[#E8272D]">ADMIN</span>
+                <span class="mx-2 text-[#E8272D]">—</span>
+                <span>17 MARCH 2022</span>
+              </div>
+              <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
+                How we can fix any problem in household things.
+              </h3>
+              <a href="Blog_details.html">
+                <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
+                  READ MORE
+                </button>
+              </a>
             </div>
           </div>
-      
-          <!-- Blog Posts Grid -->
-        <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-3">
-            <!-- Blog Post 1 -->
-            <div class="flex flex-col items-center overflow-hidden transition group">
-                <!-- Image Section -->
-                <div class="relative w-full overflow-hidden">
-                  <img
-                    src="assets/maintenance2.png"
-                    alt="Blog post image"
-                    class="object-cover w-full h-48 transition ease-in-out group-hover:brightness-75 group-hover:bg-[#28245F99]"
-                  />
-                  <div class="absolute inset-0 bg-[#28245F99] opacity-0 group-hover:opacity-40 transition duration-300 ease-in-out"></div>
-                </div>
-              
-                <!-- Text Section -->
-                <div class="p-6 transition-colors duration-300 ease-in-out w-full group-hover:bg-[#F4F4F4]">
-                  <div class="flex items-start justify-start text-[#646464] text-sm mb-4">
-                    <span class="mx-2 text-[#E8272D]">|</span>
-                    <span class="font-['Figtree'] text-[16px] text-[#E8272D]">ADMIN</span>
-                    <span class="mx-2 text-[#E8272D]">—</span>
-                    <span>17 MARCH 2022</span>
-                  </div>
-                  <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
-                    How we can fix any problem in household things.
-                  </h3>
-                  <a href="Blog_details.html">
-                    <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
-                      READ MORE
-                    </button>
-                  </a>
-                </div>
+          
+  
+        <!-- Blog Post 2 -->
+        <div class="flex flex-col items-center overflow-hidden transition group">
+            <!-- Image Section -->
+            <div class="relative w-full overflow-hidden">
+              <img
+                src="assets/maintenance2.png"
+                alt="Blog post image"
+                class="object-cover w-full h-48 transition ease-in-out group-hover:brightness-75 group-hover:bg-[#28245F99]"
+              />
+              <div class="absolute inset-0 bg-[#28245F99] opacity-0 group-hover:opacity-40 transition duration-300 ease-in-out"></div>
+            </div>
+          
+            <!-- Text Section -->
+            <div class="p-6 transition-colors duration-300 ease-in-out w-full group-hover:bg-[#F4F4F4]">
+              <div class="flex items-start justify-start text-[#646464] text-sm mb-4">
+                <span class="mx-2 text-[#E8272D]">|</span>
+                <span class="font-['Figtree'] text-[16px] text-[#E8272D]">ADMIN</span>
+                <span class="mx-2 text-[#E8272D]">—</span>
+                <span>17 MARCH 2022</span>
               </div>
-              
-      
-            <!-- Blog Post 2 -->
-            <div class="flex flex-col items-center overflow-hidden transition group">
-                <!-- Image Section -->
-                <div class="relative w-full overflow-hidden">
-                  <img
-                    src="assets/maintenance2.png"
-                    alt="Blog post image"
-                    class="object-cover w-full h-48 transition ease-in-out group-hover:brightness-75 group-hover:bg-[#28245F99]"
-                  />
-                  <div class="absolute inset-0 bg-[#28245F99] opacity-0 group-hover:opacity-40 transition duration-300 ease-in-out"></div>
-                </div>
-              
-                <!-- Text Section -->
-                <div class="p-6 transition-colors duration-300 ease-in-out w-full group-hover:bg-[#F4F4F4]">
-                  <div class="flex items-start justify-start text-[#646464] text-sm mb-4">
-                    <span class="mx-2 text-[#E8272D]">|</span>
-                    <span class="font-['Figtree'] text-[16px] text-[#E8272D]">ADMIN</span>
-                    <span class="mx-2 text-[#E8272D]">—</span>
-                    <span>17 MARCH 2022</span>
-                  </div>
-                  <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
-                    How we can fix any problem in household things.
-                  </h3>
-                  <a href="Blog_details.html">
-                    <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
-                      READ MORE
-                    </button>
-                  </a>
-                </div>
+              <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
+                How we can fix any problem in household things.
+              </h3>
+              <a href="Blog_details.html">
+                <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
+                  READ MORE
+                </button>
+              </a>
+            </div>
+          </div>
+  
+        <!-- Blog Post 3 -->
+        <div class="flex flex-col items-center overflow-hidden transition group">
+            <!-- Image Section -->
+            <div class="relative w-full overflow-hidden">
+              <img
+                src="assets/maintenance2.png"
+                alt="Blog post image"
+                class="object-cover w-full h-48 transition ease-in-out group-hover:brightness-75 group-hover:bg-[#28245F99]"
+              />
+              <div class="absolute inset-0 bg-[#28245F99] opacity-0 group-hover:opacity-40 transition duration-300 ease-in-out"></div>
+            </div>
+          
+            <!-- Text Section -->
+            <div class="p-6 transition-colors duration-300 ease-in-out w-full group-hover:bg-[#F4F4F4]">
+              <div class="flex items-start justify-start text-[#646464] text-sm mb-4">
+                <span class="mx-2 text-[#E8272D]">|</span>
+                <span class="font-['Figtree'] text-[16px] text-[#E8272D]">ADMIN</span>
+                <span class="mx-2 text-[#E8272D]">—</span>
+                <span>17 MARCH 2022</span>
               </div>
-      
-            <!-- Blog Post 3 -->
-            <div class="flex flex-col items-center overflow-hidden transition group">
-                <!-- Image Section -->
-                <div class="relative w-full overflow-hidden">
-                  <img
-                    src="assets/maintenance2.png"
-                    alt="Blog post image"
-                    class="object-cover w-full h-48 transition ease-in-out group-hover:brightness-75 group-hover:bg-[#28245F99]"
-                  />
-                  <div class="absolute inset-0 bg-[#28245F99] opacity-0 group-hover:opacity-40 transition duration-300 ease-in-out"></div>
-                </div>
-              
-                <!-- Text Section -->
-                <div class="p-6 transition-colors duration-300 ease-in-out w-full group-hover:bg-[#F4F4F4]">
-                  <div class="flex items-start justify-start text-[#646464] text-sm mb-4">
-                    <span class="mx-2 text-[#E8272D]">|</span>
-                    <span class="font-['Figtree'] text-[16px] text-[#E8272D]">ADMIN</span>
-                    <span class="mx-2 text-[#E8272D]">—</span>
-                    <span>17 MARCH 2022</span>
-                  </div>
-                  <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
-                    How we can fix any problem in household things.
-                  </h3>
-                  <a href="Blog_details.html">
-                    <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
-                      READ MORE
-                    </button>
-                  </a>
-                </div>
-              </div>
-        </div>
-      
-          <!-- View All Button -->
-          <a href="Blogs.html">
-            <button class=" px-8 py-3 lg:mb-10 border-2 border-[#E8272D] text-[#28245F]  hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base w-full md:w-auto rounded-l font-bold">
-                View All Blogs
-            </button>
-            </a>
-        </div>
-      </section>
+              <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
+                How we can fix any problem in household things.
+              </h3>
+              <a href="Blog_details.html">
+                <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
+                  READ MORE
+                </button>
+              </a>
+            </div>
+          </div>
+    </div>
+  
+      <!-- View All Button -->
+      <a href="Blogs.html">
+        <button class=" px-8 py-3 lg:mb-10 border-2 border-[#E8272D] text-[#28245F]  hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base w-full md:w-auto rounded-l font-bold">
+            View All Blogs
+        </button>
+        </a>
+    </div>
+  </section>
 <!-- BLOGS -->
 <!-- Footer -->
 <section class="relative w-full">
