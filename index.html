@@ -118,7 +118,7 @@
                     <a href="Clients.html" class="text-[14px] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Clients</a>
                     <a href="#" class="text-[14px] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Testimonials</a>
                     <a href="Blogs.html" class="text-[14px] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Blogs</a>
-                    <a href="Contact.html"><button class="w-[120px] md:w-[164px] py-3 md:py-6 bg-[#E8272D] text-[14px] md:text-[16px] font-['Figtree'] font-medium text-white uppercase">Get In Touch</button></a>
+                    <a href="Contact.html"><button class="w-[120px] md:w-[160px] py-3 md:py-6 bg-[#E8272D] text-[14px] md:text-[16px] font-['Figtree'] font-medium text-white uppercase">Get In Touch</button></a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
@@ -142,6 +142,12 @@
     <!-- navbar -->
 
     <section class="relative flex items-center justify-center w-full h-[110vh] text-center text-white overflow-hidden pt-[80px] md:pt-0">
+        <button class="group absolute z-10 py-3 px-7 transition-all duration-300 -translate-y-1/2 bg-[#E8272D] bottom-19 carousel-prev lg:right-94 right-35 cursor-pointer">
+            <img src="assets/arrowL.svg" alt="">
+        </button>
+        <button class="absolute z-10 py-3 transition-all duration-300 -translate-y-1/2 bg-white cursor-pointer group px-7 bottom-19 carousel-next lg:right-70 right-10">
+            <img src="assets/arrowR.svg" alt="">
+        </button>
         <!-- Carousel -->
         <div class="absolute inset-0 z-0 overflow-hidden carousel-container">
             <div class="relative w-full h-full">
@@ -179,16 +185,11 @@
             </button>
         </div>
         <!-- Left Button - Hidden on small screens, visible on lg and above -->
-        <button class="group absolute z-10 py-3 px-7 transition-all duration-300 -translate-y-1/2 bg-[#E8272D] bottom-20 carousel-prev lg:right-94 right-35 cursor-pointer">
-            <img src="assets/arrowL.svg" alt="">
-        </button>
-        <button class="absolute z-10 py-3 transition-all duration-300 -translate-y-1/2 bg-white cursor-pointer group px-7 bottom-20 carousel-next lg:right-70 right-10">
-            <img src="assets/arrowR.svg" alt="">
-        </button>  
+          
 </section>
 
     <!-- About Us -->
-     <section class="w-full min-h-screen py-10 rounded-t-4xl md:py-0 flex items-center justify-center rounded-xl bg-[#F9F9F9] relative -top-[100px] md:h-[110vh]">
+     <section class="w-full min-h-screen py-10 rounded-t-4xl md:py-0 flex items-center justify-center rounded-xl bg-[#F9F9F9] relative -top-[99px] md:h-[110vh]">
         
         <div class="w-[90%] md:w-[80%] h-auto md:h-[65%] flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 mx-auto relative">
             <h1 class="absolute top-0 left-0  -translate-y-1/2 text-[60px] lg:text-[130px] font-extrabold uppercase text-transparent z-10  electricity-outline hidden sm:block text-center" 
@@ -205,13 +206,13 @@
                 <p class="w-full md:w-[90%] text-[18px] text-[#646464] font-['Figtree'] md:text-base">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,</p>
                 <div class="flex items-end justify-end md:w-[85%] mt-10 md:justify-end  ">
                     <a href="About.html">
-                        <button class=" px-8 py-3 border-1 border-[#E8272D] text-[#28245F]  hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base rounded-l font-bold">
+                        <button class=" px-8 py-3 border-1 border-[#E8272D] text-[#28245F]  hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base rounded font-bold">
                             DISCOVER MORE
                         </button>
                     </a>
                 </div>
             </div>
-            <div  class="w-full md:w-[32%] h-full relative flex items-center justify-center" data-aos="fade-left" data-aos-duration="2000">
+            <div  class="w-full md:w-[35%] h-full relative flex items-center justify-center" data-aos="fade-left" data-aos-duration="2000">
                 <img src="assets/electrician.png" alt="Electrician" class="w-full">
                 <div class="w-[50%] absolute top-1/2 md:top-1/2 left-0 md:-left-1/4 transform -translate-y-1/2 rounded-3xl p-2 bg-white flex items-center justify-center">
                     <img src="assets/electrician2.png" alt="" class="w-[100%] ">
@@ -369,7 +370,7 @@
         <div class="flex items-center justify-center" data-aos="fade-down" data-aos-duration="2000">
             <h2 class="font-['Figtree'] font-extrabold text-[32px] md:text-[55px] text-white text-center">Our Achievement</h2>
         </div>
-        <div class="flex flex-col items-center w-[80%] gap-10 mt-6 md:flex-row justify-evenly md:gap-0" data-aos="fade-up" data-aos-duration="3000">
+        <div class="flex flex-col items-center w-[80%] gap-10 mt-4 md:flex-row justify-evenly md:gap-0" data-aos="fade-up" data-aos-duration="3000">
             <!-- Counter Item -->
             <div class="flex items-center justify-between">
                 <div class="text-center counter">
@@ -415,7 +416,7 @@
 <!-- Achievements -->
 
 <!-- Solutions -->
-<section class="flex items-center justify-center w-full min-h-screen  md:py-0 md:h-[130vh] relative lg:bottom-[50px] bg-[#F9F9F9] rounded-t-4xl">
+<section class="flex items-center justify-center w-full min-h-screen  md:py-0 md:h-[130vh] relative lg:bottom-[50px] bg-[#F9F9F9] rounded-t-4xl overflow-hidden">
         
     <div class="w-[90%] md:w-[80%] h-full mt-10 py-5 z-15 rounded-t-2xl flex flex-col items-center justify-center relative lg:top-[50px] ">
         
@@ -440,16 +441,16 @@
         </div>
 
         <!-- Content Grid -->
-        <div class="flex flex-col items-center w-full gap-8 mt-10 justify-evenly h-fit md:flex-row md:gap-0">
+        <div class="flex flex-col items-center w-full gap-8 mt-5 justify-evenly h-fit md:flex-row md:gap-0">
             <!-- Electrician Image - Moves to top on mobile -->
-            <div class="w-full md:w-[35%] h-auto order-first md:order-none md:mt-20 flex items-center justify-center">
-                <img src="assets/electrician3.png" alt="Electrician" class="object-cover w-[90%] h-auto rounded-lg">
+            <div class="w-full md:w-[35%] h-auto order-first md:order-none md:mt-20 flex items-center justify-center ">
+                <img src="assets/electrician3.png" alt="Electrician" class="object-cover w-[95%] h-auto rounded-lg">
             </div>
 
             <!-- Solutions Grid -->
             <div class="w-full md:w-[60%] flex flex-col items-center md:items-center justify-center gap-2">
                 <!-- First Row -->
-                <div class="flex flex-col items-center justify-center w-full gap-2 md:flex-row md:gap-4">
+                <div class="flex flex-col items-center justify-center w-full gap-2 md:flex-row md:gap-2">
                     <div class="relative w-full overflow-hidden md:w-1/2 group" data-aos="fade-right" data-aos-duration="1000">
                         <img src="assets/consult.png" alt="Consultations" class="object-cover w-full h-full transition duration-300 group-hover:scale-105">
                     
@@ -496,7 +497,7 @@
                 </div>
 
                 <!-- Second Row -->
-                <div class="flex flex-col items-center justify-center w-full gap-2 md:flex-row md:gap-4">
+                <div class="flex flex-col items-center justify-center w-full gap-2 md:flex-row md:gap-2">
                     <div class="relative w-full overflow-hidden md:w-1/2 group" data-aos="fade-right" data-aos-duration="1000">
                         <img src="assets/laptop.png" alt="Consultations" class="object-cover w-full h-full transition duration-300 group-hover:scale-105">
                     
@@ -554,21 +555,21 @@
 <!-- Solutions -->
 <!-- Carousel -->
 <section class="w-full h-[50vh] flex flex-col items-center justify-start mt-10 ">
-    <div class="w-[90%] md:w-[85%] h-[80%] flex flex-col items-center justify-between md:flex-row gap-8">
+    <div class="w-[90%] md:w-[80%] h-[80%] flex flex-col items-center justify-between md:flex-row gap-8">
       <!-- Header Section -->
       <div class="flex flex-col items-start justify-start md:justify-start md:items-center md:w-[15%] md:flex-col">
         <h2 class="text-[28px] md:text-[55px] font-bold font-['Figtree'] text-[#28245F] mb-2.5">
           Our Clients<span class="text-[#E8272D]">.</span>
         </h2>
         <a href="Solutions.html">
-          <button class="px-9 py-3 border-1 border-[#E8272D] text-[#28245F] hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base rounded font-bold">
+          <button class="px-8 py-3 border-1 border-[#E8272D] text-[#28245F] hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base rounded font-bold">
             View All Clients
           </button>
         </a>
       </div>
   
       <!-- Carousel Container -->
-      <div class="relative w-full md:w-[80%]  mt-10">
+      <div class="relative w-full md:w-[75%]  mt-10">
         <!-- Navigation Buttons -->
         <button id="carousel-prev" class="absolute -left-7 z-10 p-2  transition-all duration-300 -translate-y-1/2 shadow-md top-1/2 bg-[#E8272D] ">
           <img src="assets/carrL.svg" alt="">
@@ -661,7 +662,7 @@
             <!-- Slides container -->
             <div class="flex items-center justify-between">
                 <!-- Prev button -->
-                <button class="py-1 px-2 bg-[#E8272D] rounded  hover:bg-gray-300" data-carousel-prev>
+                <button class="py-1.5 px-2 bg-[#E8272D] rounded  hover:bg-gray-300" data-carousel-prev>
                     <img src="assets/carrL.svg" alt="">
                 </button>
 
@@ -693,7 +694,7 @@
                 </div>
 
                 <!-- Next button -->
-                <button class="py-1 px-2 bg-[#E8272D] rounded hover:bg-gray-300" data-carousel-next>
+                <button class="py-1.5 px-2 bg-[#E8272D] rounded hover:bg-gray-300" data-carousel-next>
                     <img src="assets/carrR.svg" alt="">
                 </button>
             </div>
