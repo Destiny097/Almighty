@@ -2249,6 +2249,11 @@
       width: 60%;
     }
   }
+  .lg\:w-\[70\%\] {
+    @media (width >= 64rem) {
+      width: 70%;
+    }
+  }
   .lg\:w-\[75\%\] {
     @media (width >= 64rem) {
       width: 75%;
