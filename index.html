@@ -143,51 +143,68 @@
     </div>
     <!-- navbar -->
 
-    <section class="relative flex items-center justify-center w-full h-[110vh] text-center text-white overflow-hidden pt-[80px] md:pt-0">
-        <button class="group absolute z-10 py-3 px-7 transition-all duration-300 -translate-y-1/2 bg-[#E8272D] bottom-19 carousel-prev lg:right-94 right-35 cursor-pointer">
+ <section class="relative w-full h-[110vh] overflow-hidden">
+  <!-- Navigation -->
+    <button class="group absolute z-10 py-3 px-7 transition-all duration-300 -translate-y-1/2 bg-[#E8272D] bottom-19 carousel-prev lg:right-94 right-35 cursor-pointer">
             <img src="assets/arrowL.svg" alt="">
-        </button>
-        <button class="absolute z-10 py-3 transition-all duration-300 -translate-y-1/2 bg-white cursor-pointer group px-7 bottom-19 carousel-next lg:right-70 right-10">
+    </button>
+    <button class="absolute z-10 py-3 transition-all duration-300 -translate-y-1/2 bg-white cursor-pointer group px-7 bottom-19 carousel-next lg:right-70 right-10">
             <img src="assets/arrowR.svg" alt="">
-        </button>
-        <!-- Carousel -->
-        <div class="absolute inset-0 z-0 overflow-hidden carousel-container">
-            <div class="relative w-full h-full">
-                <!-- Slides -->
-                <div class="carousel-slide absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" 
-                     style="background-image: url(assets/landing.png); transform: translateX(0);"></div>
-                <div class="carousel-slide absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" 
-                     style="background-image: url(assets/landing.png); transform: translateX(100%);"></div>
-                <div class="carousel-slide absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" 
-                     style="background-image: url(assets/landing.png); transform: translateX(100%);"></div>
-            
-                <!-- Overlay -->
-                <div class="absolute inset-0 bg-black/30 z-5"></div>
-                
-                <!-- Navigation Arrows -->
-                
-            </div>
-        </div>
+    </button>
+
+  <!-- Carousel Wrapper -->
+  <div class="relative w-full h-full carousel-wrapper">
     
-        <!-- Content -->
-        
-    
-        <div class="relative px-4 z-50 w-full max-w-[90%] mx-auto" data-aos="fade-left" data-aos-duration="9000">
-            <h1 class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[60px] lg:text-[180px] font-extrabold uppercase text-transparent z-1 tracking-widest electricity-outline hidden sm:block" 
-            data-aos="fade-left" data-aos-duration="3000">
-            ELECTRICITY
-            </h1>
-            <p class="uppercase tracking-widest text-[16px] md:text-[25px]  font-['Enriqueta'] font-normal z-50">Reliable, Safe, and Efficient Solutions</p>
-            <h2 class="text-3xl md:text-6xl lg:text-[100px] font-extrabold leading-tight font-['Figtree'] z-50">
-                Powering <span class="font-['Gwendolyn'] text-teal-400 font-bold"> Excellence for</span><br class="hidden md:block" />
-                25 Years<span class="text-red-600">.</span>
-            </h2>
-            <button class="mt-4 px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition font-['Figtree'] text-[16px] md:text-base rounded">
+    <!-- Slide 1 -->
+    <div class="absolute inset-0 w-full h-full transition-transform duration-1000 ease-in-out carousel-item" style="transform: translateX(0%)">
+      <div class="absolute inset-0 bg-center bg-no-repeat bg-cover" style="background-image: url('assets/landing.png');"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center text-white">
+        <p class="uppercase tracking-widest text-[16px] md:text-[25px] font-['Enriqueta']">Reliable, Safe, and Efficient Solutions</p>
+        <h2 class="text-3xl md:text-6xl lg:text-[100px] font-extrabold leading-tight font-['Figtree']">
+          Powering <span class="font-['Gwendolyn'] text-teal-400 font-bold"> Excellence for</span><br class="hidden md:block" />
+          25 Years<span class="text-red-600">.</span>
+        </h2>
+        <button class="mt-4 px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition font-['Figtree'] text-[16px] md:text-base rounded">
                 DISCOVER MORE
             </button>
-        </div>
-        <!-- Left Button - Hidden on small screens, visible on lg and above -->
-          
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="absolute inset-0 w-full h-full transition-transform duration-1000 ease-in-out carousel-item" style="transform: translateX(0%)">
+      <div class="absolute inset-0 bg-center bg-no-repeat bg-cover" style="background-image: url('assets/landing.png');"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center text-white">
+        <p class="uppercase tracking-widest text-[16px] md:text-[25px] font-['Enriqueta']">Reliable, Safe, and Efficient Solutions</p>
+        <h2 class="text-3xl md:text-6xl lg:text-[100px] font-extrabold leading-tight font-['Figtree']">
+          Powering <span class="font-['Gwendolyn'] text-teal-400 font-bold"> Excellence for</span><br class="hidden md:block" />
+          25 Years<span class="text-red-600">.</span>
+        </h2>
+        <button class="mt-4 px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition font-['Figtree'] text-[16px] md:text-base rounded">
+                DISCOVER MORE
+            </button>
+      </div>
+    </div>
+
+    <div class="absolute inset-0 w-full h-full transition-transform duration-1000 ease-in-out carousel-item" style="transform: translateX(0%)">
+      <div class="absolute inset-0 bg-center bg-no-repeat bg-cover" style="background-image: url('assets/landing.png');"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center text-white">
+        <p class="uppercase tracking-widest text-[16px] md:text-[25px] font-['Enriqueta']">Reliable, Safe, and Efficient Solutions</p>
+        <h2 class="text-3xl md:text-6xl lg:text-[100px] font-extrabold leading-tight font-['Figtree']">
+          Powering <span class="font-['Gwendolyn'] text-teal-400 font-bold"> Excellence for</span><br class="hidden md:block" />
+          25 Years<span class="text-red-600">.</span>
+        </h2>
+        <button class="mt-4 px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition font-['Figtree'] text-[16px] md:text-base rounded">
+                DISCOVER MORE
+            </button>
+      </div>
+    </div>
+
+    <!-- Add more .carousel-item as needed -->
+
+  </div>
 </section>
 
     <!-- About Us -->
@@ -1351,85 +1368,55 @@
     </script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const slides = document.querySelectorAll('.carousel-slide');
-        const slideCount = slides.length;
-        let currentIndex = 0;
-        let nextIndex = 1;
-        const slideDuration = 5000;
-        const transitionDuration = 1000;
-        let interval;
-        
-        function slideToNext() {
-            slides[currentIndex].style.transform = 'translateX(-100%)';
-            slides[nextIndex].style.transform = 'translateX(0)';
-            
-            currentIndex = nextIndex;
-            nextIndex = (nextIndex + 1) % slideCount;
-            
-            setTimeout(() => {
-                slides.forEach((slide, index) => {
-                    if(index !== currentIndex) {
-                        slide.style.transform = 'translateX(100%)';
-                    }
-                });
-            }, transitionDuration);
-        }
-        
-        function goToSlide(index) {
-            if (index === currentIndex) return;
-            
-            clearInterval(interval);
-            
-            if (index > currentIndex) {
-                slides[currentIndex].style.transform = 'translateX(-100%)';
-                slides[index].style.transform = 'translateX(0)';
-            } else {
-                slides[currentIndex].style.transform = 'translateX(100%)';
-                slides[index].style.transform = 'translateX(0)';
-            }
-            
-            nextIndex = (index + 1) % slideCount;
-            currentIndex = index;
-            
-            setTimeout(() => {
-                slides.forEach((slide, i) => {
-                    if(i !== currentIndex) {
-                        slide.style.transform = 'translateX(100%)';
-                    }
-                });
-            }, transitionDuration);
-            
-            startCarousel();
-        }
-        
-        // Initialize
-        slides.forEach((slide, index) => {
-            if(index > 0) {
-                slide.style.transform = 'translateX(100%)';
-            }
-        });
-        
-        function startCarousel() {
-            interval = setInterval(slideToNext, slideDuration);
-        }
-        startCarousel();
-        
-        // Pause on hover
-        const carousel = document.querySelector('.carousel-container');
-        carousel.addEventListener('mouseenter', () => clearInterval(interval));
-        carousel.addEventListener('mouseleave', startCarousel);
-        
-        // Button controls
-        document.querySelector('.carousel-prev').addEventListener('click', () => {
-            goToSlide((currentIndex - 1 + slideCount) % slideCount);
-        });
-        
-        document.querySelector('.carousel-next').addEventListener('click', () => {
-            goToSlide((currentIndex + 1) % slideCount);
-        });
+  document.addEventListener('DOMContentLoaded', function () {
+    const items = document.querySelectorAll('.carousel-item');
+    const itemCount = items.length;
+    let currentIndex = 0;
+    let nextIndex = 1;
+    const duration = 5000;
+    let interval;
+
+    function updateSlides() {
+      items.forEach((item, index) => {
+        item.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
+      });
+    }
+
+    function slideToNext() {
+      currentIndex = nextIndex;
+      nextIndex = (nextIndex + 1) % itemCount;
+      updateSlides();
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      nextIndex = (index + 1) % itemCount;
+      updateSlides();
+      restartAutoSlide();
+    }
+
+    function startAutoSlide() {
+      interval = setInterval(slideToNext, duration);
+    }
+
+    function restartAutoSlide() {
+      clearInterval(interval);
+      startAutoSlide();
+    }
+
+    document.querySelector('.carousel-prev').addEventListener('click', () => {
+      goToSlide((currentIndex - 1 + itemCount) % itemCount);
     });
-  </script>
+
+    document.querySelector('.carousel-next').addEventListener('click', () => {
+      goToSlide((currentIndex + 1) % itemCount);
+    });
+
+    updateSlides();  // initialize
+    startAutoSlide(); // autoplay
+  });
+</script>
+
 <script>
 const counts = document.querySelectorAll('.count');
 const speed = 50;
@@ -1469,7 +1456,8 @@ counts.forEach(counter => {
     observer.observe(counter);
 });
 
-
 </script>
+
+
 </body>
 </html>

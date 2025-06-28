@@ -287,6 +287,9 @@
   .right-35 {
     right: calc(var(--spacing) * 35);
   }
+  .right-40 {
+    right: calc(var(--spacing) * 40);
+  }
   .right-\[10\%\] {
     right: 10%;
   }
@@ -973,6 +976,9 @@
   }
   .bg-orange-500 {
     background-color: var(--color-orange-500);
+  }
+  .bg-red-600 {
+    background-color: var(--color-red-600);
   }
   .bg-transparent {
     background-color: transparent;
