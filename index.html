@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almighty Engineers</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .electricity-outline {
+            -webkit-text-stroke: 1px #08b15733;
+            color: transparent;
+        }
+        
+        /* Mobile menu styles */
+        .mobile-menu {
+            display: none;
+        }
+        
+        @media (max-width: 1024px) {
+            .desktop-menu {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .mobile-nav-items {
+                display: none;
+                width: 100%;
+            }
+            
+            .mobile-nav-items.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 20px;
+                z-index: 100;
+            }
+        }
+        
+        /* Ensure images don't cause overflow */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+    
+    .animate-fadeIn {
+        animation: fadeIn 1.5s ease-in-out forwards;
+    }
+    
+    .animate-fadeOut {
+        animation: fadeOut 1.5s ease-in-out forwards;
+    }
+
+    
+    </style>
+</head>
+
+<body class="w-full bg-white">
+    <!-- navbar -->
+    <div class="w-full h-[80px] md:h-[125px] flex items-center justify-center fixed  z-60 bg-white md:bg-transparent">
+        <nav class="w-[90%] md:w-[85%] flex flex-col items-end justify-end">
+            <!-- Contact info - hidden on mobile -->
+            <div class="items-center justify-end hidden gap-8 py-2 bg-transparent md:flex">
+                <div class="flex items-center  text-[14px] md:text-[18px] font-['Figtree'] text-white gap-2">
+                    <img src="assets/ph_nav.svg" alt="">
+                     +91 8546951833 | +91 8310411393
+                </div>
+                <div class="flex items-center  text-[14px] md:text-[18px] font-['Figtree'] text-white gap-2">
+                    <img src="assets/msg.svg" alt="">
+                    almightyengineerz@gmail.com
+                </div>
+            </div>
+            
+    
+            <div class="flex items-center justify-between w-full bg-white">
+                <div>
+                    <a href="index.html">
+                        <img src="assets/Almighty_logo.png" alt="logo" class="h-[50px] md:h-auto px-2 md:px-5">
+                    </a>
+                </div>
+    
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex w-[55%] items-center justify-evenly desktop-menu">
+                    <a href="index.html" class="text-[14px] text-[#E8272D] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Home</a>
+                    <a href="About.html" class="text-[14px] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">About Us</a>
+                    <a href="Services.html" class="text-[14px] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Services</a>
+                    <a href="Clients.html" class="text-[14px] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Clients</a>
+                    <a href="testimonials.html" class="text-[14px] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Testimonials</a>
+                    <a href="Blogs.html" class="text-[14px] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Blogs</a>
+                    <a href="Contact.html"><button class="w-[120px] md:w-[160px] py-3 md:py-6 bg-[#E8272D] text-[14px] md:text-[16px] font-['Figtree'] font-medium text-white uppercase">Get In Touch</button></a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center justify-center md:hidden mobile-menu">
+                    <button id="mobile-menu-button" class="pr-4 text-2xl">
+                        ☰
+                    </button>
+                    <div id="mobile-nav-items" class="mobile-nav-items">
+                        <a href="index.html" class="py-2 text-[16px] text-[#E8272D] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Home</a>
+                        <a href="About.html" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">About Us</a>
+                        <a href="Services.html" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Services</a>
+                        <a href="Clients.html" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Clients</a>
+                        <a href="testimonials.html" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Testimonials</a>
+                        <a href="Blogs.html" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Blogs</a>
+                        <a href="Contact.html"><button class="w-full py-3 bg-[#E8272D] text-[16px] font-['Figtree'] font-medium text-white mt-2 uppercase">Get In Touch</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- navbar -->
+
+    <section class="relative flex items-center justify-center w-full h-[110vh] text-center text-white overflow-hidden pt-[80px] md:pt-0">
+        <button class="group absolute z-10 py-3 px-7 transition-all duration-300 -translate-y-1/2 bg-[#E8272D] bottom-19 carousel-prev lg:right-94 right-35 cursor-pointer">
+            <img src="assets/arrowL.svg" alt="">
+        </button>
+        <button class="absolute z-10 py-3 transition-all duration-300 -translate-y-1/2 bg-white cursor-pointer group px-7 bottom-19 carousel-next lg:right-70 right-10">
+            <img src="assets/arrowR.svg" alt="">
+        </button>
+        <!-- Carousel -->
+        <div class="absolute inset-0 z-0 overflow-hidden carousel-container">
+            <div class="relative w-full h-full">
+                <!-- Slides -->
+                <div class="carousel-slide absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" 
+                     style="background-image: url(assets/landing.png); transform: translateX(0);"></div>
+                <div class="carousel-slide absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" 
+                     style="background-image: url(assets/landing.png); transform: translateX(100%);"></div>
+                <div class="carousel-slide absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" 
+                     style="background-image: url(assets/landing.png); transform: translateX(100%);"></div>
+            
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-black/30 z-5"></div>
+                
+                <!-- Navigation Arrows -->
+                
+            </div>
+        </div>
+    
+        <!-- Content -->
+        
+    
+        <div class="relative px-4 z-50 w-full max-w-[90%] mx-auto" data-aos="fade-left" data-aos-duration="9000">
+            <h1 class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[60px] lg:text-[180px] font-extrabold uppercase text-transparent z-1 tracking-widest electricity-outline hidden sm:block" 
+            data-aos="fade-left" data-aos-duration="3000">
+            ELECTRICITY
+            </h1>
+            <p class="uppercase tracking-widest text-[16px] md:text-[25px]  font-['Enriqueta'] font-normal z-50">Reliable, Safe, and Efficient Solutions</p>
+            <h2 class="text-3xl md:text-6xl lg:text-[100px] font-extrabold leading-tight font-['Figtree'] z-50">
+                Powering <span class="font-['Gwendolyn'] text-teal-400 font-bold"> Excellence for</span><br class="hidden md:block" />
+                25 Years<span class="text-red-600">.</span>
+            </h2>
+            <button class="mt-4 px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition font-['Figtree'] text-[16px] md:text-base rounded">
+                DISCOVER MORE
+            </button>
+        </div>
+        <!-- Left Button - Hidden on small screens, visible on lg and above -->
+          
+</section>
+
+    <!-- About Us -->
+     <section class="w-full min-h-screen py-10 rounded-t-4xl md:py-0 flex items-center justify-center rounded-xl bg-[#F9F9F9] relative -top-[99px] md:h-[120vh]">
+        
+        <div class="w-[90%] md:w-[80%] h-full md:h-[65%] flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 mx-auto relative">
+            <h1 class="absolute -top-10 left-0 -translate-y-1/2  text-[60px] lg:text-[130px] font-extrabold uppercase text-transparent z-10  electricity-outline hidden sm:block text-center" 
+            data-aos="fade-left" data-aos-duration="3000">
+            ABOUT US
+        </h1>
+            <div  class="w-full md:w-[55%] h-full flex flex-col items-start justify-center md:items-start z-10" data-aos="fade-right" data-aos-duration="2000">
+                <p class="text-sm md:text-[18px] font-['Enriqueta'] text-[#0B7C40] text-left">ABOUT US</p>
+                <h2 class="font-['Figtree'] font-extrabold text-[#28245F] text-[32px] md:text-[55px] leading-tight">25 Years of <br class="hidden md:block"> Powering Excellence <span class="text-red-600">.</span></h2>
+                <br>
+                <P class="w-full md:w-[90%] text-sm md:text-[18px] text-[#646464] font-['Figtree'] md:text-base">Almighty Engineers is a <b>Registered & Licensed Class One Electrical Contractor</b> with <b>25 years of experience </b> in <b>HT & LT electrical installations</b>. We specialize in <b>electrification, maintenance, and consultancy</b> for industries, commercial establishments, apartments, and residential buildings across Bangalore.
+                </P>
+                <br>
+                <p class="w-full md:w-[90%] text-sm md:text-[18px] text-[#646464] font-['Figtree'] md:text-base">Backed by a team of <b>technically qualified and skilled professionals</b>, we ensure <b>quality, safety, and timely completion of </b>every project. Our expertise extends to <b>electrical consultancy, troubleshooting, energy audits, and compliance</b>, along with <b>BESCOM liaisoning services</b> for power sanctions, load management, and approvals for transformers, DG sets, and elevators.</p>
+                <br>
+                <p class="w-full md:w-[90%] text-sm md:text-[18px] text-[#646464] font-['Figtree'] md:text-base">At Almighty Engineers, we uphold the values of <b>quality and sincerity</b>, delivering <b>cost-effective and reliable</b> electrical solutions tailored to client needs. Whether it's design, execution, or project supervision, we are your<b> trusted partner in powering progress.</b></p>
+                <div class="flex items-end justify-end md:w-[85%] mt-10 md:justify-end  ">
+                    <a href="About.html">
+                        <button class=" px-8 py-3 border-1 border-[#E8272D] text-[#28245F]  hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base rounded font-bold">
+                            DISCOVER MORE
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div  class="w-full md:w-[35%] h-full relative flex items-center justify-center" data-aos="fade-left" data-aos-duration="2000">
+                <img src="assets/electrician.png" alt="Electrician" class="w-full">
+                <div class="w-[50%] absolute top-1/2 md:top-1/2 left-0 md:-left-1/4 transform -translate-y-1/2 rounded-3xl p-2 bg-white flex items-center justify-center">
+                    <img src="assets/electrician2.png" alt="" class="w-[100%] ">
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- About Us -->
+
+<!-- Services -->
+<section class="flex items-center justify-around w-full bg-white ">
+    
+    <div class="flex flex-col items-center justify-center w-full h-full ">
+        <div class="w-[95%] md:w-[95%] h-[90%]  flex flex-col items-center justify-start z-10 relative ">
+            <h1 class="absolute top-0 left-1/16  -translate-y-1/2 text-[60px] lg:text-[130px] font-extrabold tracking-wide uppercase text-transparent z-1 electricity-outline hidden sm:block text-center" 
+                data-aos="fade-left" data-aos-duration="3000">
+                SERVICES
+            </h1>
+        
+            <!-- Header Section -->
+            <div class="flex flex-col items-center justify-center w-full gap-8 px-5 md:flex-row md:gap-0">
+    
+                <div class="w-full md:w-[45%] h-[20%] flex items-center justify-start z-10 relative">
+                    <div>
+                        <p class="text-sm md:text-[18px] font-['Enriqueta'] text-[#0B7C40] md:mb-3">SERVICES</p>
+                        <h2 class="font-['Figtree'] font-extrabold text-[#28245F] text-[32px] md:text-[55px] leading-tight">Comprehensive Electrical Solutions, Expertly Delivered with Precision<span class="text-red-600">.</span></h2>
+                    </div>
+                </div>
+    
+                <div class="w-full md:w-[40%] h-[20%] flex items-center justify-center md:mt-10">
+                    <div>
+                        <p class="font-['Figtree'] text-sm md:text-[18px] text-[#646464] max-w-2xl md:mx-0 mx-auto">
+                            Our services include <b>electrical consultancy, electrification, troubleshooting, energy audits, and safety compliance</b>. We also offer <b>BESCOM liaisoning</b>, including power sanctions, load enhancements, and approvals. With expert project supervision, we ensure <b>timely, quality, and cost-effective solutions</b>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Services Grid -->
+            <div class="w-[90%] h-auto md:h-[60%] mt-12.5 flex flex-col md:flex-row items-center justify-evenly gap-8 md:gap-4 lg:gap-0">
+                <!-- Left Services Column -->
+                <div class="w-full md:w-[30%] h-full flex flex-col items-center justify-evenly gap-6">
+                    <div class="w-full flex items-center justify-between border border-[#E8272D] rounded-xl hover:bg-[#1a237e] duration-300 group relative overflow-hidden min-h-[170px] lg:ml-20 " data-aos="fade-right" data-aos-duration="1000">
+                        <div class="absolute inset-0 flex items-center justify-between w-full p-1 transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/svg1.png" alt="Electrical Consultancy" class="p-1 ">
+                            <div class="w-[90%] flex flex-col items-start justify-between ml-5">
+                                <h3 class="text-left text-[#28245F] font-extrabold text-[18px] md:text-[22px] lg:text-[25px]">Electrical Consultancy</h3>
+                                <p class="text-left text-[#646464] text-sm md:text-[18px] w-[90%]">Offering expert advice on electrical designs, load calculations, and project planning for efficiency.</p>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                            <p class="text-[12px] md:text-[14px] lg:text-[25px] font-bold">Timely Completion</p>
+                            <a href="" class="font-['Figtree'] text-[#00FF78] font-bold text-sm md:text-[16px]">Read More</a>
+                        </div>
+                    </div>
+    
+                    <div class="w-full flex items-center justify-between border border-[#E8272D] rounded-xl hover:bg-[#1a237e] duration-300 group relative overflow-hidden min-h-[170px] " data-aos="fade-right" data-aos-duration="1000">
+                        <div class="absolute inset-0 flex items-center justify-between w-full p-1 transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/Power.png" alt="Electrical Consultancy" class="p-1 ">
+                            <div class="w-[90%] flex flex-col items-start justify-between ml-5">
+                                <h3 class="text-left text-[#28245F] font-extrabold text-[18px] md:text-[22px] lg:text-[25px]">Electrification</h3>
+                                <p class="text-left text-[#646464] text-[12px] text-sm md:text-[18px] w-[90%]">Complete installation of electrical systems for industrial, commercial, and residential projects with precision.</p>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                            <p class="text-[12px] md:text-[14px] lg:text-[25px] font-bold">Timely Completion</p>
+                            <a href="" class="font-['Figtree'] text-[#00FF78] font-bold text-sm md:text-[16px]">Read More</a>
+                        </div>
+                    </div>
+    
+                    <div class="w-full flex items-center justify-between border border-[#E8272D] rounded-xl hover:bg-[#1a237e] duration-300 group relative overflow-hidden min-h-[170px] lg:ml-20" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="absolute inset-0 flex items-center justify-between w-full p-1 transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/worker.png" alt="Electrical Consultancy" class="p-1 ">
+                            <div class="w-[90%] flex flex-col items-start justify-between ml-5">
+                                <h3 class="text-left text-[#28245F] font-extrabold text-[18px] md:text-[22px] lg:text-[25px]">Troubleshooting</h3>
+                                <p class="text-left text-[#646464] text-sm md:text-[18px] w-[90%]">Diagnosing and resolving electrical issues, ensuring smooth operation and minimal downtime for clients.</p>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                            <p class="text-[12px] md:text-[14px] lg:text-[25px] font-bold">Timely Completion</p>
+                            <a href=""  class="font-['Figtree'] text-[#00FF78] font-bold text-sm md:text-[16px]">Read More</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Center Image -->
+                <div class="w-full md:w-[30%] h-full flex flex-col items-center justify-center order-first md:order-none my-8 md:my-0">
+                    <img src="assets/Handyman.png" alt="Electrical Services" class="w-[60%] md:w-[75%] lg:w-[80%] "> 
+                </div>
+    
+                <!-- Right Services Column -->
+                <div class="w-full md:w-[30%] h-full flex flex-col items-center justify-evenly gap-6">
+                    <div class="w-full flex items-center justify-between border border-[#E8272D] rounded-xl hover:bg-[#1a237e] duration-300 group relative overflow-hidden min-h-[170px]" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="absolute inset-0 flex items-center justify-between w-full p-1 transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="images/services/Energy Audits.jpg" alt="Electrical Consultancy" class="p-1 ">
+                            <div class="w-[90%] flex flex-col items-start justify-between ml-5">
+                                <h3 class="text-left text-[#28245F] font-extrabold text-[18px] md:text-[22px] lg:text-[25px]">Energy Audits</h3>
+                                <p class="text-left text-[#646464] text-sm md:text-[18px] w-[90%]">Assessing energy usage, identifying inefficiencies, and recommending solutions for optimized energy consumption.</p>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                            <p class="text-[12px] md:text-[14px] lg:text-[25px] font-bold">Timely Completion</p>
+                            <a href=""  class="font-['Figtree'] text-[#00FF78] font-bold text-sm md:text-[16px]">Read More</a>
+                        </div>
+                    </div>
+    
+                    <div class="w-full flex items-center justify-between border border-[#E8272D] rounded-xl hover:bg-[#1a237e] duration-300 group relative overflow-hidden min-h-[170px] lg:ml-20" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="absolute inset-0 flex items-center justify-between w-full p-1 transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="images/services/Safety & Compliance.jpg" alt="Electrical Consultancy" class="p-1 ">
+                            <div class="w-[90%] flex flex-col items-start justify-between ml-5">
+                                <h3 class="text-left text-[#28245F] font-extrabold text-[18px] md:text-[22px] lg:text-[25px]">Safety & Compliance</h3>
+                                <p class="text-left text-[#646464] text-sm md:text-[18px] w-[90%]">Ensuring electrical installations meet industry standards, regulatory requirements, and safety protocols for risk-free operations.</p>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                            <p class="text-[12px] md:text-[14px] lg:text-[25px] font-bold">Timely Completion</p>
+                            <a href=""  class="font-['Figtree'] text-[#00FF78] font-bold text-sm md:text-[16px]">Read More</a>
+                        </div>
+                    </div>
+    
+                    <div class="w-full flex items-center justify-between border border-[#E8272D] rounded-xl hover:bg-[#1a237e] duration-300 group relative overflow-hidden min-h-[170px]" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="absolute inset-0 flex items-center justify-between w-full p-1 transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/prices.png" alt="Electrical Consultancy" class="p-1 ">
+                            <div class="w-[90%] flex flex-col items-start justify-between ml-5">
+                                <h3 class="text-left text-[#28245F] font-extrabold text-[18px] md:text-[22px] lg:text-[25px]">BESCOM Liaisoning</h3>
+                                <p class="text-left text-[#646464] text-sm md:text-[18px] w-[90%]">Handling all BESCOM-related services like load enhancement, power sanctioning, and approvals for seamless operations.</p>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                            <p class="text-[12px] md:text-[14px] lg:text-[25px] font-bold">Timely Completion</p>
+                            <a href=""  class="font-['Figtree'] text-[#00FF78] font-bold text-sm md:text-[16px]">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View All Button -->
+    <div class="flex flex-col items-center justify-center w-[90%] m-5 md:mb-10 ">    
+        <a href="Services.html" class="w-full md:w-auto ">
+            <button class="px-8 py-3 border-2 uppercase rounded-lg bg-[#E8272D] text-white hover:bg-white hover:text-black hover:border-[#E8272D] transition font-['Figtree'] text-[18px] md:text-[16px] w-full ">
+                View All 
+            </button>
+        </a>
+    </div>
+</div>
+    
+    
+</section>
+<!-- Services -->
+
+<!-- Achievements -->
+<section class="w-full min-h-[55vh] py-10 md:py-0 flex  items-start justify-center bg-[#28245F]">
+    <div class="w-full h-auto md:h-[40vh] flex flex-col items-center bg-[#28245F] counter_wrapper justify-evenly  md:py-0  sm:mt-0 lg:mt-10">
+        <div class="flex items-center justify-center" data-aos="fade-down" data-aos-duration="2000">
+            <h2 class="font-['Figtree'] font-extrabold text-[32px] md:text-[55px] text-white text-center">Our Achievement</h2>
+        </div>
+        <div class="flex flex-col items-center w-[80%] gap-10 mt-4 md:flex-row justify-evenly md:gap-0" data-aos="fade-up" data-aos-duration="3000">
+            <!-- Counter Item -->
+            <div class="flex items-center justify-between">
+                <div class="text-center counter">
+                    <h1 class="count font-['Figtree'] font-extrabold text-[50px] md:text-[85px] text-[#30AAE1]" data-target="20">0</h1>
+                    <p class="text-white text-[16px] md:text-[20px] font-['Figtree']">Years of Experience</p>
+                </div>
+            </div>
+
+            <div class="hidden w-0.5 mx-4 bg-gray-400 md:block h-30 md:mx-8"></div>
+    
+            <div class="flex items-center justify-between">
+                <div class="text-center counter ">
+                    <h1 class="count font-['Figtree'] font-extrabold text-[50px] md:text-[85px] text-[#30AAE1]" data-target="1110">0</h1>
+                    <p class="text-white text-[16px] md:text-[20px] font-['Figtree']">Installations</p>
+                </div>
+
+            </div>
+
+            <div class="hidden w-0.5 mx-4 bg-gray-400 md:block h-30 md:mx-8"></div>
+
+            <div class="flex items-center">
+                <div class="text-center counter">
+                    <h1 class="count font-['Figtree'] font-extrabold text-[50px] md:text-[85px] text-[#30AAE1]" data-target="20">0</h1>
+                    <p class="text-white text-[16px] md:text-[20px] font-['Figtree']">Projects Completed</p>
+                </div>
+                
+            </div>
+    
+
+            <div class="hidden w-0.5 mx-4 bg-gray-400 md:block h-30 md:mx-8"></div>
+
+
+            <div class="flex items-center">
+                <div class="text-center counter">
+                    <h1 class="count font-['Figtree'] font-extrabold text-[50px] md:text-[85px] text-[#30AAE1]" data-target="1110">0</h1>
+                    <p class="text-white text-[16px] md:text-[20px] font-['Figtree']">Projects Completed</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Achievements -->
+
+<!-- Solutions -->
+<section class="flex items-center justify-center w-full   md:py-0 md:h-[150vh] relative lg:bottom-[50px] bg-[#F9F9F9] rounded-t-4xl overflow-hidden">
+        
+    <div class="w-[90%] md:w-[80%] h-full mt-10 py-5 z-15 rounded-t-2xl flex flex-col items-center justify-center relative lg:top-[50px] ">
+        
+        <!-- Header Section -->
+        <div class="relative flex flex-col items-center justify-between w-full gap-8 md:flex-row md:gap-0">
+            <h1 class="absolute top-0 left-0  -translate-y-1/2 text-[60px] lg:text-[100px] font-extrabold tracking-wide uppercase text-transparent z-10  electricity-outline hidden sm:block text-center" 
+            data-aos="fade-left" data-aos-duration="3000">
+            SOLUTIONS
+            </h1>
+            <div class="w-full md:w-[50%]  flex items-center justify-start z-10">
+                <div>
+                    <p class="text-sm md:text-[18px] font-['Enriqueta'] text-[#0B7C40] md:mb-3">SOLUTIONS</p>
+                    <h2 class="font-['Figtree'] font-extrabold text-[#28245F] text-[32px] md:text-[55px] leading-tight">Expert Electrical Solutions,<br class="hidden md:block"> Delivering Quality and Reliability <span class="text-red-600">.</span></h2>
+                </div>
+            </div>
+
+            <div class="w-full md:w-[45%] h-fit flex items-center justify-center">
+                <p class="font-['Figtree'] text-sm md:text-[18px] pt-0 mt-0 md:mt-5 font-normal text-[#646464] ">
+                    We provide <b>comprehensive electrical solutions</b> including <b>electrification, energy audits, troubleshooting, safety compliance</b>, and <b>BESCOM liaisoning</b>. Our expert team ensures <b>timely, reliable, and cost-effective solutions </b>tailored to meet the unique needs of industries, businesses, and residential projects.
+                </p>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="flex flex-col items-center w-full gap-8 mt-5 justify-evenly h-fit md:flex-row md:gap-0">
+            <!-- Electrician Image - Moves to top on mobile -->
+            <div class="w-full md:w-[35%] h-auto order-first md:order-none md:mt-17 flex items-center justify-center ">
+                <img src="assets/electrician3.png" alt="Electrician" class="object-cover w-[100%] h-auto rounded-lg">
+            </div>
+
+            <!-- Solutions Grid -->
+            <div class="w-full md:w-[60%] flex flex-col items-center md:items-center justify-center gap-2">
+                <!-- First Row -->
+                <div class="flex flex-col items-center justify-center w-full gap-2 md:flex-row md:gap-2">
+                    <div class="relative w-full overflow-hidden md:w-1/2 group" data-aos="fade-right" data-aos-duration="1000">
+                        <img src="assets/consult.png" alt="Consultations" class="object-cover w-full h-full transition duration-300 group-hover:scale-105">
+                    
+                        <!-- Dark Overlay -->
+                        <div class="absolute w-full inset-0 bg-[#28245F] opacity-0 group-hover:opacity-80 transition duration-300 z-10 flex flex-col items-center justify-evenly">
+                            <p class="text-white text-center font-['Figtree'] font-semibold text-lg md:text-[25px]">
+                                Electrification Solutions
+                            </p>
+                            <p class="w-[80%] text-center text-white font-['Figtree'] text-sm md:text-[18px] font-normal">
+                                We provide end-to-end electrification services, including system design, installation, and maintenance for industries, commercial establishments, and residential buildings.
+                            </p>
+                            <a href="#" class="font-['Figtree'] text-[#00FF78] font-bold text-[16px]">Read More</a>
+                        </div>
+                    
+                        <!-- Heading to hide on hover -->
+                        <div class="absolute flex items-center justify-center w-full p-5 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                            <h2 class="font-['Figtree'] text-white font-extrabold text-[25px] transition-opacity duration-300 group-hover:opacity-0">
+                                Electrification Solutions
+                            </h2>
+                        </div>
+                    </div>
+                    
+                    <div class="relative w-full overflow-hidden md:w-1/2 group" data-aos="fade-right" data-aos-duration="1000">
+                        <img src="assets/Planning.png" alt="Consultations" class="object-cover w-full h-full transition duration-300 group-hover:scale-105">
+                    
+                        <!-- Dark Overlay -->
+                        <div class="absolute w-full inset-0 bg-[#28245F] opacity-0 group-hover:opacity-80 transition duration-300 z-10 flex flex-col items-center justify-evenly">
+                            <p class="text-white text-center font-['Figtree'] font-semibold text-lg md:text-[25px]">
+                                Energy Audits & Optimization
+                            </p>
+                            <p class="w-[80%] text-center text-white font-['Figtree'] text-sm md:text-[18px] font-normal">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                            </p>
+                            <a href="#" class="font-['Figtree'] text-[#00FF78] font-bold text-[16px]">Read More</a>
+                        </div>
+                    
+                        <!-- Heading to hide on hover -->
+                        <div class="absolute flex items-center justify-center w-full p-5 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                            <h2 class="font-['Figtree'] text-white font-extrabold text-[25px] transition-opacity duration-300 group-hover:opacity-0">
+                                Energy Audits & Optimization
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row -->
+                <div class="flex flex-col items-center justify-center w-full gap-2 md:flex-row md:gap-2">
+                    <div class="relative w-full overflow-hidden md:w-1/2 group" data-aos="fade-right" data-aos-duration="1000">
+                        <img src="assets/laptop.png" alt="Consultations" class="object-cover w-full h-full transition duration-300 group-hover:scale-105">
+                    
+                        <!-- Dark Overlay -->
+                        <div class="absolute w-full inset-0 bg-[#28245F] opacity-0 group-hover:opacity-80 transition duration-300 z-10 flex flex-col items-center justify-evenly">
+                            <p class="text-white text-center font-['Figtree'] font-semibold text-lg md:text-[25px]">
+                                Troubleshooting & Repair Services
+                            </p>
+                            <p class="w-[80%] text-center text-white font-['Figtree'] text-sm md:text-[18px] font-normal">
+                                We offer quick and reliable troubleshooting to diagnose electrical faults, followed by efficient repairs ensuring minimal disruption to operations.
+                            </p>
+                            <a href="#" class="font-['Figtree'] text-[#00FF78] font-bold text-[16px]">Read More</a>
+                        </div>
+                    
+                        <!-- Heading to hide on hover -->
+                        <div class="absolute flex items-center justify-center w-full p-5 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                            <h2 class="font-['Figtree'] text-white text-center font-extrabold text-[25px] transition-opacity duration-300 group-hover:opacity-0">
+                                Troubleshooting & Repair Services
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="relative w-full overflow-hidden md:w-1/2 group" data-aos="fade-right" data-aos-duration="1000">
+                        <img src="assets/maintenance.png" alt="Consultations" class="object-cover w-full h-full transition duration-300 group-hover:scale-105">
+                    
+                        <!-- Dark Overlay -->
+                        <div class="absolute w-full inset-0 bg-[#28245F] opacity-0 group-hover:opacity-80 transition duration-300 z-10 flex flex-col items-center justify-evenly">
+                            <p class="text-white text-center font-['Figtree'] font-semibold text-lg md:text-[25px]">
+                               BESCOM Liaisoning Services
+                            </p>
+                            <p class="w-[80%] text-center text-white font-['Figtree'] text-sm md:text-[18px] font-normal">
+                                We handle all BESCOM-related processes, including power sanctioning, load management, and approvals for transformers, DG sets, and elevators.
+                            </p>
+                            <a href="#" class="font-['Figtree'] text-[#00FF78] font-bold text-[16px]">Read More</a>
+                        </div>
+                    
+                        <!-- Heading to hide on hover -->
+                        <div class="absolute flex items-center justify-center w-full p-5 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                            <h2 class="font-['Figtree'] text-white font-extrabold text-[25px] transition-opacity duration-300 group-hover:opacity-0">
+                                BESCOM Liaisoning Services
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <a href="Solutions.html">
+                    <button class="mt-8 px-8 py-3 border-1 border-[#E8272D] text-[#28245F]  hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base w-full md:w-auto rounded-l font-bold">
+                        View All Solutions
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Solutions -->
+<!-- Carousel -->
+<section class="w-full h-[50vh] flex flex-col items-center justify-start mt-10 ">
+    <div class="w-[90%] md:w-[80%] h-[80%] flex flex-col items-center justify-between md:flex-row gap-8">
+      <!-- Header Section -->
+      <div class="flex flex-col items-start justify-start md:justify-start md:items-center md:w-[15%] md:flex-col">
+        <h2 class="text-[28px] md:text-[55px] font-bold font-['Figtree'] text-[#28245F] mb-2.5">
+          Our Clients<span class="text-[#E8272D]">.</span>
+        </h2>
+        <a href="Clients.html">
+          <button class="px-8 py-3 border-1 border-[#E8272D] text-[#28245F] hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base rounded font-bold">
+            View All Clients
+          </button>
+        </a>
+      </div>
+  
+      <!-- Carousel Container -->
+      <div class="relative w-full md:w-[75%]  mt-10">
+        <!-- Navigation Buttons -->
+        <button id="carousel-prev" class="absolute -left-7 z-10 p-2  transition-all duration-300 -translate-y-1/2 shadow-md top-1/2 bg-[#E8272D] ">
+          <img src="assets/carrL.svg" alt="">
+        </button>
+  
+        <!-- Carousel Track -->
+        <div id="carousel-wrapper" class="overflow-hidden">
+          <div id="clientCarousel" class="flex transition-transform duration-500 ease-in-out">
+            <!-- Client Logos -->
+            <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+              <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                <img src="images/clients/ACME-Constructions.jpg" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
+              </div>
+            </div>
+  
+            <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+              <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                <img src="images/clients/AMGH-Hospital.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+              </div>
+            </div>
+  
+            <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+              <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                <img src="images/clients/Aspire-Badminton-Academy.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+              </div>
+            </div>
+  
+            <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+              <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                <img src="images/clients/Assist-Interiors.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+              </div>
+            </div>
+  
+            <!-- Duplicate for looping -->
+            <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/Barely-and-Grapes.jpg" alt="Assist Intendos" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+    
+              <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/Bijith-Builders.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+    
+              <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/Blytons.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+    
+              <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/BWLE-Eye-Hospital.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+
+              <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/Dhelvon-Interiors.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+
+              <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/Ferra.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+
+              <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/Golden-Plam.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+
+              <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/Impact-Saftey-Glass.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+
+              <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/Legno-Doors.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+
+              <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/Ms-Builders.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+
+              <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/Rialto-Hotel.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+
+              <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/St-Marthas-Hospital.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+
+              <div class="min-w-[300px] max-w-[300px] h-[200px] p-2 flex items-center justify-center">
+                <div class="flex items-center justify-center w-full h-full p-4 bg-white border border-gray-500 hover:shadow-lg">
+                  <img src="images/clients/Unifuds.jpg" alt="Furniture" class="max-h-[80px] md:max-h-[120px] w-auto">
+                </div>
+              </div>
+          </div>
+        </div>
+  
+        <button id="carousel-next" class="absolute -right-7 z-10 p-2 transition-all duration-300 -translate-y-1/2 shadow-md top-1/2 bg-[#E8272D]">
+          <img src="assets/carrR.svg" alt="">
+        </button>
+      </div>
+    </div>
+  </section>
+     
+    <!-- Testimonial Section - Hidden on Small Screens -->
+<section class="relative flex-col hidden w-full h-screen lg:flex md:h-screen md:hidden ">
+    <!-- Background Image -->
+    <div class="w-full h-[50vh] md:h-[70%] relative">
+        <img src="assets/testbg.png" alt="Tools" class="object-cover w-full h-full">
+    </div>
+
+    <!-- Electrician Image (hidden on small screens) -->
+    <div class="hidden md:block w-[30%] absolute top-[50%] md:top-[15%] left-[12.5%]">
+        <img src="assets/electrician.png" alt="Electrician" class="w-full">
+    </div>
+
+    <!-- Testimonial Carousel -->
+    <div class="w-[90%] md:w-[40%] absolute top-[50vh] md:top-[40%] right-[10%] p-6 md:p-8 rounded-lg -translate-y-1/2">
+        <div class="relative md:mb-10">
+            <h1 class="font-['Figtree'] font-bold text-[28px] md:text-[55px] text-white text-center mb-4">Testimonials</h1>
+            <div class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                <img src="assets/tes.png" alt="">
+            </div>
+        </div>
+        
+        <div class="relative flex flex-col h-full md:mt-20">
+            <!-- Slides container -->
+            <div class="flex items-center justify-between">
+                <!-- Prev button -->
+                <button class="py-1.5 px-2 bg-[#E8272D] rounded  hover:bg-gray-300" data-carousel-prev>
+                    <img src="assets/carrL.svg" alt="">
+                </button>
+
+                <div class="flex-1 mx-2 md:mx-4 relative h-[180px] md:h-[200px] overflow-hidden">
+                    <!-- Slides -->
+                    <div class="absolute inset-0 flex flex-col items-center text-center transition-opacity duration-700 opacity-100 justify-evenly" data-carousel-slide>
+                        <p class="font-['Figtree'] text-[14px] md:text-[18px] text-white">
+                            "Almighty Engineers provided excellent electrical solutions for our industrial project. Their team was professional, efficient, and ensured timely completion with utmost attention to quality and safety. Highly recommended."
+                        </p>
+                        <h3 class="font-['Figtree'] text-[16px] md:text-[20px] font-bold text-white mt-2">Ravi Kumar</h3>
+                        <p class="font-['Figtree'] text-[#00FFC3] text-[14px] md:text-[16px]">CEO, TechnoWorks Pvt Ltd</p>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="absolute inset-0 flex flex-col items-center text-center transition-opacity duration-700 opacity-100 justify-evenly" data-carousel-slide>
+                        <p class="font-['Figtree'] text-[14px] md:text-[18px] text-white">
+                           "The electrification work by Almighty Engineers for our commercial establishment was flawless. Their timely service and energy audit recommendations have significantly reduced our operational costs. A trustworthy partner for all electrical needs."
+                        </p>
+                        <h3 class="font-['Figtree'] text-[16px] md:text-[20px] font-bold text-white mt-2">Anjali Desai</h3>
+                        <p class="font-['Figtree'] text-[#00FFC3] text-[14px] md:text-[16px]">Director, Urban Living Solutions</p>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="absolute inset-0 flex flex-col items-center text-center transition-opacity duration-700 opacity-0 justify-evenly" data-carousel-slide>
+                        <p class="font-['Figtree'] text-[14px] md:text-[18px] text-white">
+                        "We’ve been working with Almighty Engineers for over a decade. Their troubleshooting skills and expertise in electrical compliance have helped us maintain smooth operations without any electrical failures. Excellent service every time."
+                        </p>
+                        <h3 class="font-['Figtree'] text-[16px] md:text-[20px] font-bold text-white mt-2">Suresh Babu</h3>
+                        <p class="font-['Figtree'] text-[#00FFC3] text-[14px] md:text-[16px]">Facility Manager, GreenTech Industries</p>
+                    </div>
+
+                 <!-- Slide 4 -->
+                    <div class="absolute inset-0 flex flex-col items-center text-center transition-opacity duration-700 opacity-0 justify-evenly" data-carousel-slide>
+                        <p class="font-['Figtree'] text-[14px] md:text-[18px] text-white">
+                            "Almighty Engineers provided electrical consultancy and installation for our residential projects. Their team delivered the work with precision and quality, ensuring all safety standards. Very professional and reliable service provider."
+                        </p>
+                        <h3 class="font-['Figtree'] text-[16px] md:text-[20px] font-bold text-white mt-2">Pooja Shah</h3>
+                        <p class="font-['Figtree'] text-[#00FFC3] text-[14px] md:text-[16px]">Project Manager, Elevate Construction</p>
+                    </div>
+
+            <!-- Slide 5 -->
+                    <div class="absolute inset-0 flex flex-col items-center text-center transition-opacity duration-700 opacity-0 justify-evenly" data-carousel-slide>
+                        <p class="font-['Figtree'] text-[14px] md:text-[18px] text-white">
+                            "Almighty Engineers helped us with BESCOM liaisoning for our factory. They made the entire process smooth and efficient. Their professionalism and commitment to service are truly commendable."
+                        </p>
+                        <h3 class="font-['Figtree'] text-[16px] md:text-[20px] font-bold text-white mt-2">Rajeev Reddy</h3>
+                        <p class="font-['Figtree'] text-[#00FFC3] text-[14px] md:text-[16px]">Operations Head, Bharat Electronics</p>
+                    </div>
+                    
+                </div>
+
+                <!-- Next button -->
+                <button class="py-1.5 px-2 bg-[#E8272D] rounded  hover:bg-gray-300" data-carousel-next>
+                  <img src="assets/carrR.svg" alt="">
+                </button>
+            </div>
+            <div class="flex items-center justify-center mt-5 ">
+                <a href="testimonials.html"><button class="px-8 py-3 text-center bg-white font-['Figtree'] text-[16px] font-bold border-[#E8272D] border-2 cursor-pointer rounded-[5px]" >View All</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-[20%] absolute -bottom-2/14 right-0">
+        <img src="assets/wired.png" alt="Live wires" class="w-full">
+    </div>
+</section>
+  
+  <!-- Testimonials on mobile-->
+  <section class="w-full h-[90vh] md:h-[80vh] rounded-t-2xl bg-cover bg-center bg-no-repeat flex items-center justify-center py-12 md:py-0 relative overflow-hidden lg:hidden" style="background-image: url(assets/testbg.png);" data-aos="fade-up" data-aos-duration="1000">
+    <!-- Carousel Container -->
+    <div class="w-[90%] md:w-[80%] h-full mx-auto overflow-hidden relative">
+        <!-- Carousel Track -->
+        <div id="testimonialTrack" class="flex h-full transition-transform duration-500">
+            <!-- Testimonial 1 -->
+            <div class="flex flex-col items-center justify-center min-w-full gap-8 px-4 md:flex-row md:gap-0 md:justify-evenly">
+                <div class="hidden md:block w-full md:w-[30%] h-auto">
+                    <img src="assets/electrician.png" alt="Electrician" class="object-contain w-full h-auto">
+                </div>
+                <div class="w-full md:w-[60%] lg:w-[40%] flex flex-col items-center justify-center text-center  bg-opacity-50 md:bg-transparent p-6 md:p-0 rounded-lg md:rounded-none">
+                    <div class="w-full mb-8 md:mb-12">
+                        <h3 class="font-['Figtree'] font-extrabold text-[32px] md:text-[55px] text-white">Testimonials</h3>
+                    </div>
+                    <div class="text-center font-['Figtree'] text-sm md:text-[18px] text-white space-y-6">
+                        <p class="italic">"Almighty Engineers provided excellent electrical solutions for our industrial project. Their team was professional, efficient, and ensured timely completion with utmost attention to quality and safety. Highly recommended."</p>
+                        <div class="space-y-2">
+                            <p class="text-[20px] font-bold md:text-xl">Ravi Kumar</p>
+                            <p class="text-[#00FFC3] text-[16px]">CEO, TechnoWorks Pvt Ltd</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="flex flex-col items-center justify-center min-w-full gap-8 px-4 md:flex-row md:gap-0 md:justify-evenly">
+                <div class="hidden md:block w-full md:w-[30%] h-auto">
+                    <img src="assets/electrician2.png" alt="Electrician" class="object-contain w-full h-auto">
+                </div>
+                <div class="w-full md:w-[60%] lg:w-[40%] flex flex-col items-center justify-center text-center  bg-opacity-50 md:bg-transparent p-6 md:p-0 rounded-lg md:rounded-none">
+                    <div class="w-full mb-8 md:mb-12">
+                        <h3 class="font-['Figtree'] font-extrabold text-[32px] md:text-[55px] text-white">Testimonials</h3>
+                    </div>
+                    <div class="text-center font-['Figtree'] text-sm md:text-[18px] text-white space-y-6">
+                        <p class="italic">"The electrification work by Almighty Engineers for our commercial establishment was flawless. Their timely service and energy audit recommendations have significantly reduced our operational costs. A trustworthy partner for all electrical needs."</p>
+                        <div class="space-y-2">
+                            <p class="text-[20px] font-bold md:text-xl">Anjali Desai</p>
+                            <p class="text-[#00FFC3] text-[16px]">Director, Urban Living Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="flex flex-col items-center justify-center min-w-full gap-8 px-4 md:flex-row md:gap-0 md:justify-evenly">
+                <div class="hidden md:block w-full md:w-[30%] h-auto">
+                    <img src="assets/electrician2.png" alt="Electrician" class="object-contain w-full h-auto">
+                </div>
+                <div class="w-full md:w-[60%] lg:w-[40%] flex flex-col items-center justify-center text-center  bg-opacity-50 md:bg-transparent p-6 md:p-0 rounded-lg md:rounded-none">
+                    <div class="w-full mb-8 md:mb-12">
+                        <h3 class="font-['Figtree'] font-extrabold text-[32px] md:text-[55px] text-white">Testimonials</h3>
+                    </div>
+                    <div class="text-center font-['Figtree'] text-sm md:text-[18px] text-white space-y-6">
+                        <p class="italic">"We’ve been working with Almighty Engineers for over a decade. Their troubleshooting skills and expertise in electrical compliance have helped us maintain smooth operations without any electrical failures. Excellent service every time."</p>
+                        <div class="space-y-2">
+                            <p class="text-[20px] font-bold md:text-xl">Suresh Babu</p>
+                            <p class="text-[#00FFC3] text-[16px]"> Facility Manager, GreenTech Industries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="flex flex-col items-center justify-center min-w-full gap-8 px-4 md:flex-row md:gap-0 md:justify-evenly">
+                <div class="hidden md:block w-full md:w-[30%] h-auto">
+                    <img src="assets/electrician2.png" alt="Electrician" class="object-contain w-full h-auto">
+                </div>
+                <div class="w-full md:w-[60%] lg:w-[40%] flex flex-col items-center justify-center text-center  bg-opacity-50 md:bg-transparent p-6 md:p-0 rounded-lg md:rounded-none">
+                    <div class="w-full mb-8 md:mb-12">
+                        <h3 class="font-['Figtree'] font-extrabold text-[32px] md:text-[55px] text-white">Testimonials</h3>
+                    </div>
+                    <div class="text-center font-['Figtree'] text-sm md:text-[18px] text-white space-y-6">
+                        <p class="italic">"Almighty Engineers provided electrical consultancy and installation for our residential projects. Their team delivered the work with precision and quality, ensuring all safety standards. Very professional and reliable service provider."</p>
+                        <div class="space-y-2">
+                            <p class="text-[20px] font-bold md:text-xl">Pooja Shah</p>
+                            <p class="text-[#00FFC3] text-[16px]">Project Manager, Elevate Construction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="flex flex-col items-center justify-center min-w-full gap-8 px-4 md:flex-row md:gap-0 md:justify-evenly">
+                <div class="hidden md:block w-full md:w-[30%] h-auto">
+                    <img src="assets/electrician3.png" alt="Electrician" class="object-contain w-full h-auto">
+                </div>
+                <div class="w-full md:w-[60%] lg:w-[40%] flex flex-col items-center justify-center text-center  bg-opacity-50 md:bg-transparent p-6 md:p-0 rounded-lg md:rounded-none">
+                    <div class="w-full mb-8 md:mb-12">
+                        <h3 class="font-['Figtree'] font-extrabold text-[32px] md:text-[55px] text-white">Testimonials</h3>
+                    </div>
+                    <div class="text-center font-['Figtree'] text-sm md:text-[18px] text-white space-y-6">
+                        <p class="italic">"Almighty Engineers helped us with BESCOM liaisoning for our factory. They made the entire process smooth and efficient. Their professionalism and commitment to service are truly commendable."</p>
+                        <div class="space-y-2">
+                            <p class="text-[20px] font-bold md:text-xl">Rajeev Reddy</p>
+                            <p class="text-[#00FFC3] text-[16px]">Operations Head, Bharat Electronics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button id="testimonialPrev" class="absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 p-2 bg-[#E8272D]  text-white hover:bg-[#c51f24] transition z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+    </button>
+    <button id="testimonialNext" class="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 p-2 bg-[#E8272D]  text-white hover:bg-[#c51f24] transition z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+    </button>
+</section>
+
+<!-- BLOGS -->
+<section class="z-50 flex items-center justify-center w-full py-20 bg-transparent" data-aos="fade-down" data-aos-duration="1000">
+        
+        <div class="w-[90%] md:w-[80%] mx-auto z-50 relative flex flex-col items-center">
+            <h1 class="absolute top-0 left-0  -translate-y-1/2 text-[60px] lg:text-[130px] font-extrabold uppercase text-transparent z-10  electricity-outline hidden sm:block text-center" 
+            data-aos="fade-left" data-aos-duration="3000">
+            BLOGS
+            </h1>
+          <!-- Header Section -->
+          <div class="z-50 flex flex-col items-start justify-between w-full gap-6 mb-12 md:flex-row">
+            <div class="md:w-[50%]">
+              <p class="text-[#0B7C40] font-['Enriqueta'] text-[18px] mb-1">OUR BLOGS</p>
+              <h2 class="text-[32px] md:text-[48px] font-bold font-['Figtree'] text-[#28245F] mb-6">
+                Our Latest Blog Posts<span class="text-red-600">.</span>
+              </h2>
+            </div> 
+            <div class="flex items-center justify-center md:w-[45%]">
+              <p class="font-['Figtree'] text-sm md:text-[18px] text-[#646464] max-w-2xl md:mx-0 mx-auto">
+                Our blog section provides insights on electrical trends, energy optimization, safety compliance, and industry best practices. Stay updated with expert advice, tips, and innovations to enhance your electrical systems and ensure optimal performance.
+              </p>
+            </div>
+          </div>
+      
+          <!-- Blog Posts Grid -->
+        <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Blog Post 1 -->
+            <div class="flex flex-col items-center overflow-hidden transition group">
+                <!-- Image Section -->
+                <div class="relative w-full overflow-hidden">
+                  <img
+                    src="images/blogs/thumb/1.jpg"
+                    alt="Blog post image"
+                    class="object-cover w-full h-48 transition ease-in-out group-hover:brightness-75 group-hover:bg-[#28245F99]"
+                  />
+                  <div class="absolute inset-0 bg-[#28245F99] opacity-0 group-hover:opacity-40 transition duration-300 ease-in-out"></div>
+                </div>
+              
+                <!-- Text Section -->
+                <div class="p-6 transition-colors duration-300 ease-in-out w-full group-hover:bg-[#F4F4F4]">
+                  <div class="flex items-start justify-start text-[#646464] text-sm mb-4">
+                    <span class="mx-2 text-[#E8272D]">|</span>
+                    <span class="font-['Figtree'] text-[16px] text-[#E8272D]">ADMIN</span>
+                    <span class="mx-2 text-[#E8272D]">—</span>
+                    <span>17 MARCH 2022</span>
+                  </div>
+                  <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
+                    The Future of Electrical Systems: Innovations and Trends
+                  </h3>
+                  <a href="Blog_details.html">
+                    <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
+                      READ MORE
+                    </button>
+                  </a>
+                </div>
+              </div>
+              
+      
+            <!-- Blog Post 2 -->
+            <div class="flex flex-col items-center overflow-hidden transition group">
+                <!-- Image Section -->
+                <div class="relative w-full overflow-hidden">
+                  <img
+                    src="images/blogs/thumb/2.jpg"
+                    alt="Blog post image"
+                    class="object-cover w-full h-48 transition ease-in-out group-hover:brightness-75 group-hover:bg-[#28245F99]"
+                  />
+                  <div class="absolute inset-0 bg-[#28245F99] opacity-0 group-hover:opacity-40 transition duration-300 ease-in-out"></div>
+                </div>
+              
+                <!-- Text Section -->
+                <div class="p-6 transition-colors duration-300 ease-in-out w-full group-hover:bg-[#F4F4F4]">
+                  <div class="flex items-start justify-start text-[#646464] text-sm mb-4">
+                    <span class="mx-2 text-[#E8272D]">|</span>
+                    <span class="font-['Figtree'] text-[16px] text-[#E8272D]">ADMIN</span>
+                    <span class="mx-2 text-[#E8272D]">—</span>
+                    <span>19 APRIL 2022</span>
+                  </div>
+                  <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
+                    Navigating Electrical Compliance: What Every Business Needs to Know.
+                  </h3>
+                  <a href="Blog_details2.html">
+                    <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
+                      READ MORE
+                    </button>
+                  </a>
+                </div>
+              </div>
+      
+            <!-- Blog Post 3 -->
+            <div class="flex flex-col items-center overflow-hidden transition group">
+                <!-- Image Section -->
+                <div class="relative w-full overflow-hidden">
+                  <img
+                    src="images/blogs/thumb/3.jpg"
+                    alt="Blog post image"
+                    class="object-cover w-full h-48 transition ease-in-out group-hover:brightness-75 group-hover:bg-[#28245F99]"
+                  />
+                  <div class="absolute inset-0 bg-[#28245F99] opacity-0 group-hover:opacity-40 transition duration-300 ease-in-out"></div>
+                </div>
+              
+                <!-- Text Section -->
+                <div class="p-6 transition-colors duration-300 ease-in-out w-full group-hover:bg-[#F4F4F4]">
+                  <div class="flex items-start justify-start text-[#646464] text-sm mb-4">
+                    <span class="mx-2 text-[#E8272D]">|</span>
+                    <span class="font-['Figtree'] text-[16px] text-[#E8272D]">ADMIN</span>
+                    <span class="mx-2 text-[#E8272D]">—</span>
+                    <span>20 MAY 2022</span>
+                  </div>
+                  <h3 class="text-[20px] md:text-[24px] font-bold font-['Figtree'] text-[#28245F] mb-4">
+                    Energy Audits and Their Role in Reducing Operational Costs
+                  </h3>
+                  <a href="Blog_details3.html">
+                    <button class="text-[#E8272D] font-['Figtree'] font-medium hover:underline w-full text-right">
+                      READ MORE
+                    </button>
+                  </a>
+                </div>
+              </div>
+        </div>
+      
+          <!-- View All Button -->
+          <a href="Blogs.html">
+            <button class=" px-8 py-3 lg:mb-10 border-2 border-[#E8272D] text-[#28245F]  hover:bg-[#E8272D] hover:text-white transition font-['Figtree'] text-sm md:text-base w-full md:w-auto rounded-l font-bold">
+                View All Blogs
+            </button>
+            </a>
+        </div>
+      </section>
+<!-- BLOGS -->
+<!-- Footer -->
+<section class="relative w-full">
+    <footer class="w-full h-full bg-[#28245F] rounded-t-4xl flex flex-col items-center py-8 md:py-0">
+      
+      <!-- Logo -->
+      <div class="flex items-center justify-center w-full mt-4 h-fit md:mt-4">
+        <img src="assets/Almighty_logo_alt.png" alt="Logo" class="h-16 md:h-24">
+      </div>
+  
+      <!-- Divider -->
+      <div class="w-[90%] md:w-full my-4 md:my-6 border-t-2 border-[#9793CD]"></div>
+  
+      <!-- Contact Section -->
+      <div class="w-[90%] md:w-[60%] h-fit md:h-[15%] flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
+        <h2 class="font-['Figtree'] font-extrabold text-[32px] md:text-[48px] lg:text-[80px] text-white text-center md:text-left">
+          Let's Get in Touch!
+        </h2>
+        <a href="Contact.html">
+          <button class="px-6 py-3 md:px-8 md:py-4 rounded bg-[#E8272D] text-[20px] text-white hover:bg-white hover:text-black transition font-['Figtree'] font-medium whitespace-nowrap">
+            Contact Us
+          </button>
+        </a>
+      </div>
+  
+      <!-- Divider -->
+      <div class="w-[90%] md:w-full my-4 md:my-6 border-t-2 border-[#9793CD]"></div>
+  
+      <!-- Footer Content -->
+      <div class="w-[90%] md:w-[75%] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 py-4">
+        <!-- Links and Address Block -->
+        <div class="flex flex-col justify-between w-full gap-6 md:flex-row">
+          
+          <!-- Quick Links 1 -->
+          <div class="w-full md:w-1/2 lg:w-[20%] flex flex-col items-center md:items-start gap-4">
+            <h3 class="text-[20px] font-bold text-[#00FF78] uppercase">Quick Links</h3>
+            <a href="index.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Home</a>
+            <a href="About.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">About Us</a>
+            <a href="Services.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Services</a>
+            <a href="Clients.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Clients</a>
+            <a href="#" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Testimonials</a>
+            <a href="Blogs.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Blogs</a>
+          </div>
+  
+          <!-- Quick Links 2 -->
+          <div class="hidden md:flex md:w-1/2 lg:w-[20%] flex-col items-start gap-4">
+            <h3 class="text-[20px] font-bold text-[#00FF78] uppercase">Quick Links</h3>
+            <a href="index.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Home</a>
+            <a href="About.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">About Us</a>
+            <a href="Services.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Services</a>
+            <a href="Clients.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Clients</a>
+            <a href="#" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Testimonials</a>
+            <a href="Blogs.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Blogs</a>
+          </div>
+  
+          <!-- Address -->
+          <div class="w-full lg:w-[45%] flex flex-col items-start gap-4">
+            <h3 class="text-[20px] font-['Figtree'] font-medium text-white uppercase">Address</h3>
+            <p class="text-[14px] md:text-[20px] font-['Figtree'] text-white ">#634, Banaswadi main road, Dodda Banaswadi Opp Mahayogi Vemana Circle, Bangalore-560043</p>
+            <div class="md:py-5">
+              <p class="text-[14px] md:text-[20px] font-['Figtree'] text-white uppercase">Phone</p>
+              <p class="text-[14px] md:text-[20px] font-['Figtree'] text-white "> +91 8546951833 | +91 8310411393</p>
+            </div>
+            <div>
+              <p class="text-[14px] md:text-[20px] font-['Figtree'] text-white uppercase">Email</p>
+              <p class="text-[14px] md:text-[20px] font-['Figtree'] text-white ">almightyengineerz@gmail.com</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Wires Image (Hidden on small/medium) -->
+        <div class="hidden lg:flex w-[20%] items-center justify-center">
+          <img src="assets/wires.png" alt="Electrical wires" class="absolute w-[350px] right-0 bottom-20">
+        </div>
+      </div>
+  
+      <!-- Newsletter & Social -->
+      <div class="w-[85%] flex flex-col lg:flex-row items-center justify-evenly gap-6 py-8">
+        
+        <!-- Text -->
+        <div class="w-full lg:w-[30%] text-white text-[14px] md:text-[16px] text-center lg:text-left">
+          <p>Stay updated with the latest electrical insights, tips, trends, and solutions.</p>
+        </div>
+  
+        <!-- Email Input -->
+        <div class="w-full lg:w-[30%] flex justify-center">
+          <input type="email" required placeholder="Enter Your Email"
+            class="w-full px-4 py-3 rounded-lg bg-white text-[#28245F] focus:outline-none focus:ring-2 focus:ring-[#E8272D]">
+        </div>
+  
+        <!-- Subscribe Button -->
+        <div class="w-full lg:w-[10%] flex justify-center">
+          <button class="w-full px-6 py-3 rounded bg-[#E8272D] text-white hover:bg-white hover:text-black transition font-['Figtree'] font-medium">
+            Subscribe
+          </button>
+        </div>
+  
+        <!-- Social Icons -->
+        <div class="w-full lg:w-[20%] flex items-center justify-center gap-5">
+          <a href="#" class="transition hover:opacity-80">
+            <img src="assets/insta.png" alt="Instagram">
+          </a>
+          <a href="#" class="transition hover:opacity-80">
+            <img src="assets/facebook.png" alt="Facebook">
+          </a>
+          <a href="#" class="transition hover:opacity-80">
+            <img src="assets/youtube.png" alt="YouTube">
+          </a>
+          <a href="#" class="transition hover:opacity-80">
+            <img src="assets/x.png" alt="X">
+          </a>
+        </div>
+  
+        <!-- Back to Top Button -->
+        <button class="back-to-top px-4 bg-[#E8272D] hover:bg-[#c51f24] text-white py-3 rounded shadow-lg transition-all duration-300 transform hover:-translate-y-1 hidden z-60">
+          <img src="assets/arrowUP.png" alt="">
+        </button>
+  
+      </div>
+    </footer>
+  </section>
+  
+<!-- Footer -->
+<section class="w-full min-h-[5vh] md:h-[10vh] bg-[#1A1747] py-1.5 md:py-0 flex items-center justify-center">
+    <div class="container w-[85%] flex flex-col items-center justify-between h-full  md:flex-row md:gap-0">
+        <!-- Copyright - moves to top on mobile -->
+        <div class="text-[#30AAE1] text-sm md:text-base text-center md:text-left order-1 md:order-none flex flex-col md:flex-row items-center justify-center md:justify-start gap-1">
+            <p class="font-['Figtree'] text-[16px]">Copyright © 2024 Best Properties.</p>
+            <p class="font-['Figtree'] text-[16px]">All Rights Reserved.</p>
+          </div>
+          
+
+        <!-- Links - centered on mobile -->
+        <div class="flex flex-wrap items-center justify-center gap-4 text-[#30AAE1] text-sm md:text-base order-3 md:order-none">
+            <a href="#" class="hover:underline">Privacy policy</a>
+            <span>|</span>
+            <a href="#" class="hover:underline">Terms & conditions</a>
+            <span>|</span>
+            <a href="#" class="hover:underline">FAQ</a>
+        </div>
+
+        <!-- Powered by - moves to bottom on mobile -->
+        <div class="flex items-center gap-2 md:gap-4 text-[#30AAE1] text-sm md:text-base order-2 md:order-none">
+            <p>Powered BY</p>
+            <a href="https://spyder.asia"><img src="assets/Syndernet.png" alt="Sydernet Logo" class="w-auto h-6 md:h-8"></a>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Carousel Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('[data-carousel-slide]');
+        const prevButton = document.querySelector('[data-carousel-prev]');
+        const nextButton = document.querySelector('[data-carousel-next]');
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        function showSlide(index) {
+            if (index >= slides.length) index = 0;
+            if (index < 0) index = slides.length - 1;
+
+            slides.forEach(slide => {
+                slide.classList.remove('opacity-100');
+                slide.classList.add('opacity-0');
+            });
+
+            slides[index].classList.remove('opacity-0');
+            slides[index].classList.add('opacity-100');
+            currentIndex = index;
+            resetAutoSlide();
+        }
+
+        function nextSlide() { showSlide(currentIndex + 1); }
+        function prevSlide() { showSlide(currentIndex - 1); }
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+
+        showSlide(0);
+    });
+</script>
+<script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileNavItems = document.getElementById('mobile-nav-items');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileNavItems.classList.toggle('active');
+        });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Select the button
+      const topButton = document.querySelector('.back-to-top');
+      
+      // Show/hide button based on scroll position
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          topButton.classList.remove('hidden');
+        } else {
+          topButton.classList.add('hidden');
+        }
+      });
+      
+      // Scroll to top when clicked
+      topButton.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+    </script>
+    <script>
+        const carousel = document.getElementById("clientCarousel");
+        const prevBtn = document.getElementById("carousel-prev");
+        const nextBtn = document.getElementById("carousel-next");
+      
+        const slideWidth = 280; // Width of one logo item
+        const totalSlides = carousel.children.length-2 ;
+      
+        let position = 0;
+      
+        function moveCarousel(dir) {
+          position += dir * slideWidth;
+      
+          // Loop back to start or end
+          if (position < 0) {
+            position = slideWidth * (totalSlides - 1);
+          } else if (position >= slideWidth * totalSlides) {
+            position = 0;
+          }
+      
+          carousel.style.transform = `translateX(-${position}px)`;
+        }
+      
+        prevBtn.addEventListener("click", () => moveCarousel(-1));
+        nextBtn.addEventListener("click", () => moveCarousel(1));
+      
+        // Auto-play every 2 seconds
+        setInterval(() => moveCarousel(1), 2000);
+      </script>        
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const track = document.getElementById('testimonialTrack');
+        const prevBtn = document.getElementById('testimonialPrev');
+        const nextBtn = document.getElementById('testimonialNext');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        const slides = document.querySelectorAll('#testimonialTrack > div');
+        let currentIndex = 0;
+    
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('bg-white', index === currentIndex);
+                dot.classList.toggle('bg-gray-400', index !== currentIndex);
+            });
+            
+            // Disable buttons at boundaries
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === slides.length - 1;
+        }
+    
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+    
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < slides.length - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+    
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentIndex = parseInt(dot.dataset.index);
+                updateCarousel();
+            });
+        });
+    
+        // Auto-rotate (optional)
+        let interval = setInterval(() => {
+            currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        }, 5000);
+    
+        // Pause on hover
+        track.addEventListener('mouseenter', () => clearInterval(interval));
+        track.addEventListener('mouseleave', () => {
+            interval = setInterval(() => {
+                currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+                updateCarousel();
+            }, 5000);
+        });
+    
+        // Initialize
+        updateCarousel();
+    });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({once:true});
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const slideCount = slides.length;
+        let currentIndex = 0;
+        let nextIndex = 1;
+        const slideDuration = 5000;
+        const transitionDuration = 1000;
+        let interval;
+        
+        function slideToNext() {
+            slides[currentIndex].style.transform = 'translateX(-100%)';
+            slides[nextIndex].style.transform = 'translateX(0)';
+            
+            currentIndex = nextIndex;
+            nextIndex = (nextIndex + 1) % slideCount;
+            
+            setTimeout(() => {
+                slides.forEach((slide, index) => {
+                    if(index !== currentIndex) {
+                        slide.style.transform = 'translateX(100%)';
+                    }
+                });
+            }, transitionDuration);
+        }
+        
+        function goToSlide(index) {
+            if (index === currentIndex) return;
+            
+            clearInterval(interval);
+            
+            if (index > currentIndex) {
+                slides[currentIndex].style.transform = 'translateX(-100%)';
+                slides[index].style.transform = 'translateX(0)';
+            } else {
+                slides[currentIndex].style.transform = 'translateX(100%)';
+                slides[index].style.transform = 'translateX(0)';
+            }
+            
+            nextIndex = (index + 1) % slideCount;
+            currentIndex = index;
+            
+            setTimeout(() => {
+                slides.forEach((slide, i) => {
+                    if(i !== currentIndex) {
+                        slide.style.transform = 'translateX(100%)';
+                    }
+                });
+            }, transitionDuration);
+            
+            startCarousel();
+        }
+        
+        // Initialize
+        slides.forEach((slide, index) => {
+            if(index > 0) {
+                slide.style.transform = 'translateX(100%)';
+            }
+        });
+        
+        function startCarousel() {
+            interval = setInterval(slideToNext, slideDuration);
+        }
+        startCarousel();
+        
+        // Pause on hover
+        const carousel = document.querySelector('.carousel-container');
+        carousel.addEventListener('mouseenter', () => clearInterval(interval));
+        carousel.addEventListener('mouseleave', startCarousel);
+        
+        // Button controls
+        document.querySelector('.carousel-prev').addEventListener('click', () => {
+            goToSlide((currentIndex - 1 + slideCount) % slideCount);
+        });
+        
+        document.querySelector('.carousel-next').addEventListener('click', () => {
+            goToSlide((currentIndex + 1) % slideCount);
+        });
+    });
+  </script>
+<script>
+const counts = document.querySelectorAll('.count');
+const speed = 50;
+
+const startCounter = (counter) => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = target / speed;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(updateCount, 30);
+        } else {
+            counter.innerText = target +"+" ;
+        }
+    };
+
+    updateCount();
+};
+
+// Intersection Observer
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            startCounter(counter);
+            observer.unobserve(counter); // Optional: Stop observing after trigger
+        }
+    });
+}, {
+    threshold: 0.7 
+});
+
+// Observe each counter
+counts.forEach(counter => {
+    observer.observe(counter);
+});
+
+
+</script>
+</body>
+</html>

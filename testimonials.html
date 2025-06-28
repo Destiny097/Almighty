@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almighty Engineers</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .electricity-outline {
+            -webkit-text-stroke: 1px #08b15733;
+            color: transparent;
+        }
+        
+        /* Mobile menu styles */
+        .mobile-menu {
+            display: none;
+        }
+        
+        @media (max-width: 1024px) {
+            .desktop-menu {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .mobile-nav-items {
+                display: none;
+                width: 100%;
+            }
+            
+            .mobile-nav-items.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 20px;
+                z-index: 100;
+            }
+        }
+        
+        /* Ensure images don't cause overflow */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+    
+    .animate-fadeIn {
+        animation: fadeIn 1.5s ease-in-out forwards;
+    }
+    
+    .animate-fadeOut {
+        animation: fadeOut 1.5s ease-in-out forwards;
+    }
+    </style>
+</head>
+
+<body class="w-full bg-white">
+     <!-- navbar -->
+<div class="w-full h-[80px] md:h-[125px] flex items-center justify-center fixed  z-60 bg-white md:bg-transparent" id="navbar">
+    <nav class="w-[90%] md:w-[85%] flex flex-col items-end justify-end">
+        <!-- Contact info - hidden on mobile -->
+        <div class="items-center justify-end hidden gap-8 py-2 bg-transparent md:flex">
+            <div class="flex items-center  text-[14px] md:text-[18px] font-['Figtree'] text-white gap-2">
+                <img src="assets/ph_nav.svg" alt="">
+                 +91 8546951833 | +91 8310411393
+            </div>
+            <div class="flex items-center  text-[14px] md:text-[18px] font-['Figtree'] text-white gap-2">
+                <img src="assets/msg.svg" alt="">
+                almightyengineerz@gmail.com
+            </div>
+        </div>
+        
+  
+        <div class="flex items-center justify-between w-full bg-white">
+            <div>
+                <a href="index.html">
+                    <img src="assets/Almighty_logo.png" alt="logo" class="h-[50px] md:h-auto px-2 md:px-5">
+                </a>
+            </div>
+  
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex w-[55%] items-center justify-evenly desktop-menu">
+                <a href="index.html" class="text-[14px] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Home</a>
+                <a href="About.html" class="text-[14px]  md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">About Us</a>
+                <a href="Services.html" class="text-[14px] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Services</a>
+                <a href="Clients.html" class="text-[14px]  md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Clients</a>
+                <a href="testimonials.html" class="text-[14px] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Testimonials</a>
+                <a href="Blogs.html" class="text-[14px] md:text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Blogs</a>
+                <a href="Contact.html"><button class="w-[120px] md:w-[160px] py-3 md:py-6 bg-[#E8272D] text-[14px] md:text-[16px] font-['Figtree'] font-medium text-white uppercase">Get In Touch</button></a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="flex items-center justify-center md:hidden mobile-menu">
+                <button id="mobile-menu-button" class="pr-4 text-2xl">
+                    ☰
+                </button>
+                <div id="mobile-nav-items" class="mobile-nav-items">
+                    <a href="index.html" class="py-2 text-[16px]  font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Home</a>
+                    <a href="About.html" class="py-2 text-[16px]  font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">About Us</a>
+                    <a href="Services.html" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Services</a>
+                    <a href="Clients.html" class="py-2 text-[16px]  font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Clients</a>
+                    <a href="testimonials.html" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Testimonials</a>
+                    <a href="Blogs.html" class="py-2 text-[16px] font-['Figtree'] font-medium hover:text-[#E8272D] duration-300 cursor-pointer uppercase">Blogs</a>
+                    <a href="Contact.html"><button class="w-full py-3 bg-[#E8272D] text-[16px] font-['Figtree'] font-medium text-white mt-2 uppercase">Get In Touch</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </div>
+  <!-- navbar -->
+
+<!-- Homepage -->
+<section class="relative flex items-center justify-center w-full h-[60vh] text-center text-white overflow-hidden pt-[80px] md:pt-0">
+    <!-- Carousel -->
+    <div class="absolute inset-0 z-0 overflow-hidden carousel-container">
+        <div class="relative w-full h-full">
+            <!-- Slides -->
+            <div class="carousel-slide absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" 
+                 style="background-image: url(assets/landing.png); transform: translateX(0);"></div>
+            <div class="carousel-slide absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" 
+                 style="background-image: url(assets/landing.png); transform: translateX(100%);"></div>
+            <div class="carousel-slide absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" 
+                 style="background-image: url(assets/landing.png); transform: translateX(100%);"></div>
+        
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/30/30 z-5"></div>
+            
+            <!-- Navigation Arrows -->
+            
+        </div>
+    </div>
+  
+    <!-- Content -->
+  
+    <div class="relative lg:px-18  sm:px-10 z-15 w-full max-w-[90%] mx-auto flex items-start" data-aos="fade-left" data-aos-duration="9000">
+        <h2 class=" md:text-[100px] text-[50px] font-bold leading-tight font-['Figtree'] text-center">
+            TESTIMONIALS
+        </h2>
+      </div>
+    
+  </section>
+  <!-- Homepage -->
+<!-- Title -->
+<section class="w-full md:h-[7vh] h-[10vh] flex flex-col items-center justify-center ">
+    <div class="lg:w-[80%] sm:w-full h-full px-3 lg:mt-7 mt-5 text-[#28245F] font-bold text-[18px] font-['Figtree'] text-left "><P>Home > Testimonials</P></div>
+</section>
+<!-- Title -->
+ 
+<section class="flex items-center justify-center w-full bg-[#F9F9F9] py-5 mt-10">
+    <div class="w-[95%] md:w-[85%] py-10 flex flex-col items-start justify-center">
+      
+      <!-- Header -->
+      <div class="flex flex-col items-center justify-center w-full py-10 space-y-6 px-7 md:flex-row md:items-start md:justify-between md:space-y-0">
+        <div class="md:w-[30%] w-full text-center">
+          <h2 class="text-[28px] md:text-[55px] font-bold font-['Figtree'] text-[#28245F]">
+            Testimonials<span class="text-[#E8272D]">.</span>
+          </h2>
+        </div>
+        <div class="md:w-[50%] w-full text-center md:text-left">
+          <p class="text-sm md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">
+            “There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour variations incididunt ut labore et dolore. Quis ipsum suspendisse ultrices gravida.”
+          </p>
+        </div>
+      </div>
+  
+      <!-- Testimonials -->
+      <div class="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
+        
+        <!-- Testimonial Card -->
+        <div class="relative w-full max-w-md p-5 space-y-4 text-center bg-white shadow-md rounded-xl">
+          <img src="assets/testimonial_comma.svg" alt="inverted double comma" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/4 left-1/2">
+          <!-- Stars -->
+          <div class="flex justify-center space-x-1">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+            <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+            <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+          </div>
+          <p class="text-sm md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">
+            “There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour variations incididunt ut labore et dolore.”
+          </p>
+          <div>
+            <p class="text-lg md:text-[19px] text-[#28245F] font-bold font-['Figtree']">Ken Williamson</p>
+            <p class="text-xs md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">CEO &amp; Founder</p>
+          </div>
+          <button 
+            class="px-4 py-2 bg-[#E8272D] text-white font-['Figtree'] text-sm rounded cursor-pointer"
+            onclick="openModal('assets/Testimonial_form.jpg')">
+            Read More
+          </button>
+
+          <div id="imageModal" class="fixed inset-0 z-50 items-center justify-center hidden bg-opacity-50 bg-white/30 sm:px-5 md:px-0 ">
+              <!-- Modal Content -->
+              <div class="relative w-full max-w-[450px] p-4 bg-white rounded-lg">
+                <div class="absolute flex items-center justify-center w-full translate-y-1/2 -top-35 left-5 mb-15">
+                  <img src="./assets/profile_icon.svg" alt="" class="w-1/4">
+                  <div class="ml-5 mt-11">
+                    <h3 class="text-[#28245F] font-bold font-['Figtree'] text-[30px] text-left">Ken Williamson</h3>
+                    <p class="text-[#6B6B6B] font-normal font-['Figtree'] text-[16px] text-left">CEO & Founder</p>
+                  </div>
+                </div>
+                <button onclick="closeModal()" class="absolute text-3xl text-black top-2 right-2 hover:text-gray-800">&times;</button>
+                <img id="modalImage" src="" alt="Testimonial Image" class="w-full h-auto rounded" />
+              </div>
+          </div>
+        </div>
+
+        <div class="relative w-full max-w-md p-5 space-y-4 text-center bg-white shadow-md rounded-xl">
+            <img src="assets/testimonial_comma.svg" alt="inverted double comma" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/4 left-1/2">
+            <!-- Stars -->
+            <div class="flex justify-center space-x-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+            </div>
+            <p class="text-sm md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">
+              “There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour variations incididunt ut labore et dolore.”
+            </p>
+            <div>
+              <p class="text-lg md:text-[19px] text-[#28245F] font-bold font-['Figtree']">Ken Williamson</p>
+              <p class="text-xs md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">CEO &amp; Founder</p>
+            </div>
+            <button 
+            class="px-4 py-2 bg-[#E8272D] text-white font-['Figtree'] text-sm rounded cursor-pointer"
+            onclick="openModal('assets/Testimonial_form.jpg')">
+            Read More
+          </button>
+
+          <div id="imageModal" class="fixed inset-0 z-50 items-center justify-center hidden bg-opacity-50 bg-white/30 sm:px-5 md:px-0 ">
+              <!-- Modal Content -->
+              <div class="relative w-full max-w-[450px] p-4 bg-white rounded-lg">
+                <div class="absolute flex items-center justify-center w-full translate-y-1/2 -top-35 left-5 mb-15">
+                  <img src="./assets/profile_icon.svg" alt="" class="w-1/4">
+                  <div class="ml-5 mt-11">
+                    <h3 class="text-[#28245F] font-bold font-['Figtree'] text-[30px] text-left">Ken Williamson</h3>
+                    <p class="text-[#6B6B6B] font-normal font-['Figtree'] text-[16px] text-left">CEO & Founder</p>
+                  </div>
+                </div>
+                <button onclick="closeModal()" class="absolute text-3xl text-black top-2 right-2 hover:text-gray-800">&times;</button>
+                <img id="modalImage" src="" alt="Testimonial Image" class="w-full h-auto rounded" />
+              </div>
+          </div>
+          </div>
+
+          <div class="relative w-full max-w-md p-5 space-y-4 text-center bg-white shadow-md rounded-xl">
+            <img src="assets/testimonial_comma.svg" alt="inverted double comma" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/4 left-1/2">
+            <!-- Stars -->
+            <div class="flex justify-center space-x-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+            </div>
+            <p class="text-sm md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">
+              “There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour variations incididunt ut labore et dolore.”
+            </p>
+            <div>
+              <p class="text-lg md:text-[19px] text-[#28245F] font-bold font-['Figtree']">Ken Williamson</p>
+              <p class="text-xs md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">CEO &amp; Founder</p>
+            </div>
+            <button 
+            class="px-4 py-2 bg-[#E8272D] text-white font-['Figtree'] text-sm rounded cursor-pointer"
+            onclick="openModal('assets/Testimonial_form.jpg')">
+            Read More
+          </button>
+
+          <div id="imageModal" class="fixed inset-0 z-50 items-center justify-center hidden bg-opacity-50 bg-white/30 sm:px-5 md:px-0 ">
+              <!-- Modal Content -->
+              <div class="relative w-full max-w-[450px] p-4 bg-white rounded-lg">
+                <div class="absolute flex items-center justify-center w-full translate-y-1/2 -top-35 left-5 mb-15">
+                  <img src="./assets/profile_icon.svg" alt="" class="w-1/4">
+                  <div class="ml-5 mt-11">
+                    <h3 class="text-[#28245F] font-bold font-['Figtree'] text-[30px] text-left">Ken Williamson</h3>
+                    <p class="text-[#6B6B6B] font-normal font-['Figtree'] text-[16px] text-left">CEO & Founder</p>
+                  </div>
+                </div>
+                <button onclick="closeModal()" class="absolute text-3xl text-black top-2 right-2 hover:text-gray-800">&times;</button>
+                <img id="modalImage" src="" alt="Testimonial Image" class="w-full h-auto rounded" />
+              </div>
+          </div>
+          </div>
+
+          <div class="relative w-full max-w-md p-5 space-y-4 text-center bg-white shadow-md rounded-xl">
+            <img src="assets/testimonial_comma.svg" alt="inverted double comma" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/4 left-1/2">
+            <!-- Stars -->
+            <div class="flex justify-center space-x-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+            </div>
+            <p class="text-sm md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">
+              “There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour variations incididunt ut labore et dolore.”
+            </p>
+            <div>
+              <p class="text-lg md:text-[19px] text-[#28245F] font-bold font-['Figtree']">Ken Williamson</p>
+              <p class="text-xs md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">CEO &amp; Founder</p>
+            </div>
+            <button 
+            class="px-4 py-2 bg-[#E8272D] text-white font-['Figtree'] text-sm rounded cursor-pointer"
+            onclick="openModal('assets/Testimonial_form.jpg')">
+            Read More
+          </button>
+
+         <div id="imageModal" class="fixed inset-0 z-50 items-center justify-center hidden bg-opacity-50 bg-white/30 sm:px-5 md:px-0 ">
+              <!-- Modal Content -->
+              <div class="relative w-full max-w-[450px] p-4 bg-white rounded-lg">
+                <div class="absolute flex items-center justify-center w-full translate-y-1/2 -top-35 left-5 mb-15">
+                  <img src="./assets/profile_icon.svg" alt="" class="w-1/4">
+                  <div class="ml-5 mt-11">
+                    <h3 class="text-[#28245F] font-bold font-['Figtree'] text-[30px] text-left">Ken Williamson</h3>
+                    <p class="text-[#6B6B6B] font-normal font-['Figtree'] text-[16px] text-left">CEO & Founder</p>
+                  </div>
+                </div>
+                <button onclick="closeModal()" class="absolute text-3xl text-black top-2 right-2 hover:text-gray-800">&times;</button>
+                <img id="modalImage" src="" alt="Testimonial Image" class="w-full h-auto rounded" />
+              </div>
+          </div>
+          </div>
+
+          <div class="relative w-full max-w-md p-5 space-y-4 text-center bg-white shadow-md rounded-xl">
+            <img src="assets/testimonial_comma.svg" alt="inverted double comma" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/4 left-1/2">
+            <!-- Stars -->
+            <div class="flex justify-center space-x-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+            </div>
+            <p class="text-sm md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">
+              “There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour variations incididunt ut labore et dolore.”
+            </p>
+            <div>
+              <p class="text-lg md:text-[19px] text-[#28245F] font-bold font-['Figtree']">Ken Williamson</p>
+              <p class="text-xs md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">CEO &amp; Founder</p>
+            </div>
+            <button 
+            class="px-4 py-2 bg-[#E8272D] text-white font-['Figtree'] text-sm rounded cursor-pointer"
+            onclick="openModal('assets/Testimonial_form.jpg')">
+            Read More
+          </button>
+
+          <div id="imageModal" class="fixed inset-0 z-50 items-center justify-center hidden bg-opacity-50 bg-white/30 sm:px-5 md:px-0 ">
+              <!-- Modal Content -->
+              <div class="relative w-full max-w-[450px] p-4 bg-white rounded-lg">
+                <div class="absolute flex items-center justify-center w-full translate-y-1/2 -top-35 left-5 mb-15">
+                  <img src="./assets/profile_icon.svg" alt="" class="w-1/4">
+                  <div class="ml-5 mt-11">
+                    <h3 class="text-[#28245F] font-bold font-['Figtree'] text-[30px] text-left">Ken Williamson</h3>
+                    <p class="text-[#6B6B6B] font-normal font-['Figtree'] text-[16px] text-left">CEO & Founder</p>
+                  </div>
+                </div>
+                <button onclick="closeModal()" class="absolute text-3xl text-black top-2 right-2 hover:text-gray-800">&times;</button>
+                <img id="modalImage" src="" alt="Testimonial Image" class="w-full h-auto rounded" />
+              </div>
+          </div>
+          </div>
+
+          <div class="relative w-full max-w-md p-5 space-y-4 text-center bg-white shadow-md rounded-xl">
+            <img src="assets/testimonial_comma.svg" alt="inverted double comma" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/4 left-1/2">
+            <!-- Stars -->
+            <div class="flex justify-center space-x-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+            </div>
+            <p class="text-sm md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">
+              “There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour variations incididunt ut labore et dolore.”
+            </p>
+            <div>
+              <p class="text-lg md:text-[19px] text-[#28245F] font-bold font-['Figtree']">Ken Williamson</p>
+              <p class="text-xs md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">CEO &amp; Founder</p>
+            </div>
+            <button 
+            class="px-4 py-2 bg-[#E8272D] text-white font-['Figtree'] text-sm rounded cursor-pointer"
+            onclick="openModal('assets/Testimonial_form.jpg')">
+            Read More
+          </button>
+
+          <div id="imageModal" class="fixed inset-0 z-50 items-center justify-center hidden bg-opacity-50 bg-white/30 sm:px-5 md:px-0 ">
+              <!-- Modal Content -->
+              <div class="relative w-full max-w-[450px] p-4 bg-white rounded-lg">
+                <div class="absolute flex items-center justify-center w-full translate-y-1/2 -top-35 left-5 mb-15">
+                  <img src="./assets/profile_icon.svg" alt="" class="w-1/4">
+                  <div class="ml-5 mt-11">
+                    <h3 class="text-[#28245F] font-bold font-['Figtree'] text-[30px] text-left">Ken Williamson</h3>
+                    <p class="text-[#6B6B6B] font-normal font-['Figtree'] text-[16px] text-left">CEO & Founder</p>
+                  </div>
+                </div>
+                <button onclick="closeModal()" class="absolute text-3xl text-black top-2 right-2 hover:text-gray-800">&times;</button>
+                <img id="modalImage" src="" alt="Testimonial Image" class="w-full h-auto rounded" />
+              </div>
+          </div>
+          </div>
+
+          <div class="relative w-full max-w-md p-5 space-y-4 text-center bg-white shadow-md rounded-xl">
+            <img src="assets/testimonial_comma.svg" alt="inverted double comma" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/4 left-1/2">
+            <!-- Stars -->
+            <div class="flex justify-center space-x-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+            </div>
+            <p class="text-sm md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">
+              “There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour variations incididunt ut labore et dolore.”
+            </p>
+            <div>
+              <p class="text-lg md:text-[19px] text-[#28245F] font-bold font-['Figtree']">Ken Williamson</p>
+              <p class="text-xs md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">CEO &amp; Founder</p>
+            </div>
+            <button 
+            class="px-4 py-2 bg-[#E8272D] text-white font-['Figtree'] text-sm rounded cursor-pointer"
+            onclick="openModal('assets/Testimonial_form.jpg')">
+            Read More
+          </button>
+
+          <div id="imageModal" class="fixed inset-0 z-50 items-center justify-center hidden bg-opacity-50 bg-white/30 sm:px-5 md:px-0 ">
+              <!-- Modal Content -->
+              <div class="relative w-full max-w-[450px] p-4 bg-white rounded-lg">
+                <div class="absolute flex items-center justify-center w-full translate-y-1/2 -top-35 left-5 mb-15">
+                  <img src="./assets/profile_icon.svg" alt="" class="w-1/4">
+                  <div class="ml-5 mt-11">
+                    <h3 class="text-[#28245F] font-bold font-['Figtree'] text-[30px] text-left">Ken Williamson</h3>
+                    <p class="text-[#6B6B6B] font-normal font-['Figtree'] text-[16px] text-left">CEO & Founder</p>
+                  </div>
+                </div>
+                <button onclick="closeModal()" class="absolute text-3xl text-black top-2 right-2 hover:text-gray-800">&times;</button>
+                <img id="modalImage" src="" alt="Testimonial Image" class="w-full h-auto rounded" />
+              </div>
+          </div>
+          </div>
+
+          <div class="relative w-full max-w-md p-5 space-y-4 text-center bg-white shadow-md rounded-xl">
+            <img src="assets/testimonial_comma.svg" alt="inverted double comma" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/4 left-1/2">
+            <!-- Stars -->
+            <div class="flex justify-center space-x-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+            </div>
+            <p class="text-sm md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">
+              “There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour variations incididunt ut labore et dolore.”
+            </p>
+            <div>
+              <p class="text-lg md:text-[19px] text-[#28245F] font-bold font-['Figtree']">Ken Williamson</p>
+              <p class="text-xs md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">CEO &amp; Founder</p>
+            </div>
+            <button 
+            class="px-4 py-2 bg-[#E8272D] text-white font-['Figtree'] text-sm rounded cursor-pointer"
+            onclick="openModal('assets/Testimonial_form.jpg')">
+            Read More
+          </button>
+
+          <div id="imageModal" class="fixed inset-0 z-50 items-center justify-center hidden bg-opacity-50 bg-white/30 sm:px-5 md:px-0 ">
+              <!-- Modal Content -->
+              <div class="relative w-full max-w-[450px] p-4 bg-white rounded-lg">
+                <div class="absolute flex items-center justify-center w-full translate-y-1/2 -top-35 left-5 mb-15">
+                  <img src="./assets/profile_icon.svg" alt="" class="w-1/4">
+                  <div class="ml-5 mt-11">
+                    <h3 class="text-[#28245F] font-bold font-['Figtree'] text-[30px] text-left">Ken Williamson</h3>
+                    <p class="text-[#6B6B6B] font-normal font-['Figtree'] text-[16px] text-left">CEO & Founder</p>
+                  </div>
+                </div>
+                <button onclick="closeModal()" class="absolute text-3xl text-black top-2 right-2 hover:text-gray-800">&times;</button>
+                <img id="modalImage" src="" alt="Testimonial Image" class="w-full h-auto rounded" />
+              </div>
+          </div>
+          </div>
+
+          <div class="relative w-full max-w-md p-5 space-y-4 text-center bg-white shadow-md rounded-xl">
+            <img src="assets/testimonial_comma.svg" alt="inverted double comma" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/4 left-1/2">
+            <!-- Stars -->
+            <div class="flex justify-center space-x-1">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+              <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></svg>
+            </div>
+            <p class="text-sm md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">
+              “There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour variations incididunt ut labore et dolore.”
+            </p>
+            <div>
+              <p class="text-lg md:text-[19px] text-[#28245F] font-bold font-['Figtree']">Ken Williamson</p>
+              <p class="text-xs md:text-[18px] text-[#6B6B6B] font-normal font-['Figtree']">CEO &amp; Founder</p>
+            </div>
+            <button 
+            class="px-4 py-2 bg-[#E8272D] text-white font-['Figtree'] text-sm rounded cursor-pointer"
+            onclick="openModal('assets/Testimonial_form.jpg')">
+            Read More
+          </button>
+
+          <div id="imageModal" class="fixed inset-0 z-50 items-center justify-center hidden bg-opacity-50 bg-white/30 sm:px-5 md:px-0 ">
+              <!-- Modal Content -->
+              <div class="relative w-full max-w-[450px] p-4 bg-white rounded-lg">
+                <div class="absolute flex items-center justify-center w-full translate-y-1/2 -top-35 left-5 mb-15">
+                  <img src="./assets/profile_icon.svg" alt="" class="w-1/4">
+                  <div class="ml-5 mt-11">
+                    <h3 class="text-[#28245F] font-bold font-['Figtree'] text-[30px] text-left">Ken Williamson</h3>
+                    <p class="text-[#6B6B6B] font-normal font-['Figtree'] text-[16px] text-left">CEO & Founder</p>
+                  </div>
+                </div>
+                <button onclick="closeModal()" class="absolute text-3xl text-black top-2 right-2 hover:text-gray-800">&times;</button>
+                <img id="modalImage" src="" alt="Testimonial Image" class="w-full h-auto rounded" />
+              </div>
+          </div>
+          </div>
+  
+        <!-- Duplicate or Add more testimonial cards as needed using the same structure above -->
+         
+      </div>
+    </div>
+  </section>
+
+  
+<!-- Footer -->
+<section class="relative w-full">
+    <footer class="w-full h-full bg-[#28245F] rounded-t-4xl flex flex-col items-center py-8 md:py-0">
+      
+      <!-- Logo -->
+      <div class="flex items-center justify-center w-full mt-4 h-fit md:mt-4">
+        <img src="assets/Almighty_logo_alt.png" alt="Logo" class="h-16 md:h-24">
+      </div>
+  
+      <!-- Divider -->
+      <div class="w-[90%] md:w-full my-4 md:my-6 border-t-2 border-[#9793CD]"></div>
+  
+      <!-- Contact Section -->
+      <div class="w-[90%] md:w-[60%] h-fit md:h-[15%] flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
+        <h2 class="font-['Figtree'] font-extrabold text-[32px] md:text-[48px] lg:text-[80px] text-white text-center md:text-left">
+          Let's Get in Touch!
+        </h2>
+        <a href="Contact.html">
+          <button class="px-6 py-3 md:px-8 md:py-4 rounded bg-[#E8272D] text-[20px] text-white hover:bg-white hover:text-black transition font-['Figtree'] font-medium whitespace-nowrap">
+            Contact Us
+          </button>
+        </a>
+      </div>
+  
+      <!-- Divider -->
+      <div class="w-[90%] md:w-full my-4 md:my-6 border-t-2 border-[#9793CD]"></div>
+  
+      <!-- Footer Content -->
+      <div class="w-[90%] md:w-[75%] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 py-4">
+        <!-- Links and Address Block -->
+        <div class="flex flex-col justify-between w-full gap-6 md:flex-row">
+          
+          <!-- Quick Links 1 -->
+          <div class="w-full md:w-1/2 lg:w-[20%] flex flex-col items-center md:items-start gap-4">
+            <h3 class="text-[20px] font-bold text-[#00FF78] uppercase">Quick Links</h3>
+            <a href="index.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Home</a>
+            <a href="About.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">About Us</a>
+            <a href="Services.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Services</a>
+            <a href="Clients.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Clients</a>
+            <a href="testimonials.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Testimonials</a>
+            <a href="Blogs.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Blogs</a>
+          </div>
+  
+          <!-- Quick Links 2 -->
+          <div class="hidden md:flex md:w-1/2 lg:w-[20%] flex-col items-start gap-4">
+            <h3 class="text-[20px] font-bold text-[#00FF78] uppercase">Quick Links</h3>
+            <a href="index.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Home</a>
+            <a href="About.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">About Us</a>
+            <a href="Services.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Services</a>
+            <a href="Clients.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Clients</a>
+            <a href="testimonials.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Testimonials</a>
+            <a href="Blogs.html" class="text-[14px] md:text-[20px] font-['Figtree'] font-medium text-white hover:text-[#E8272D] transition uppercase">Blogs</a>
+          </div>
+  
+          <!-- Address -->
+          <div class="w-full lg:w-[45%] flex flex-col items-start gap-4">
+            <h3 class="text-[20px] font-['Figtree'] font-medium text-white uppercase">Address</h3>
+            <p class="text-[14px] md:text-[20px] font-['Figtree'] text-white ">#634, Banaswadi main road, Dodda Banaswadi Opp Mahayogi Vemana Circle, Bangalore-560043</p>
+            <div class="md:py-5">
+              <p class="text-[14px] md:text-[20px] font-['Figtree'] text-white uppercase">Phone</p>
+              <p class="text-[14px] md:text-[20px] font-['Figtree'] text-white "> +91 8546951833 | +91 8310411393</p>
+            </div>
+            <div>
+              <p class="text-[14px] md:text-[20px] font-['Figtree'] text-white uppercase">Email</p>
+              <p class="text-[14px] md:text-[20px] font-['Figtree'] text-white ">almightyengineerz@gmail.com</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Wires Image (Hidden on small/medium) -->
+        <div class="hidden lg:flex w-[20%] items-center justify-center">
+          <img src="assets/wires.png" alt="Electrical wires" class="absolute w-[350px] right-0 bottom-20">
+        </div>
+      </div>
+  
+      <!-- Newsletter & Social -->
+      <div class="w-[85%] flex flex-col lg:flex-row items-center justify-evenly gap-6 py-8">
+        
+        <!-- Text -->
+        <div class="w-full lg:w-[30%] text-white text-[14px] md:text-[16px] text-center lg:text-left">
+          <p>Stay updated with the latest electrical insights, tips, trends, and solutions.</p>
+        </div>
+  
+        <!-- Email Input -->
+        <div class="w-full lg:w-[30%] flex justify-center">
+          <input type="email" required placeholder="Enter Your Email"
+            class="w-full px-4 py-3 rounded-lg bg-white text-[#28245F] focus:outline-none focus:ring-2 focus:ring-[#E8272D]">
+        </div>
+  
+        <!-- Subscribe Button -->
+        <div class="w-full lg:w-[10%] flex justify-center">
+          <button class="w-full px-6 py-3 rounded bg-[#E8272D] text-white hover:bg-white hover:text-black transition font-['Figtree'] font-medium">
+            Subscribe
+          </button>
+        </div>
+  
+        <!-- Social Icons -->
+        <div class="w-full lg:w-[20%] flex items-center justify-center gap-5">
+          <a href="#" class="transition hover:opacity-80">
+            <img src="assets/insta.png" alt="Instagram">
+          </a>
+          <a href="#" class="transition hover:opacity-80">
+            <img src="assets/facebook.png" alt="Facebook">
+          </a>
+          <a href="#" class="transition hover:opacity-80">
+            <img src="assets/youtube.png" alt="YouTube">
+          </a>
+          <a href="#" class="transition hover:opacity-80">
+            <img src="assets/x.png" alt="X">
+          </a>
+        </div>
+  
+        <!-- Back to Top Button -->
+        <button class="back-to-top px-4 bg-[#E8272D] hover:bg-[#c51f24] text-white py-3 rounded shadow-lg transition-all duration-300 transform hover:-translate-y-1 hidden z-60">
+          <img src="assets/arrowUP.png" alt="">
+        </button>
+  
+      </div>
+    </footer>
+  </section>
+  
+<!-- Footer -->
+<section class="w-full min-h-[5vh] md:h-[10vh] bg-[#1A1747] py-1.5 md:py-0 flex items-center justify-center">
+    <div class="container w-[85%] flex flex-col items-center justify-between h-full  md:flex-row md:gap-0">
+        <!-- Copyright - moves to top on mobile -->
+        <div class="text-[#30AAE1] text-sm md:text-base text-center md:text-left order-1 md:order-none flex flex-col md:flex-row items-center justify-center md:justify-start gap-1">
+            <p class="font-['Figtree'] text-[16px]">Copyright © 2024 Best Properties.</p>
+            <p class="font-['Figtree'] text-[16px]">All Rights Reserved.</p>
+          </div>
+          
+
+        <!-- Links - centered on mobile -->
+        <div class="flex flex-wrap items-center justify-center gap-4 text-[#30AAE1] text-sm md:text-base order-3 md:order-none">
+            <a href="#" class="hover:underline">Privacy policy</a>
+            <span>|</span>
+            <a href="#" class="hover:underline">Terms & conditions</a>
+            <span>|</span>
+            <a href="#" class="hover:underline">FAQ</a>
+        </div>
+
+        <!-- Powered by - moves to bottom on mobile -->
+        <div class="flex items-center gap-2 md:gap-4 text-[#30AAE1] text-sm md:text-base order-2 md:order-none">
+            <p>Powered BY</p>
+            <a href="https://spyder.asia"><img src="assets/Syndernet.png" alt="Sydernet Logo" class="w-auto h-6 md:h-8"></a>
+            
+        </div>
+    </div>
+</section>
+<script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileNavItems = document.getElementById('mobile-nav-items');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileNavItems.classList.toggle('active');
+        });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Select the button
+      const topButton = document.querySelector('.back-to-top');
+      
+      // Show/hide button based on scroll position
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          topButton.classList.remove('hidden');
+        } else {
+          topButton.classList.add('hidden');
+        }
+      });
+      
+      // Scroll to top when clicked
+      topButton.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+    </script>
+    
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({once:true});
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const slideCount = slides.length;
+        let currentIndex = 0;
+        let nextIndex = 1;
+        const slideDuration = 5000;
+        const transitionDuration = 1000;
+        let interval;
+        
+        function slideToNext() {
+            slides[currentIndex].style.transform = 'translateX(-100%)';
+            slides[nextIndex].style.transform = 'translateX(0)';
+            
+            currentIndex = nextIndex;
+            nextIndex = (nextIndex + 1) % slideCount;
+            
+            setTimeout(() => {
+                slides.forEach((slide, index) => {
+                    if(index !== currentIndex) {
+                        slide.style.transform = 'translateX(100%)';
+                    }
+                });
+            }, transitionDuration);
+        }
+        
+        function goToSlide(index) {
+            if (index === currentIndex) return;
+            
+            clearInterval(interval);
+            
+            if (index > currentIndex) {
+                slides[currentIndex].style.transform = 'translateX(-100%)';
+                slides[index].style.transform = 'translateX(0)';
+            } else {
+                slides[currentIndex].style.transform = 'translateX(100%)';
+                slides[index].style.transform = 'translateX(0)';
+            }
+            
+            nextIndex = (index + 1) % slideCount;
+            currentIndex = index;
+            
+            setTimeout(() => {
+                slides.forEach((slide, i) => {
+                    if(i !== currentIndex) {
+                        slide.style.transform = 'translateX(100%)';
+                    }
+                });
+            }, transitionDuration);
+            
+            startCarousel();
+        }
+        
+        // Initialize
+        slides.forEach((slide, index) => {
+            if(index > 0) {
+                slide.style.transform = 'translateX(100%)';
+            }
+        });
+        
+        function startCarousel() {
+            interval = setInterval(slideToNext, slideDuration);
+        }
+        startCarousel();
+        
+        // Pause on hover
+        const carousel = document.querySelector('.carousel-container');
+        carousel.addEventListener('mouseenter', () => clearInterval(interval));
+        carousel.addEventListener('mouseleave', startCarousel);
+        
+        // Button controls
+    });
+  </script>
+  <script>
+  function openModal(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    
+    modalImage.src = imageSrc;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex'); // Add flex to display modal properly
+
+    hideNavbar();
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+    modalImage.src = '';
+
+    showNavbar();
+  }
+
+  function hideNavbar() {
+    document.getElementById('navbar').classList.add('hidden');
+  }
+
+  function showNavbar() {
+    document.getElementById('navbar').classList.remove('hidden');
+  }
+</script>
+
+</body>
+</html>
